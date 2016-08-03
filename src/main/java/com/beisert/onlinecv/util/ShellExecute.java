@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-package com.beisert.onlinecv.gwt.server.util;
-=======
 package com.beisert.onlinecv.util;
->>>>>>> 5b7e992de2754950669724678236ad1a13c68da2
 
 import java.io.BufferedReader;
 import java.io.IOException;

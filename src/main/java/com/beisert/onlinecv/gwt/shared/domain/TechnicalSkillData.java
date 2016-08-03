@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-package com.beisert.onlinecv.gwt.shared;
-
-public class TechnicalSkillData {
-  
-  
-  String skill;
-  double numberOfYears;
-  int yearLastUsed;
-  
-  
-=======
 package com.beisert.onlinecv.gwt.shared.domain;
 
 public class TechnicalSkillData {
@@ -64,5 +52,4 @@ public class TechnicalSkillData {
 		this.yearLastUsed = yearLastUsed;
 	}
 
->>>>>>> 5b7e992de2754950669724678236ad1a13c68da2
 }

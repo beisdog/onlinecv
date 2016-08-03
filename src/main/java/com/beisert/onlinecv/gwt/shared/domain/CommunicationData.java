@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-package com.beisert.onlinecv.gwt.shared;
-
-public class CommunicationData {
-  
-   /**
-    * email, fax, tel
-    */
-  	String type;
-   String data;
-   String additionalInfo;
-=======
 package com.beisert.onlinecv.gwt.shared.domain;
 
 public class CommunicationData {
@@ -57,5 +45,4 @@ public class CommunicationData {
 		this.additionalInfo = additionalInfo;
 	}
 
->>>>>>> 5b7e992de2754950669724678236ad1a13c68da2
 }

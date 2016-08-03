@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-package com.beisert.onlinecv.gwt.shared;
-=======
 package com.beisert.onlinecv.gwt.shared.domain;
->>>>>>> 5b7e992de2754950669724678236ad1a13c68da2
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,12 +7,6 @@ import java.util.List;
  * Represents a multilanguage struct.
  */
 public class I18Text {
-<<<<<<< HEAD
-  
-  String defaultText;
-  
-  List<LanguageText> languageTexts = new ArrayList<LanguageText>();
-=======
 
 	String defaultText;
 
@@ -46,5 +36,4 @@ public class I18Text {
 		this.languageTexts.add(new LanguageText("en", en));
 	}
 
->>>>>>> 5b7e992de2754950669724678236ad1a13c68da2
 }

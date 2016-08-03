@@ -1,18 +1,9 @@
-<<<<<<< HEAD
-package com.beisert.onlinecv.gwt.shared;
-=======
 package com.beisert.onlinecv.gwt.shared.domain;
->>>>>>> 5b7e992de2754950669724678236ad1a13c68da2
 
 /**
  * Part of I18Text.
  */
 public class LanguageText {
-<<<<<<< HEAD
-  
-  String locale;
-  String text;
-=======
 
 	String locale;
 	String text;
@@ -41,5 +32,5 @@ public class LanguageText {
 		this.text = text;
 	}
 
->>>>>>> 5b7e992de2754950669724678236ad1a13c68da2
+
 }

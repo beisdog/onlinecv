@@ -1,26 +1,3 @@
-<<<<<<< HEAD
-package com.beisert.onlinecv.gwt.shared;
-
-import java.util.List;
-
-
-
-public class PersonalData {
-  
-  String lastName;
-  String firstName;
-  
-  java.sql.Date birthDate;
-  
-  int numberOfChildren;
-  
-  String relationShipStatus = "married";
-  
-  AdressData address;
-  
-  List<CommunicationData> communicationData;
-  
-=======
 package com.beisert.onlinecv.gwt.shared.domain;
 
 import java.util.List;
@@ -100,5 +77,4 @@ public class PersonalData {
 		this.communicationData = communicationData;
 	}
 
->>>>>>> 5b7e992de2754950669724678236ad1a13c68da2
 }

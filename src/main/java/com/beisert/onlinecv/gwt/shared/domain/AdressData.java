@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-package com.beisert.onlinecv.gwt.shared;
-
-public class AdressData {
-  
-  String street;
-  String houseNumber;
-  String additionalLine;
-  String zip;
-  String city;
-  String countryName;
-  
-=======
 package com.beisert.onlinecv.gwt.shared.domain;
 
 public class AdressData {
@@ -84,5 +71,4 @@ public class AdressData {
 		this.countryName = countryName;
 	}
 
->>>>>>> 5b7e992de2754950669724678236ad1a13c68da2
 }
