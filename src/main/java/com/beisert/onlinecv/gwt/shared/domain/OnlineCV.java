@@ -1,5 +1,11 @@
+<<<<<<< HEAD
 package com.beisert.onlinecv.gwt.shared;
 
+=======
+package com.beisert.onlinecv.gwt.shared.domain;
+
+import java.util.ArrayList;
+>>>>>>> 5b7e992de2754950669724678236ad1a13c68da2
 import java.util.List;
 
 import javax.xml.bind.annotation.XmlRootElement;
@@ -9,10 +15,48 @@ import javax.xml.bind.annotation.XmlRootElement;
  */
 @XmlRootElement
 public class OnlineCV {
+<<<<<<< HEAD
   
   
   PersonalData personalData;
   
   List<TechnicalSkillData> technicalSkills;
   
+=======
+	
+	
+	String id;
+
+	PersonalData personalData;
+
+	List<TechnicalSkillData> technicalSkills = new ArrayList<TechnicalSkillData>();
+	
+	List<ProjectData> projects = new ArrayList<ProjectData>();
+	
+
+	public List<ProjectData> getProjects() {
+		return projects;
+	}
+
+	public void setProjects(List<ProjectData> projects) {
+		this.projects = projects;
+	}
+
+	public PersonalData getPersonalData() {
+		return personalData;
+	}
+
+	public void setPersonalData(PersonalData personalData) {
+		this.personalData = personalData;
+	}
+
+	public List<TechnicalSkillData> getTechnicalSkills() {
+		return technicalSkills;
+	}
+
+	public void setTechnicalSkills(List<TechnicalSkillData> technicalSkills) {
+		this.technicalSkills = technicalSkills;
+	}
+
+>>>>>>> 5b7e992de2754950669724678236ad1a13c68da2
 }
