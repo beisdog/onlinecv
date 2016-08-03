@@ -1,4 +1,4 @@
-package com.beisert.onlinecv.gwt.server.util;
+package com.beisert.onlinecv.util;
 
 import java.io.BufferedReader;
 import java.io.IOException;

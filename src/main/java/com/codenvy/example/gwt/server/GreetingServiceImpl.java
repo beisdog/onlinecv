@@ -22,28 +22,29 @@ public class GreetingServiceImpl extends RemoteServiceServlet implements
             throw new IllegalArgumentException(
                     "Name must be at least 4 characters long");
         }
-		  System.out.println("Enter greetServer " + input);
+		System.out.println("Enter greetServer " + input);
         String serverInfo = getServletContext().getServerInfo();
         String userAgent = getThreadLocalRequest().getHeader("User-Agent");
-
+        System.out.println("Enter greetServer: serverInfo " + serverInfo);
         // Escape data from the client to avoid cross-site script vulnerabilities.
         input = escapeHtml(input);
         userAgent = escapeHtml(userAgent);
-      
-      	DB db = MongoDBSingleton.getInstance().getDB();
+        
          
 		  long count = 0;
         String greeting =  "Hello, " + input + "!<br><br>I am running " + serverInfo
                + ".<br><br>It looks like you are using:<br>" + userAgent;
-      
+        
+        System.out.println("Enter greetServer: greeting " + greeting);
+      	
       	try{
+      		DB db = MongoDBSingleton.getInstance().getDB();
       		db.getCollection("greetings").insert(new BasicDBObject().append("input",input).append("serverInfo",serverInfo).append("userAgent",userAgent));
-      	
       		count = db.getCollection("greetings").count();
-        	}catch(Exception e){
+        }catch(Throwable e){
            System.out.println(e.toString());
-         }
-      	
+        }
+      	System.out.println("Enter greetServer: after mongo " );
       	return greeting + " - inserted " + count + " into mongodb";
     }
 

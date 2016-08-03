@@ -34,7 +34,7 @@ public class GWTEntryPoint implements EntryPoint {
      */
     private final GreetingServiceAsync greetingService = GWT.create(GreetingService.class);
 
-    private final Messages messages = GWT.create(Messages.class);
+    private final com.codenvy.example.gwt.client.Messages messages = GWT.create(com.codenvy.example.gwt.client.Messages.class);
 
     /**
      * This is the entry point method.

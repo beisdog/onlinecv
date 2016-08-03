@@ -2,7 +2,7 @@ package com.beisert.onlinecv;
 
 import java.net.UnknownHostException;
 
-import com.beisert.onlinecv.gwt.server.util.ShellExecute;
+import com.beisert.onlinecv.util.ShellExecute;
 import com.mongodb.DB;
 import com.mongodb.MongoClient;
 
@@ -23,7 +23,7 @@ public class MongoDBSingleton {
     public static MongoDBSingleton getInstance() {
         if (instance == null) {
             instance = new MongoDBSingleton();
-            startMongo();
+            //startMongo();
 
         }
         return instance;
@@ -47,6 +47,8 @@ public class MongoDBSingleton {
     }
 
     public static void startMongo() {
+    	//local on mac
+    	///usr/local/bin/mongod --dbpath /home/user/mongodb/db --port 27017 --smallfiles --httpinterface --rest --fork --logpath /home/user/mongo.log
         ShellExecute.run("/usr/bin/mongod --dbpath /home/user/mongodb/db --port 27017 --smallfiles --httpinterface --rest --fork --logpath /home/user/mongo.log");
     }
 
