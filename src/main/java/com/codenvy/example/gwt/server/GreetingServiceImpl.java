@@ -1,6 +1,6 @@
 package com.codenvy.example.gwt.server;
 
-import com.beisert.onlinecv.gwt.server.MongoDBSingleton;
+import com.beisert.onlinecv.MongoDBSingleton;
 import com.codenvy.example.gwt.client.GreetingService;
 import com.codenvy.example.gwt.shared.FieldVerifier;
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
