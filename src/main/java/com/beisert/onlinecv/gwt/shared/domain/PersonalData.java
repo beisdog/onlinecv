@@ -1,13 +1,21 @@
 package com.beisert.onlinecv.gwt.shared.domain;
 
+import java.util.ArrayList;
 import java.util.List;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElementWrapper;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+
+@XmlAccessorType(XmlAccessType.FIELD)
 public class PersonalData {
 
 	String lastName;
 	String firstName;
 
-	java.sql.Date birthDate;
+	SimpleDate birthDate;
 
 	int numberOfChildren;
 
@@ -19,7 +27,8 @@ public class PersonalData {
 
 	AdressData address;
 
-	List<CommunicationData> communicationData;
+	@XmlElementWrapper(name="communications")
+	List<CommunicationData> communicationData = new ArrayList<CommunicationData>();
 
 	public String getLastName() {
 		return lastName;
@@ -37,11 +46,10 @@ public class PersonalData {
 		this.firstName = firstName;
 	}
 
-	public java.sql.Date getBirthDate() {
+	public SimpleDate getBirthDate() {
 		return birthDate;
 	}
-
-	public void setBirthDate(java.sql.Date birthDate) {
+	public void setBirthDate(SimpleDate birthDate) {
 		this.birthDate = birthDate;
 	}
 

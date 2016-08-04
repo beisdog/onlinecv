@@ -1,27 +1,19 @@
 package com.beisert.onlinecv.rest;
 
-import com.beisert.onlinecv.gwt.shared.domain.AdressData;
-import com.beisert.onlinecv.gwt.shared.domain.CommunicationData;
-import com.beisert.onlinecv.gwt.shared.domain.CommunicationData.CommunicationType;
-import com.beisert.onlinecv.gwt.shared.domain.GenericContainer;
-import com.beisert.onlinecv.gwt.shared.domain.I18Text;
-import com.beisert.onlinecv.gwt.shared.domain.OnlineCV;
-import com.beisert.onlinecv.gwt.shared.domain.PersonalData;
-import com.beisert.onlinecv.gwt.shared.domain.ProjectData;
-import com.beisert.onlinecv.gwt.shared.domain.SkillData;
-import com.beisert.onlinecv.util.DateUtil;
-
-import java.sql.Date;
-import java.util.ArrayList;
-import java.util.LinkedHashMap;
-import java.util.List;
-
+import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
+import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+
+import org.jongo.Jongo;
+
+import com.beisert.onlinecv.MongoDBSingleton;
+import com.beisert.onlinecv.gwt.shared.domain.OnlineCV;
 
 
 @Path("/onlinecv")
@@ -29,44 +21,31 @@ public class OnlineCVRestServiceImpl {
 
     @GET
     @Path("{user}")
-    @Produces(MediaType.APPLICATION_JSON)
-    public OnlineCV findCVByUser(@PathParam("user") String user) {
+    @Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
+    public Response findCVByUser(@PathParam("user") String user, @QueryParam("format")String format) {
 
-        OnlineCV cv = new OnlineCV();
-
-        PersonalData pd = new PersonalData();
-        pd.setFirstName("David");
-        pd.setLastName("Beisert");
-        pd.setBirthDate(DateUtil.createSqlDate(1976, 7, 4));
-        pd.setNumberOfChildren(2);
-
-
-        SkillData java = new SkillData("java", 18d, 2016);
-        cv.getTechnicalSkills().add(java);
-        SkillData j2ee = new SkillData("j2ee", 18d, 2016);
-        cv.getTechnicalSkills().add(j2ee);
-        SkillData hibernate = new SkillData("hibernate", 18d, 2016);
-        cv.getTechnicalSkills().add(hibernate);
-
-        ProjectData project1 =
-                               new ProjectData(new I18Text("Tolles project", "Great Project"), new I18Text("schön", "beautiful"), "BAYER",
-                                               DateUtil.createSqlDate(2016, 1, 1), DateUtil.createSqlDate(2016, 8, 1), java, j2ee,
-                                               hibernate);
-        project1.getAdditionalInfos().add(new GenericContainer(new I18Text("Rolle", "Role"), new I18Text("Architekt", "Architect")));
-
-        cv.getProjects().add(project1);
-
-        cv.setPersonalData(pd);
-
-        AdressData ad = new AdressData("Farnsburgerstrasse", "54", "", "4052", "Basel", "Switzerland");
-        pd.setAddress(ad);
-
-        pd.setCommunicationData(new ArrayList<CommunicationData>());
-        pd.getCommunicationData().add(new CommunicationData(CommunicationType.EMAIL, "david.beisert@beisert-btc.de", ""));
-        pd.getCommunicationData().add(new CommunicationData(CommunicationType.MOBILE, "+49 151 58771341", ""));
-
-
-        return cv;
-
+        Jongo jongo = MongoDBSingleton.getInstance().getJongo();
+        OnlineCV cv = jongo.getCollection("cvs").findOne("{user: '"+user+"'}").as(OnlineCV.class);
+        System.out.println("Found " + cv);
+        System.out.println("Try to marshal to xml ...");
+        
+        return Response
+        		.ok(cv, "xml".equals(format)?MediaType.APPLICATION_XML:MediaType.APPLICATION_JSON)
+        		.build();
     }
+    
+    @POST
+    @Path("/save")
+    @Produces(value={MediaType.APPLICATION_JSON})
+    @Consumes(MediaType.APPLICATION_JSON)
+    public OnlineCV save(OnlineCV cv) {
+
+        Jongo jongo = MongoDBSingleton.getInstance().getJongo();
+        jongo.getCollection("cvs").save(cv);
+        
+        
+        return cv;
+    }
+    
+    
 }

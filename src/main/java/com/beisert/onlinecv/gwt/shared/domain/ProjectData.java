@@ -1,27 +1,34 @@
 package com.beisert.onlinecv.gwt.shared.domain;
 
-import java.sql.Date;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlElementWrapper;
+
+@XmlAccessorType(XmlAccessType.FIELD)
 public class ProjectData {
 	
 	I18Text title;
-	
+	@XmlElementWrapper(name="usedSkills")
+	@XmlElement(name="skill")
 	List<SkillData> usedSkills = new ArrayList<SkillData>();
 	
 	I18Text description;
 	
-	java.sql.Date from;
+	SimpleDate from;
 	
-	java.sql.Date to;
+	SimpleDate to;
 	
 	String customer;
 	
 	
+	public ProjectData(){}
 	
-	public ProjectData(I18Text title, I18Text description, String customer, Date from, Date to,
+	public ProjectData(I18Text title, I18Text description, String customer, SimpleDate from, SimpleDate to,
 			SkillData...usedSkills) {
 		super();
 		this.title = title;
@@ -32,7 +39,8 @@ public class ProjectData {
 		this.usedSkills = Arrays.asList(usedSkills);
 	}
 
-	List<GenericContainer> additionalInfos = new ArrayList<GenericContainer>();
+	@XmlElement(name="additionalInfo")
+	List<GenericContainer> additionalInfos = null;
 
 	public I18Text getTitle() {
 		return title;
@@ -58,19 +66,19 @@ public class ProjectData {
 		this.description = description;
 	}
 
-	public java.sql.Date getFrom() {
+	public SimpleDate getFrom() {
 		return from;
 	}
 
-	public void setFrom(java.sql.Date from) {
+	public void setFrom(SimpleDate from) {
 		this.from = from;
 	}
 
-	public java.sql.Date getTo() {
+	public SimpleDate getTo() {
 		return to;
 	}
 
-	public void setTo(java.sql.Date to) {
+	public void setTo(SimpleDate to) {
 		this.to = to;
 	}
 
@@ -83,6 +91,7 @@ public class ProjectData {
 	}
 
 	public List<GenericContainer> getAdditionalInfos() {
+		if(additionalInfos==null)additionalInfos=new ArrayList<GenericContainer>();
 		return additionalInfos;
 	}
 

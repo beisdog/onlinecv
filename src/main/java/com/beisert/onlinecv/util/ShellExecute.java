@@ -47,7 +47,7 @@ public class ShellExecute {
 
     public static void _exec(String cmd) {
         try {
-
+        	System.out.println("Execute cmd:" + cmd);
             // using the Runtime exec method:
             Process p = Runtime.getRuntime().exec(cmd);
             Thread tOut = new StreamHandler(p.getInputStream());

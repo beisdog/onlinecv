@@ -3,21 +3,37 @@ package com.beisert.onlinecv.gwt.shared.domain;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlRootElement;
+
+import org.jongo.marshall.jackson.oid.MongoId;
+import org.jongo.marshall.jackson.oid.MongoObjectId;
 
 /**
  * Data object for an online cv
  */
 @XmlRootElement
+@XmlAccessorType(XmlAccessType.FIELD)
 public class OnlineCV {
-	String id;
+	
+	@MongoId
+	@MongoObjectId
+	String _id;
 	
 	String user;
+	String cvName;
 
 	PersonalData personalData;
 
-	List<SkillData> technicalSkills = new ArrayList<SkillData>();
+	@XmlElementWrapper(name="technicalSkills")
+	@XmlElement(name="skill")
+	List<SkillData> technicalSkills = null;
 	
+	@XmlElementWrapper(name="projects")
+	@XmlElement(name="project")
 	List<ProjectData> projects = new ArrayList<ProjectData>();
 	
 
@@ -38,6 +54,8 @@ public class OnlineCV {
 	}
 
 	public List<SkillData> getTechnicalSkills() {
+		//needed for jaxb
+		if(technicalSkills == null) technicalSkills = new ArrayList<SkillData>();
 		return technicalSkills;
 	}
 
@@ -45,12 +63,12 @@ public class OnlineCV {
 		this.technicalSkills = technicalSkills;
 	}
 
-	public String getId() {
-		return id;
+	public String get_id() {
+		return _id;
 	}
 
-	public void setId(String id) {
-		this.id = id;
+	public void set_id(String id) {
+		this._id = id;
 	}
 
 	public String getUser() {

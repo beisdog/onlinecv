@@ -1,11 +1,14 @@
 package com.codenvy.example.gwt.server;
 
+import org.bson.Document;
+
 import com.beisert.onlinecv.MongoDBSingleton;
 import com.codenvy.example.gwt.client.GreetingService;
 import com.codenvy.example.gwt.shared.FieldVerifier;
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 import com.mongodb.BasicDBObject;
 import com.mongodb.DB;
+import com.mongodb.client.MongoDatabase;
 
 /**
  * The server side implementation of the RPC service.
@@ -37,8 +40,8 @@ public class GreetingServiceImpl extends RemoteServiceServlet implements Greetin
 		System.out.println("Enter greetServer: greeting " + greeting);
 
 		try {
-			DB db = MongoDBSingleton.getInstance().getDB();
-			db.getCollection("greetings").insert(new BasicDBObject().append("input", input)
+			MongoDatabase db = MongoDBSingleton.getInstance().getMongoDatabase();
+			db.getCollection("greetings").insertOne(new Document().append("input", input)
 					.append("serverInfo", serverInfo).append("userAgent", userAgent));
 			count = db.getCollection("greetings").count();
 		} catch (Throwable e) {
