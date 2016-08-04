@@ -36,6 +36,7 @@ public class GWTEntryPoint implements EntryPoint {
 
     private final com.codenvy.example.gwt.client.Messages messages = GWT.create(com.codenvy.example.gwt.client.Messages.class);
 
+  
     /**
      * This is the entry point method.
      */

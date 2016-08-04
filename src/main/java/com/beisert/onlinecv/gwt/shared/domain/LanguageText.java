@@ -32,4 +32,5 @@ public class LanguageText {
 		this.text = text;
 	}
 
+
 }
