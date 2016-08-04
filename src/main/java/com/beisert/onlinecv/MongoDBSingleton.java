@@ -23,8 +23,6 @@ public class MongoDBSingleton {
     public static MongoDBSingleton getInstance() {
         if (instance == null) {
             instance = new MongoDBSingleton();
-            //startMongo();
-
         }
         return instance;
     }

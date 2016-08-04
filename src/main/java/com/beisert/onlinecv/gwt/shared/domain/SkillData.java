@@ -1,12 +1,13 @@
 package com.beisert.onlinecv.gwt.shared.domain;
 
-public class TechnicalSkillData {
+public class SkillData {
 
+	String category = "technical";
 	String skill;
 	double numberOfYears;
 	int yearLastUsed;
 	SkillLevel skillLevel = SkillLevel.EXPERT;
-	
+
 	public SkillLevel getSkillLevel() {
 		return skillLevel;
 	}
@@ -15,17 +16,26 @@ public class TechnicalSkillData {
 		this.skillLevel = skillLevel;
 	}
 
-	public static enum SkillLevel{
-		BEGINNER,GOOD_EXPERIENCE,EXPERT;
+	public static enum SkillLevel {
+		BEGINNER, GOOD_EXPERIENCE, EXPERT;
 	}
-	
-	public TechnicalSkillData(){}
 
-	public TechnicalSkillData(String skill, double numberOfYears, int yearLastUsed) {
+	public SkillData() {
+	}
+
+	public SkillData(String skill, double numberOfYears, int yearLastUsed) {
 		super();
 		this.skill = skill;
 		this.numberOfYears = numberOfYears;
 		this.yearLastUsed = yearLastUsed;
+	}
+
+	public String getCategory() {
+		return category;
+	}
+
+	public void setCategory(String category) {
+		this.category = category;
 	}
 
 	public String getSkill() {

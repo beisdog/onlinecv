@@ -9,7 +9,7 @@ public class ProjectData {
 	
 	I18Text title;
 	
-	List<TechnicalSkillData> usedSkills = new ArrayList<TechnicalSkillData>();
+	List<SkillData> usedSkills = new ArrayList<SkillData>();
 	
 	I18Text description;
 	
@@ -22,7 +22,7 @@ public class ProjectData {
 	
 	
 	public ProjectData(I18Text title, I18Text description, String customer, Date from, Date to,
-			TechnicalSkillData...usedSkills) {
+			SkillData...usedSkills) {
 		super();
 		this.title = title;
 		this.description = description;
@@ -32,7 +32,7 @@ public class ProjectData {
 		this.usedSkills = Arrays.asList(usedSkills);
 	}
 
-	GenericContainer additionalInfos = null;
+	List<GenericContainer> additionalInfos = new ArrayList<GenericContainer>();
 
 	public I18Text getTitle() {
 		return title;
@@ -42,11 +42,11 @@ public class ProjectData {
 		this.title = title;
 	}
 
-	public List<TechnicalSkillData> getUsedSkills() {
+	public List<SkillData> getUsedSkills() {
 		return usedSkills;
 	}
 
-	public void setUsedSkills(List<TechnicalSkillData> usedSkills) {
+	public void setUsedSkills(List<SkillData> usedSkills) {
 		this.usedSkills = usedSkills;
 	}
 
@@ -82,11 +82,11 @@ public class ProjectData {
 		this.customer = customer;
 	}
 
-	public GenericContainer getAdditionalInfos() {
+	public List<GenericContainer> getAdditionalInfos() {
 		return additionalInfos;
 	}
 
-	public void setAdditionalInfos(GenericContainer additionalInfos) {
+	public void setAdditionalInfos(List<GenericContainer> additionalInfos) {
 		this.additionalInfos = additionalInfos;
 	}
 	

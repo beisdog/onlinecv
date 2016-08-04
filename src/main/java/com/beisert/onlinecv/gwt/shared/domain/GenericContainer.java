@@ -6,13 +6,13 @@ import java.util.List;
 public class GenericContainer {
 	
 	I18Text title;
-	I18Text value;
+	Object value;
 	
 	List<GenericContainer> children = new ArrayList<GenericContainer>();
 	
 	
 
-	public GenericContainer(I18Text title, I18Text value) {
+	public GenericContainer(I18Text title, Object value) {
 		super();
 		this.title = title;
 		this.value = value;
@@ -26,11 +26,11 @@ public class GenericContainer {
 		this.title = title;
 	}
 
-	public I18Text getValue() {
+	public Object getValue() {
 		return value;
 	}
 
-	public void setValue(I18Text value) {
+	public void setValue(Object value) {
 		this.value = value;
 	}
 

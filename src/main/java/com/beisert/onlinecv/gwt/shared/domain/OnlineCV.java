@@ -13,10 +13,12 @@ public class OnlineCV {
 	
 	
 	String id;
+	
+	String user;
 
 	PersonalData personalData;
 
-	List<TechnicalSkillData> technicalSkills = new ArrayList<TechnicalSkillData>();
+	List<SkillData> technicalSkills = new ArrayList<SkillData>();
 	
 	List<ProjectData> projects = new ArrayList<ProjectData>();
 	
@@ -37,12 +39,28 @@ public class OnlineCV {
 		this.personalData = personalData;
 	}
 
-	public List<TechnicalSkillData> getTechnicalSkills() {
+	public List<SkillData> getTechnicalSkills() {
 		return technicalSkills;
 	}
 
-	public void setTechnicalSkills(List<TechnicalSkillData> technicalSkills) {
+	public void setTechnicalSkills(List<SkillData> technicalSkills) {
 		this.technicalSkills = technicalSkills;
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public String getUser() {
+		return user;
+	}
+
+	public void setUser(String user) {
+		this.user = user;
 	}
 
 }
