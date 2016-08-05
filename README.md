@@ -14,6 +14,8 @@ The following technologies are shown:
 * Different output format generation xml and json
 * JAXB datamapping.
 * XSD on the fly generation
+* Codeenvy as online code editor used
+ * Docker image configured with Mongo DB.
 
 # TODOs
 * Clean up code
