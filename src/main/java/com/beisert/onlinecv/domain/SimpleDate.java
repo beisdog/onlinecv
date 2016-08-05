@@ -1,17 +1,16 @@
-package com.beisert.onlinecv.gwt.shared.domain;
+package com.beisert.onlinecv.domain;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlType;
 
+@XmlType( propOrder={"year","month","day"})
 @XmlAccessorType(XmlAccessType.FIELD)
 public class SimpleDate {
 	
-	@XmlAttribute
 	int year;
-	@XmlAttribute
 	int month;
-	@XmlAttribute
 	int day;
 	public SimpleDate(){}
 	public SimpleDate(int year, int month, int day) {

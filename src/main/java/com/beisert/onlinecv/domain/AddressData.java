@@ -1,6 +1,9 @@
-package com.beisert.onlinecv.gwt.shared.domain;
+package com.beisert.onlinecv.domain;
 
-public class AdressData {
+import javax.xml.bind.annotation.XmlType;
+
+@XmlType( propOrder={"street","houseNumber","additionalLine","zip","city","countryName"})
+public class AddressData {
 
 	String street;
 	String houseNumber;
@@ -10,9 +13,9 @@ public class AdressData {
 	String countryName;
 	
 	
-	public AdressData(){}
+	public AddressData(){}
 	
-	public AdressData(String street, String houseNumber, String additionalLine, String zip, String city,
+	public AddressData(String street, String houseNumber, String additionalLine, String zip, String city,
 			String countryName) {
 		super();
 		this.street = street;

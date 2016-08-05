@@ -1,4 +1,4 @@
-package com.beisert.onlinecv.gwt.shared.domain;
+package com.beisert.onlinecv.domain;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,9 +6,12 @@ import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlType;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
+
+@XmlType( propOrder={"lastName","firstName","birthDate","numberOfChildren","relationShipStatus","address","communicationData"})
 @XmlAccessorType(XmlAccessType.FIELD)
 public class PersonalData {
 
@@ -25,9 +28,9 @@ public class PersonalData {
 	
 	RelationShipStatus relationShipStatus = RelationShipStatus.MARRIED;
 
-	AdressData address;
+	AddressData address;
 
-	@XmlElementWrapper(name="communications")
+//	@XmlElementWrapper(name="communications")
 	List<CommunicationData> communicationData = new ArrayList<CommunicationData>();
 
 	public String getLastName() {
@@ -69,11 +72,11 @@ public class PersonalData {
 		this.relationShipStatus = relationShipStatus;
 	}
 
-	public AdressData getAddress() {
+	public AddressData getAddress() {
 		return address;
 	}
 
-	public void setAddress(AdressData address) {
+	public void setAddress(AddressData address) {
 		this.address = address;
 	}
 

@@ -12,10 +12,15 @@ import javax.ws.rs.core.Response;
 
 import org.bson.Document;
 
-import com.beisert.onlinecv.MongoDBSingleton;
+import com.beisert.onlinecv.service.MongoDBSingleton;
 import com.mongodb.Block;
 import com.mongodb.client.FindIterable;
-
+/**
+ * Simple rest interface to control and query mongo.
+ * Just for troubleshooting.
+ * @author dbe
+ *
+ */
 @Path("/mongo")
 public class MongoRestServiceImpl {
 

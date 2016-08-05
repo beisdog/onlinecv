@@ -1,19 +1,19 @@
-package com.beisert.onlinecv;
+package com.beisert.onlinecv.service;
 
 import java.util.ArrayList;
 
 import org.jongo.Jongo;
 
-import com.beisert.onlinecv.gwt.shared.domain.AdressData;
-import com.beisert.onlinecv.gwt.shared.domain.CommunicationData;
-import com.beisert.onlinecv.gwt.shared.domain.GenericContainer;
-import com.beisert.onlinecv.gwt.shared.domain.I18Text;
-import com.beisert.onlinecv.gwt.shared.domain.OnlineCV;
-import com.beisert.onlinecv.gwt.shared.domain.PersonalData;
-import com.beisert.onlinecv.gwt.shared.domain.ProjectData;
-import com.beisert.onlinecv.gwt.shared.domain.SimpleDate;
-import com.beisert.onlinecv.gwt.shared.domain.SkillData;
-import com.beisert.onlinecv.gwt.shared.domain.CommunicationData.CommunicationType;
+import com.beisert.onlinecv.domain.AddressData;
+import com.beisert.onlinecv.domain.CommunicationData;
+import com.beisert.onlinecv.domain.GenericContainer;
+import com.beisert.onlinecv.domain.I18NText;
+import com.beisert.onlinecv.domain.OnlineCV;
+import com.beisert.onlinecv.domain.PersonalData;
+import com.beisert.onlinecv.domain.ProjectData;
+import com.beisert.onlinecv.domain.SimpleDate;
+import com.beisert.onlinecv.domain.UserSkill;
+import com.beisert.onlinecv.domain.CommunicationData.CommunicationType;
 import com.beisert.onlinecv.util.DateUtil;
 import com.beisert.onlinecv.util.ShellExecute;
 import com.mongodb.BasicDBObject;
@@ -137,22 +137,22 @@ public class MongoDBSingleton {
         pd.setNumberOfChildren(2);
 
 
-        SkillData java = new SkillData("java", 18d, 2016);
-        cv.getTechnicalSkills().add(java);
-        SkillData j2ee = new SkillData("j2ee", 18d, 2016);
-        cv.getTechnicalSkills().add(j2ee);
-        SkillData hibernate = new SkillData("hibernate", 18d, 2016);
-        cv.getTechnicalSkills().add(hibernate);
+        UserSkill java = new UserSkill("java", 18d, 2016);
+        cv.getUserSkills().add(java);
+        UserSkill j2ee = new UserSkill("j2ee", 18d, 2016);
+        cv.getUserSkills().add(j2ee);
+        UserSkill hibernate = new UserSkill("hibernate", 18d, 2016);
+        cv.getUserSkills().add(hibernate);
 
         ProjectData project1 =
-                               new ProjectData(new I18Text("Tolles project", "Great Project"), new I18Text("schön", "beautiful"), "BAYER",
+                               new ProjectData(new I18NText("Tolles project", "Great Project"), new I18NText("schön", "beautiful"), "BAYER",
                             		  new SimpleDate(2016, 1, 1), new SimpleDate(2016, 8, 1), java, j2ee,
                                                hibernate);
-        project1.getAdditionalInfos().add(new GenericContainer(new I18Text("Rolle", "Role"), new I18Text("Architekt", "Architect")));
+        project1.getAdditionalInfos().add(new GenericContainer(new I18NText("Rolle", "Role"), new I18NText("Architekt", "Architect")));
         cv.getProjects().add(project1);
         cv.setPersonalData(pd);
 
-        AdressData ad = new AdressData("Farnsburgerstrasse", "54", "", "4052", "Basel", "Switzerland");
+        AddressData ad = new AddressData("Farnsburgerstrasse", "54", "", "4052", "Basel", "Switzerland");
         pd.setAddress(ad);
         pd.setCommunicationData(new ArrayList<CommunicationData>());
         pd.getCommunicationData().add(new CommunicationData(CommunicationType.EMAIL, "david.beisert@beisert-btc.de", ""));

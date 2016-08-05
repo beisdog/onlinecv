@@ -1,9 +1,11 @@
-package com.beisert.onlinecv.gwt.shared.domain;
+package com.beisert.onlinecv.domain;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlType;
 
+@XmlType( propOrder={"type","data","additionalInfo"})
 @XmlAccessorType(XmlAccessType.FIELD)
 public class CommunicationData {
 
@@ -13,7 +15,6 @@ public class CommunicationData {
 	public static enum CommunicationType{
 		EMAIL,PHONE,SKYPE,MOBILE;
 	}
-	@XmlAttribute
 	CommunicationType type = CommunicationType.EMAIL;
 	String data;
 	String additionalInfo;

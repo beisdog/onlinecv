@@ -1,4 +1,4 @@
-package com.beisert.onlinecv.gwt.shared.domain;
+package com.beisert.onlinecv.domain;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -8,28 +8,34 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlType;
 
+@XmlType( propOrder={"key","title","usedSkills","description","from","to","customer","additionalInfos"})
 @XmlAccessorType(XmlAccessType.FIELD)
 public class ProjectData {
 	
-	I18Text title;
-	@XmlElementWrapper(name="usedSkills")
-	@XmlElement(name="skill")
-	List<SkillData> usedSkills = new ArrayList<SkillData>();
+	/** unique within cv and mandatory */
+	String key;
 	
-	I18Text description;
+	I18NText title;
+//	@XmlElementWrapper(name="usedSkills")
+//	@XmlElement(name="skill")
+	List<UserSkill> usedSkills = new ArrayList<UserSkill>();
+	
+	I18NText description;
 	
 	SimpleDate from;
 	
 	SimpleDate to;
 	
 	String customer;
-	
+	@XmlElement(name="additionalInfo")
+	List<GenericContainer> additionalInfos = null;
 	
 	public ProjectData(){}
 	
-	public ProjectData(I18Text title, I18Text description, String customer, SimpleDate from, SimpleDate to,
-			SkillData...usedSkills) {
+	public ProjectData(I18NText title, I18NText description, String customer, SimpleDate from, SimpleDate to,
+			UserSkill...usedSkills) {
 		super();
 		this.title = title;
 		this.description = description;
@@ -39,30 +45,29 @@ public class ProjectData {
 		this.usedSkills = Arrays.asList(usedSkills);
 	}
 
-	@XmlElement(name="additionalInfo")
-	List<GenericContainer> additionalInfos = null;
 
-	public I18Text getTitle() {
+
+	public I18NText getTitle() {
 		return title;
 	}
 
-	public void setTitle(I18Text title) {
+	public void setTitle(I18NText title) {
 		this.title = title;
 	}
 
-	public List<SkillData> getUsedSkills() {
+	public List<UserSkill> getUsedSkills() {
 		return usedSkills;
 	}
 
-	public void setUsedSkills(List<SkillData> usedSkills) {
+	public void setUsedSkills(List<UserSkill> usedSkills) {
 		this.usedSkills = usedSkills;
 	}
 
-	public I18Text getDescription() {
+	public I18NText getDescription() {
 		return description;
 	}
 
-	public void setDescription(I18Text description) {
+	public void setDescription(I18NText description) {
 		this.description = description;
 	}
 

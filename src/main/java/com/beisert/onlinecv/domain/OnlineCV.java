@@ -1,4 +1,4 @@
-package com.beisert.onlinecv.gwt.shared.domain;
+package com.beisert.onlinecv.domain;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,6 +8,7 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 
 import org.jongo.marshall.jackson.oid.MongoId;
 import org.jongo.marshall.jackson.oid.MongoObjectId;
@@ -15,6 +16,7 @@ import org.jongo.marshall.jackson.oid.MongoObjectId;
 /**
  * Data object for an online cv
  */
+@XmlType( propOrder={"_id","user","cvName","personalData","userSkills","projects"})
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
 public class OnlineCV {
@@ -28,12 +30,12 @@ public class OnlineCV {
 
 	PersonalData personalData;
 
-	@XmlElementWrapper(name="technicalSkills")
-	@XmlElement(name="skill")
-	List<SkillData> technicalSkills = null;
+//	@XmlElementWrapper(name="technicalSkills")
+//	@XmlElement(name="skill")
+	List<UserSkill> userSkills = null;
 	
-	@XmlElementWrapper(name="projects")
-	@XmlElement(name="project")
+//	@XmlElementWrapper(name="projects")
+//	@XmlElement(name="project")
 	List<ProjectData> projects = new ArrayList<ProjectData>();
 	
 
@@ -53,14 +55,14 @@ public class OnlineCV {
 		this.personalData = personalData;
 	}
 
-	public List<SkillData> getTechnicalSkills() {
+	public List<UserSkill> getUserSkills() {
 		//needed for jaxb
-		if(technicalSkills == null) technicalSkills = new ArrayList<SkillData>();
-		return technicalSkills;
+		if(userSkills == null) userSkills = new ArrayList<UserSkill>();
+		return userSkills;
 	}
 
-	public void setTechnicalSkills(List<SkillData> technicalSkills) {
-		this.technicalSkills = technicalSkills;
+	public void setUserSkills(List<UserSkill> technicalSkills) {
+		this.userSkills = technicalSkills;
 	}
 
 	public String get_id() {

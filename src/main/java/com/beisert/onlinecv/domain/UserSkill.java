@@ -1,11 +1,12 @@
-package com.beisert.onlinecv.gwt.shared.domain;
+package com.beisert.onlinecv.domain;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
-
+import javax.xml.bind.annotation.XmlType;
+@XmlType( propOrder={"category","skill","numberOfYears","yearLastUsed","skillLevel"})
 @XmlAccessorType(XmlAccessType.FIELD)
-public class SkillData {
+public class UserSkill {
 
 	String category = "technical";
 	@XmlAttribute(name="skill")
@@ -26,10 +27,10 @@ public class SkillData {
 		BEGINNER, GOOD_EXPERIENCE, EXPERT;
 	}
 
-	public SkillData() {
+	public UserSkill() {
 	}
 
-	public SkillData(String skill, double numberOfYears, int yearLastUsed) {
+	public UserSkill(String skill, double numberOfYears, int yearLastUsed) {
 		super();
 		this.skill = skill;
 		this.numberOfYears = numberOfYears;

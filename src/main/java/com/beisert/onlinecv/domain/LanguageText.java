@@ -1,4 +1,4 @@
-package com.beisert.onlinecv.gwt.shared.domain;
+package com.beisert.onlinecv.domain;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -11,9 +11,7 @@ import javax.xml.bind.annotation.XmlValue;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class LanguageText {
 
-	@XmlAttribute
 	String locale;
-	@XmlValue
 	String text;
 
 	public LanguageText(){}
