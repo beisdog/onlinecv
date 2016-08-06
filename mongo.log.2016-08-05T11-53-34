@@ -1,0 +1,207 @@
+2016-08-04T17:05:14.636+0200 I CONTROL  [initandlisten] MongoDB starting : pid=1168 port=27017 dbpath=/Users/dbe/Development/tools/mongodb/db 64-bit host=dbes-MacBook-Pro.local
+2016-08-04T17:05:14.637+0200 I CONTROL  [initandlisten] db version v3.2.6
+2016-08-04T17:05:14.637+0200 I CONTROL  [initandlisten] git version: 05552b562c7a0b3143a729aaa0838e558dc49b25
+2016-08-04T17:05:14.637+0200 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.0.2h  3 May 2016
+2016-08-04T17:05:14.637+0200 I CONTROL  [initandlisten] allocator: system
+2016-08-04T17:05:14.637+0200 I CONTROL  [initandlisten] modules: none
+2016-08-04T17:05:14.637+0200 I CONTROL  [initandlisten] build environment:
+2016-08-04T17:05:14.637+0200 I CONTROL  [initandlisten]     distarch: x86_64
+2016-08-04T17:05:14.637+0200 I CONTROL  [initandlisten]     target_arch: x86_64
+2016-08-04T17:05:14.637+0200 I CONTROL  [initandlisten] options: { net: { http: { RESTInterfaceEnabled: true, enabled: true }, port: 27017 }, processManagement: { fork: true }, storage: { dbPath: "/Users/dbe/Development/tools/mongodb/db", mmapv1: { smallFiles: true } }, systemLog: { destination: "file", path: "/Users/dbe/Development/workspaces/gwt/onlinecv/mongo.log" } }
+2016-08-04T17:05:14.637+0200 I -        [initandlisten] Detected data files in /Users/dbe/Development/tools/mongodb/db created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2016-08-04T17:05:14.637+0200 W -        [initandlisten] Detected unclean shutdown - /Users/dbe/Development/tools/mongodb/db/mongod.lock is not empty.
+2016-08-04T17:05:14.637+0200 W STORAGE  [initandlisten] Recovering data from the last clean checkpoint.
+2016-08-04T17:05:14.638+0200 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=9G,session_max=20000,eviction=(threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),checkpoint=(wait=60,log_size=2GB),statistics_log=(wait=0),
+2016-08-04T17:05:15.260+0200 W STORAGE  [initandlisten] Detected configuration for non-active storage engine mmapv1 when current storage engine is wiredTiger
+2016-08-04T17:05:15.313+0200 I NETWORK  [websvr] admin web console waiting for connections on port 28017
+2016-08-04T17:05:15.314+0200 I NETWORK  [HostnameCanonicalizationWorker] Starting hostname canonicalization worker
+2016-08-04T17:05:15.314+0200 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory '/Users/dbe/Development/tools/mongodb/db/diagnostic.data'
+2016-08-04T17:05:15.316+0200 I NETWORK  [initandlisten] waiting for connections on port 27017
+2016-08-04T17:05:16.024+0200 I FTDC     [ftdc] Unclean full-time diagnostic data capture shutdown detected, found interim file, some metrics may have been lost. OK
+2016-08-04T17:05:29.903+0200 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:51680 #1 (1 connection now open)
+2016-08-04T17:05:29.929+0200 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:51681 #2 (2 connections now open)
+2016-08-04T17:20:20.037+0200 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (10.170.78.13, "nodename nor servname provided, or not known"), (10.170.78.13, "nodename nor servname provided, or not known") ]
+2016-08-04T17:35:24.528+0200 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (10.170.78.13, "nodename nor servname provided, or not known"), (10.170.78.13, "nodename nor servname provided, or not known") ]
+2016-08-04T17:37:03.645+0200 I NETWORK  [conn1] end connection 127.0.0.1:51680 (1 connection now open)
+2016-08-04T17:37:03.645+0200 I NETWORK  [conn2] end connection 127.0.0.1:51681 (1 connection now open)
+2016-08-04T17:37:52.214+0200 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:52871 #3 (1 connection now open)
+2016-08-04T17:39:49.340+0200 I NETWORK  [conn3] end connection 127.0.0.1:52871 (0 connections now open)
+2016-08-04T17:40:36.433+0200 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:53022 #4 (1 connection now open)
+2016-08-04T17:41:34.007+0200 I NETWORK  [conn4] end connection 127.0.0.1:53022 (0 connections now open)
+2016-08-04T17:41:47.486+0200 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:53075 #5 (1 connection now open)
+2016-08-04T17:41:47.663+0200 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:53076 #6 (2 connections now open)
+2016-08-04T17:44:21.392+0200 I NETWORK  [conn5] end connection 127.0.0.1:53075 (1 connection now open)
+2016-08-04T17:44:21.392+0200 I NETWORK  [conn6] end connection 127.0.0.1:53076 (1 connection now open)
+2016-08-04T17:44:32.975+0200 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:53168 #7 (1 connection now open)
+2016-08-04T17:44:33.154+0200 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:53169 #8 (2 connections now open)
+2016-08-04T17:44:33.209+0200 I INDEX    [conn8] build index on: testdb.cvs properties: { v: 1, unique: true, key: { user: 1 }, name: "user_1", ns: "testdb.cvs" }
+2016-08-04T17:44:33.209+0200 I INDEX    [conn8] 	 building index using bulk method
+2016-08-04T17:48:59.167+0200 I NETWORK  [conn8] end connection 127.0.0.1:53169 (1 connection now open)
+2016-08-04T17:48:59.167+0200 I NETWORK  [conn7] end connection 127.0.0.1:53168 (1 connection now open)
+2016-08-04T17:49:37.394+0200 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:53311 #9 (1 connection now open)
+2016-08-04T17:49:37.530+0200 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:53312 #10 (2 connections now open)
+2016-08-04T17:50:28.307+0200 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (10.170.78.13, "nodename nor servname provided, or not known"), (10.170.78.13, "nodename nor servname provided, or not known") ]
+2016-08-04T18:04:31.188+0200 I NETWORK  [conn10] end connection 127.0.0.1:53312 (1 connection now open)
+2016-08-04T18:04:31.188+0200 I NETWORK  [conn9] end connection 127.0.0.1:53311 (1 connection now open)
+2016-08-04T18:04:48.073+0200 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:54044 #11 (1 connection now open)
+2016-08-04T18:05:09.217+0200 I NETWORK  [conn11] end connection 127.0.0.1:54044 (0 connections now open)
+2016-08-04T18:05:16.696+0200 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:54052 #12 (1 connection now open)
+2016-08-04T18:05:16.718+0200 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:54053 #13 (2 connections now open)
+2016-08-04T18:05:33.108+0200 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (10.170.78.13, "nodename nor servname provided, or not known"), (10.170.78.13, "nodename nor servname provided, or not known") ]
+2016-08-04T18:07:43.757+0200 I NETWORK  [conn12] end connection 127.0.0.1:54052 (1 connection now open)
+2016-08-04T18:07:43.757+0200 I NETWORK  [conn13] end connection 127.0.0.1:54053 (1 connection now open)
+2016-08-04T18:07:51.840+0200 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:54127 #14 (1 connection now open)
+2016-08-04T18:07:51.969+0200 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:54128 #15 (2 connections now open)
+2016-08-04T18:08:05.093+0200 I NETWORK  [conn15] end connection 127.0.0.1:54128 (1 connection now open)
+2016-08-04T18:08:05.093+0200 I NETWORK  [conn14] end connection 127.0.0.1:54127 (1 connection now open)
+2016-08-04T18:08:26.577+0200 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:54171 #16 (1 connection now open)
+2016-08-04T18:08:26.715+0200 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:54172 #17 (2 connections now open)
+2016-08-04T18:14:38.418+0200 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain address information for hostname dbes-MacBook-Pro.local: nodename nor servname provided, or not known
+2016-08-04T18:22:39.569+0200 I NETWORK  [conn17] end connection 127.0.0.1:54172 (1 connection now open)
+2016-08-04T18:22:39.569+0200 I NETWORK  [conn16] end connection 127.0.0.1:54171 (1 connection now open)
+2016-08-04T18:22:58.564+0200 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:54498 #18 (1 connection now open)
+2016-08-04T18:22:58.587+0200 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:54499 #19 (2 connections now open)
+2016-08-04T18:24:02.262+0200 I NETWORK  [conn19] end connection 127.0.0.1:54499 (1 connection now open)
+2016-08-04T18:24:02.262+0200 I NETWORK  [conn18] end connection 127.0.0.1:54498 (1 connection now open)
+2016-08-04T18:24:18.480+0200 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:54519 #20 (1 connection now open)
+2016-08-04T18:24:18.606+0200 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:54520 #21 (2 connections now open)
+2016-08-04T18:25:31.933+0200 I NETWORK  [conn21] end connection 127.0.0.1:54520 (1 connection now open)
+2016-08-04T18:25:31.933+0200 I NETWORK  [conn20] end connection 127.0.0.1:54519 (1 connection now open)
+2016-08-04T18:26:09.801+0200 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:54587 #22 (1 connection now open)
+2016-08-04T18:26:09.933+0200 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:54588 #23 (2 connections now open)
+2016-08-04T18:27:39.811+0200 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (10.170.78.13, "nodename nor servname provided, or not known"), (10.170.78.13, "nodename nor servname provided, or not known") ]
+2016-08-04T18:28:41.090+0200 I NETWORK  [conn23] end connection 127.0.0.1:54588 (1 connection now open)
+2016-08-04T18:28:41.090+0200 I NETWORK  [conn22] end connection 127.0.0.1:54587 (1 connection now open)
+2016-08-04T18:28:53.684+0200 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:54701 #24 (1 connection now open)
+2016-08-04T18:28:53.706+0200 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:54702 #25 (2 connections now open)
+2016-08-04T18:30:23.742+0200 I NETWORK  [conn24] end connection 127.0.0.1:54701 (1 connection now open)
+2016-08-04T18:30:23.742+0200 I NETWORK  [conn25] end connection 127.0.0.1:54702 (1 connection now open)
+2016-08-04T18:30:58.187+0200 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:54768 #26 (1 connection now open)
+2016-08-04T18:30:58.308+0200 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:54769 #27 (2 connections now open)
+2016-08-04T18:42:44.338+0200 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (10.170.78.13, "nodename nor servname provided, or not known"), (10.170.78.13, "nodename nor servname provided, or not known") ]
+2016-08-04T18:42:57.935+0200 I NETWORK  [conn26] end connection 127.0.0.1:54768 (1 connection now open)
+2016-08-04T18:42:57.935+0200 I NETWORK  [conn27] end connection 127.0.0.1:54769 (1 connection now open)
+2016-08-04T18:43:22.972+0200 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:55173 #28 (1 connection now open)
+2016-08-04T18:43:23.098+0200 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:55174 #29 (2 connections now open)
+2016-08-04T18:43:31.087+0200 I NETWORK  [conn28] end connection 127.0.0.1:55173 (1 connection now open)
+2016-08-04T18:43:31.087+0200 I NETWORK  [conn29] end connection 127.0.0.1:55174 (1 connection now open)
+2016-08-04T18:43:42.653+0200 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:55181 #30 (1 connection now open)
+2016-08-04T18:43:42.793+0200 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:55182 #31 (2 connections now open)
+2016-08-04T18:44:29.826+0200 I NETWORK  [conn30] end connection 127.0.0.1:55181 (1 connection now open)
+2016-08-04T18:44:29.826+0200 I NETWORK  [conn31] end connection 127.0.0.1:55182 (1 connection now open)
+2016-08-04T18:44:44.734+0200 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:55213 #32 (1 connection now open)
+2016-08-04T18:44:44.859+0200 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:55214 #33 (2 connections now open)
+2016-08-04T18:46:10.102+0200 I NETWORK  [conn33] end connection 127.0.0.1:55214 (1 connection now open)
+2016-08-04T18:46:10.102+0200 I NETWORK  [conn32] end connection 127.0.0.1:55213 (1 connection now open)
+2016-08-04T18:46:23.194+0200 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:55271 #34 (1 connection now open)
+2016-08-04T18:46:23.316+0200 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:55272 #35 (2 connections now open)
+2016-08-04T18:50:18.542+0200 I NETWORK  [conn35] end connection 127.0.0.1:55272 (1 connection now open)
+2016-08-04T18:50:18.542+0200 I NETWORK  [conn34] end connection 127.0.0.1:55271 (1 connection now open)
+2016-08-04T18:50:27.456+0200 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:55395 #36 (1 connection now open)
+2016-08-04T18:50:27.595+0200 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:55396 #37 (2 connections now open)
+2016-08-04T18:52:10.458+0200 I NETWORK  [conn37] end connection 127.0.0.1:55396 (1 connection now open)
+2016-08-04T18:52:10.458+0200 I NETWORK  [conn36] end connection 127.0.0.1:55395 (1 connection now open)
+2016-08-04T18:53:58.997+0200 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:55551 #38 (1 connection now open)
+2016-08-04T18:53:59.127+0200 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:55552 #39 (2 connections now open)
+2016-08-04T18:57:48.238+0200 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (10.170.78.13, "nodename nor servname provided, or not known"), (10.170.78.13, "nodename nor servname provided, or not known") ]
+2016-08-04T18:58:58.842+0200 I NETWORK  [conn38] end connection 127.0.0.1:55551 (1 connection now open)
+2016-08-04T18:58:58.842+0200 I NETWORK  [conn39] end connection 127.0.0.1:55552 (1 connection now open)
+2016-08-04T18:59:21.932+0200 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:55736 #40 (1 connection now open)
+2016-08-04T18:59:22.074+0200 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:55737 #41 (2 connections now open)
+2016-08-04T19:00:35.959+0200 I NETWORK  [conn40] end connection 127.0.0.1:55736 (1 connection now open)
+2016-08-04T19:00:35.959+0200 I NETWORK  [conn41] end connection 127.0.0.1:55737 (1 connection now open)
+2016-08-04T19:00:45.685+0200 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:55778 #42 (1 connection now open)
+2016-08-04T19:00:45.808+0200 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:55779 #43 (2 connections now open)
+2016-08-04T19:01:49.390+0200 I NETWORK  [conn42] end connection 127.0.0.1:55778 (1 connection now open)
+2016-08-04T19:01:49.390+0200 I NETWORK  [conn43] end connection 127.0.0.1:55779 (1 connection now open)
+2016-08-04T19:02:01.105+0200 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:55833 #44 (1 connection now open)
+2016-08-04T19:02:01.231+0200 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:55834 #45 (2 connections now open)
+2016-08-04T19:07:58.168+0200 I NETWORK  [conn45] end connection 127.0.0.1:55834 (1 connection now open)
+2016-08-04T19:07:58.168+0200 I NETWORK  [conn44] end connection 127.0.0.1:55833 (1 connection now open)
+2016-08-04T19:08:09.193+0200 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:56248 #46 (1 connection now open)
+2016-08-04T19:08:09.338+0200 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:56249 #47 (2 connections now open)
+2016-08-04T19:11:27.842+0200 I NETWORK  [conn47] end connection 127.0.0.1:56249 (1 connection now open)
+2016-08-04T19:11:27.842+0200 I NETWORK  [conn46] end connection 127.0.0.1:56248 (1 connection now open)
+2016-08-04T19:11:40.790+0200 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:56487 #48 (1 connection now open)
+2016-08-04T19:11:40.914+0200 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:56488 #49 (2 connections now open)
+2016-08-04T19:12:52.564+0200 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (10.170.78.13, "nodename nor servname provided, or not known"), (10.170.78.13, "nodename nor servname provided, or not known") ]
+2016-08-04T19:19:37.990+0200 I NETWORK  [conn49] end connection 127.0.0.1:56488 (1 connection now open)
+2016-08-04T19:19:37.990+0200 I NETWORK  [conn48] end connection 127.0.0.1:56487 (1 connection now open)
+2016-08-04T19:19:49.219+0200 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:56912 #50 (1 connection now open)
+2016-08-04T19:19:49.339+0200 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:56913 #51 (2 connections now open)
+2016-08-04T19:24:37.752+0200 I NETWORK  [conn51] end connection 127.0.0.1:56913 (1 connection now open)
+2016-08-04T19:24:37.752+0200 I NETWORK  [conn50] end connection 127.0.0.1:56912 (1 connection now open)
+2016-08-04T19:24:46.582+0200 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:57069 #52 (1 connection now open)
+2016-08-04T19:24:46.724+0200 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:57070 #53 (2 connections now open)
+2016-08-04T19:27:56.757+0200 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (10.170.78.13, "nodename nor servname provided, or not known"), (10.170.78.13, "nodename nor servname provided, or not known") ]
+2016-08-04T19:28:14.350+0200 I NETWORK  [conn53] end connection 127.0.0.1:57070 (1 connection now open)
+2016-08-04T19:28:14.350+0200 I NETWORK  [conn52] end connection 127.0.0.1:57069 (1 connection now open)
+2016-08-04T19:29:21.637+0200 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:57215 #54 (1 connection now open)
+2016-08-04T19:29:21.660+0200 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:57216 #55 (2 connections now open)
+2016-08-04T19:30:04.679+0200 I NETWORK  [conn55] end connection 127.0.0.1:57216 (1 connection now open)
+2016-08-04T19:30:04.679+0200 I NETWORK  [conn54] end connection 127.0.0.1:57215 (1 connection now open)
+2016-08-04T19:30:45.394+0200 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:57283 #56 (1 connection now open)
+2016-08-04T19:30:45.417+0200 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:57284 #57 (2 connections now open)
+2016-08-04T19:31:21.288+0200 I NETWORK  [conn57] end connection 127.0.0.1:57284 (1 connection now open)
+2016-08-04T19:31:21.288+0200 I NETWORK  [conn56] end connection 127.0.0.1:57283 (1 connection now open)
+2016-08-04T19:31:32.460+0200 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:57298 #58 (1 connection now open)
+2016-08-04T19:31:32.599+0200 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:57299 #59 (2 connections now open)
+2016-08-04T19:33:52.584+0200 I NETWORK  [conn59] end connection 127.0.0.1:57299 (1 connection now open)
+2016-08-04T19:33:52.584+0200 I NETWORK  [conn58] end connection 127.0.0.1:57298 (1 connection now open)
+2016-08-04T19:34:03.739+0200 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:57386 #60 (1 connection now open)
+2016-08-04T19:34:04.035+0200 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:57387 #61 (2 connections now open)
+2016-08-04T19:35:59.825+0200 I NETWORK  [conn61] end connection 127.0.0.1:57387 (1 connection now open)
+2016-08-04T19:35:59.825+0200 I NETWORK  [conn60] end connection 127.0.0.1:57386 (1 connection now open)
+2016-08-04T19:36:15.173+0200 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:57472 #62 (1 connection now open)
+2016-08-04T19:36:15.472+0200 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:57473 #63 (2 connections now open)
+2016-08-04T19:38:35.910+0200 I NETWORK  [conn63] end connection 127.0.0.1:57473 (1 connection now open)
+2016-08-04T19:38:35.910+0200 I NETWORK  [conn62] end connection 127.0.0.1:57472 (1 connection now open)
+2016-08-04T19:38:51.639+0200 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:57588 #64 (1 connection now open)
+2016-08-04T19:38:51.906+0200 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:57589 #65 (2 connections now open)
+2016-08-04T19:42:00.251+0200 I NETWORK  [conn65] end connection 127.0.0.1:57589 (1 connection now open)
+2016-08-04T19:42:00.251+0200 I NETWORK  [conn64] end connection 127.0.0.1:57588 (1 connection now open)
+2016-08-04T19:42:25.436+0200 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:57710 #66 (1 connection now open)
+2016-08-04T19:42:25.698+0200 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:57711 #67 (2 connections now open)
+2016-08-04T19:43:01.048+0200 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (10.170.78.13, "nodename nor servname provided, or not known"), (10.170.78.13, "nodename nor servname provided, or not known") ]
+2016-08-04T19:44:51.538+0200 I NETWORK  [conn67] end connection 127.0.0.1:57711 (1 connection now open)
+2016-08-04T19:44:51.538+0200 I NETWORK  [conn66] end connection 127.0.0.1:57710 (1 connection now open)
+2016-08-04T19:45:09.407+0200 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:57797 #68 (1 connection now open)
+2016-08-04T19:45:09.693+0200 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:57798 #69 (2 connections now open)
+2016-08-04T19:55:50.395+0200 I NETWORK  [conn68] end connection 127.0.0.1:57797 (1 connection now open)
+2016-08-04T19:55:50.395+0200 I NETWORK  [conn69] end connection 127.0.0.1:57798 (1 connection now open)
+2016-08-04T19:56:02.039+0200 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:58143 #70 (1 connection now open)
+2016-08-04T19:56:02.165+0200 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:58144 #71 (2 connections now open)
+2016-08-04T19:56:28.912+0200 I NETWORK  [conn71] end connection 127.0.0.1:58144 (1 connection now open)
+2016-08-04T19:56:28.912+0200 I NETWORK  [conn70] end connection 127.0.0.1:58143 (1 connection now open)
+2016-08-04T19:56:38.678+0200 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:58190 #72 (1 connection now open)
+2016-08-04T19:56:38.807+0200 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:58191 #73 (2 connections now open)
+2016-08-04T19:58:16.577+0200 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (10.170.78.13, "nodename nor servname provided, or not known"), (10.170.78.13, "nodename nor servname provided, or not known") ]
+2016-08-04T19:58:44.798+0200 I NETWORK  [conn72] end connection 127.0.0.1:58190 (1 connection now open)
+2016-08-04T19:58:44.798+0200 I NETWORK  [conn73] end connection 127.0.0.1:58191 (1 connection now open)
+2016-08-04T19:58:55.378+0200 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:58281 #74 (1 connection now open)
+2016-08-04T19:58:55.504+0200 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:58282 #75 (2 connections now open)
+2016-08-04T20:00:38.141+0200 I NETWORK  [conn75] end connection 127.0.0.1:58282 (1 connection now open)
+2016-08-04T20:00:38.141+0200 I NETWORK  [conn74] end connection 127.0.0.1:58281 (1 connection now open)
+2016-08-04T20:00:53.134+0200 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:58349 #76 (1 connection now open)
+2016-08-04T20:00:53.262+0200 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:58350 #77 (2 connections now open)
+2016-08-04T20:01:21.259+0200 I NETWORK  [conn77] end connection 127.0.0.1:58350 (1 connection now open)
+2016-08-04T20:01:21.259+0200 I NETWORK  [conn76] end connection 127.0.0.1:58349 (1 connection now open)
+2016-08-04T20:01:30.649+0200 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:58361 #78 (1 connection now open)
+2016-08-04T20:01:30.776+0200 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:58362 #79 (2 connections now open)
+2016-08-04T20:10:18.465+0200 I NETWORK  [conn78] end connection 127.0.0.1:58361 (1 connection now open)
+2016-08-04T20:10:18.465+0200 I NETWORK  [conn79] end connection 127.0.0.1:58362 (1 connection now open)
+2016-08-04T20:10:37.139+0200 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:58689 #80 (1 connection now open)
+2016-08-04T20:10:37.276+0200 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:58690 #81 (2 connections now open)
+2016-08-04T20:13:21.351+0200 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (10.170.78.13, "nodename nor servname provided, or not known"), (10.170.78.13, "nodename nor servname provided, or not known") ]
+2016-08-04T20:14:13.136+0200 I NETWORK  [conn81] end connection 127.0.0.1:58690 (1 connection now open)
+2016-08-04T20:14:13.136+0200 I NETWORK  [conn80] end connection 127.0.0.1:58689 (1 connection now open)
+2016-08-05T08:04:41.555+0200 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (10.170.78.13, "nodename nor servname provided, or not known"), (10.170.78.13, "nodename nor servname provided, or not known") ]
+2016-08-05T08:19:45.966+0200 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (10.170.78.13, "nodename nor servname provided, or not known"), (10.170.78.13, "nodename nor servname provided, or not known") ]
+2016-08-05T08:34:50.649+0200 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (10.170.78.13, "nodename nor servname provided, or not known"), (10.170.78.13, "nodename nor servname provided, or not known") ]
+2016-08-05T08:49:55.310+0200 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (10.170.78.13, "nodename nor servname provided, or not known"), (10.170.78.13, "nodename nor servname provided, or not known") ]
+2016-08-05T09:05:00.078+0200 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (10.170.78.13, "nodename nor servname provided, or not known"), (10.170.78.13, "nodename nor servname provided, or not known") ]
+2016-08-05T09:20:04.536+0200 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (10.170.78.13, "nodename nor servname provided, or not known"), (10.170.78.13, "nodename nor servname provided, or not known") ]
+2016-08-05T09:35:09.065+0200 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (10.170.78.13, "nodename nor servname provided, or not known"), (10.170.78.13, "nodename nor servname provided, or not known") ]
+2016-08-05T09:50:13.617+0200 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (10.170.78.13, "nodename nor servname provided, or not known"), (10.170.78.13, "nodename nor servname provided, or not known") ]
+2016-08-05T10:05:18.326+0200 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (10.170.78.13, "nodename nor servname provided, or not known"), (10.170.78.13, "nodename nor servname provided, or not known") ]
+2016-08-05T10:21:21.558+0200 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (10.170.78.13, "nodename nor servname provided, or not known"), (10.170.78.13, "nodename nor servname provided, or not known") ]

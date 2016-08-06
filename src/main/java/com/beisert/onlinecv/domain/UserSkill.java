@@ -9,7 +9,6 @@ import javax.xml.bind.annotation.XmlType;
 public class UserSkill {
 
 	String category = "technical";
-	@XmlAttribute(name="skill")
 	String skill;
 	double numberOfYears;
 	int yearLastUsed;

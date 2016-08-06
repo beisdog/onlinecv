@@ -131,9 +131,9 @@ public class MongoDBSingleton {
     	cv.setUser("dbe");
 
         PersonalData pd = new PersonalData();
-        pd.setFirstName("David");
-        pd.setLastName("Beisert");
-        pd.setBirthDate(new SimpleDate(1976, 7, 4));
+        pd.setFirstname("David");
+        pd.setLastname("Beisert");
+        pd.setBirthday(new SimpleDate(1976, 7, 4));
         pd.setNumberOfChildren(2);
 
 

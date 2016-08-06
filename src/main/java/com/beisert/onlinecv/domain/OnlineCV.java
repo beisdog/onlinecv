@@ -30,12 +30,8 @@ public class OnlineCV {
 
 	PersonalData personalData;
 
-//	@XmlElementWrapper(name="technicalSkills")
-//	@XmlElement(name="skill")
-	List<UserSkill> userSkills = null;
+	List<UserSkill> userSkills = new ArrayList<UserSkill>();
 	
-//	@XmlElementWrapper(name="projects")
-//	@XmlElement(name="project")
 	List<ProjectData> projects = new ArrayList<ProjectData>();
 	
 
@@ -56,8 +52,6 @@ public class OnlineCV {
 	}
 
 	public List<UserSkill> getUserSkills() {
-		//needed for jaxb
-		if(userSkills == null) userSkills = new ArrayList<UserSkill>();
 		return userSkills;
 	}
 

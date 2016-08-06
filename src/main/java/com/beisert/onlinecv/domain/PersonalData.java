@@ -5,20 +5,16 @@ import java.util.List;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlType;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
-
-
-@XmlType( propOrder={"lastName","firstName","birthDate","numberOfChildren","relationShipStatus","address","communicationData"})
+@XmlType( propOrder={"lastname","firstname","birthday","numberOfChildren","relationshipStatus","address","communicationData"})
 @XmlAccessorType(XmlAccessType.FIELD)
 public class PersonalData {
 
-	String lastName;
-	String firstName;
+	String lastname;
+	String firstname;
 
-	SimpleDate birthDate;
+	SimpleDate birthday;
 
 	int numberOfChildren;
 
@@ -26,34 +22,33 @@ public class PersonalData {
 		SINGLE,WIDOWED,MARRIED,DIVORCED,IN_A_RELATIONSHIP;
 	}
 	
-	RelationShipStatus relationShipStatus = RelationShipStatus.MARRIED;
+	RelationShipStatus relationshipStatus = RelationShipStatus.MARRIED;
 
 	AddressData address;
 
-//	@XmlElementWrapper(name="communications")
 	List<CommunicationData> communicationData = new ArrayList<CommunicationData>();
 
-	public String getLastName() {
-		return lastName;
+	public String getLastname() {
+		return lastname;
 	}
 
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
+	public void setLastname(String lastName) {
+		this.lastname = lastName;
 	}
 
-	public String getFirstName() {
-		return firstName;
+	public String getFirstname() {
+		return firstname;
 	}
 
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
+	public void setFirstname(String firstName) {
+		this.firstname = firstName;
 	}
 
-	public SimpleDate getBirthDate() {
-		return birthDate;
+	public SimpleDate getBirthday() {
+		return birthday;
 	}
-	public void setBirthDate(SimpleDate birthDate) {
-		this.birthDate = birthDate;
+	public void setBirthday(SimpleDate birthDate) {
+		this.birthday = birthDate;
 	}
 
 	public int getNumberOfChildren() {
@@ -64,12 +59,12 @@ public class PersonalData {
 		this.numberOfChildren = numberOfChildren;
 	}
 
-	public RelationShipStatus getRelationShipStatus() {
-		return relationShipStatus;
+	public RelationShipStatus getRelationshipStatus() {
+		return relationshipStatus;
 	}
 
-	public void setRelationShipStatus(RelationShipStatus relationShipStatus) {
-		this.relationShipStatus = relationShipStatus;
+	public void setRelationshipStatus(RelationShipStatus relationShipStatus) {
+		this.relationshipStatus = relationShipStatus;
 	}
 
 	public AddressData getAddress() {

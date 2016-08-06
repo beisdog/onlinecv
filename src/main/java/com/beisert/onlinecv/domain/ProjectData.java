@@ -18,8 +18,7 @@ public class ProjectData {
 	String key;
 	
 	I18NText title;
-//	@XmlElementWrapper(name="usedSkills")
-//	@XmlElement(name="skill")
+
 	List<UserSkill> usedSkills = new ArrayList<UserSkill>();
 	
 	I18NText description;
