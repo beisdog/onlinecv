@@ -16,7 +16,7 @@ import org.jongo.marshall.jackson.oid.MongoObjectId;
 /**
  * Data object for an online cv
  */
-@XmlType( propOrder={"_id","user","cvName","personalData","userSkills","projects"})
+@XmlType( propOrder={"_id","user","name","personalData","userSkills","projects"})
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
 public class OnlineCV {
@@ -26,7 +26,7 @@ public class OnlineCV {
 	String _id;
 	
 	String user;
-	String cvName;
+	String name;
 
 	PersonalData personalData;
 
@@ -73,6 +73,14 @@ public class OnlineCV {
 
 	public void setUser(String user) {
 		this.user = user;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
 	}
 
 }

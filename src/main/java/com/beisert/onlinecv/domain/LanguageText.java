@@ -10,23 +10,27 @@ import javax.xml.bind.annotation.XmlValue;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 public class LanguageText {
+	
+	public static enum Locale{
+		ENGLISH,FRENCH,ITALIAN,GERMAN;
+	} 
 
-	String locale;
+	Locale locale;
 	String text;
 
 	public LanguageText(){}
 	
-	public LanguageText(String locale, String text) {
+	public LanguageText(Locale locale, String text) {
 		super();
 		this.locale = locale;
 		this.text = text;
 	}
 
-	public String getLocale() {
+	public Locale getLocale() {
 		return locale;
 	}
 
-	public void setLocale(String locale) {
+	public void setLocale(Locale locale) {
 		this.locale = locale;
 	}
 

@@ -5,6 +5,8 @@ import java.util.List;
 
 import javax.xml.bind.annotation.XmlType;
 
+import com.beisert.onlinecv.domain.LanguageText.Locale;
+
 /**
  * Represents a multilanguage struct.
  */
@@ -36,7 +38,7 @@ public class I18NText {
 
 	public I18NText(String de, String en) {
 		this.defaultText = de;
-		this.languageTexts.add(new LanguageText("en", en));
+		this.languageTexts.add(new LanguageText(Locale.ENGLISH, en));
 	}
 
 }

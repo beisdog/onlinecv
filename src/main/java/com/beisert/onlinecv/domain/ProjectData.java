@@ -28,7 +28,7 @@ public class ProjectData {
 	SimpleDate to;
 	
 	String customer;
-	@XmlElement(name="additionalInfo")
+	
 	List<GenericContainer> additionalInfos = null;
 	
 	public ProjectData(){}
@@ -101,6 +101,14 @@ public class ProjectData {
 
 	public void setAdditionalInfos(List<GenericContainer> additionalInfos) {
 		this.additionalInfos = additionalInfos;
+	}
+
+	public String getKey() {
+		return key;
+	}
+
+	public void setKey(String key) {
+		this.key = key;
 	}
 	
 	
