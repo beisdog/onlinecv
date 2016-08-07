@@ -5,11 +5,6 @@
 
 <web-app>
 
-	<!-- Servlets -->
-	<servlet>
-		<servlet-name>greetServlet</servlet-name>
-		<servlet-class>com.codenvy.example.gwt.server.GreetingServiceImpl</servlet-class>
-	</servlet>
 
 	<servlet>
 		<servlet-name>jersey</servlet-name>
@@ -25,29 +20,17 @@
 		<load-on-startup>1</load-on-startup>
 	</servlet>
 
-	<servlet>
-		<servlet-name>jUnitHostImpl</servlet-name>
-		<servlet-class>com.google.gwt.junit.server.JUnitHostImpl</servlet-class>
-	</servlet>
-
-	<servlet-mapping>
-		<servlet-name>greetServlet</servlet-name>
-		<url-pattern>/GWT/greet</url-pattern>
-	</servlet-mapping>
 
 	<servlet-mapping>
 		<servlet-name>jersey</servlet-name>
 		<url-pattern>/rest/*</url-pattern>
 	</servlet-mapping>
 
-	<servlet-mapping>
-		<servlet-name>jUnitHostImpl</servlet-name>
-		<url-pattern>/GWT/junithost/*</url-pattern>
-	</servlet-mapping>
+	
 
 	<!-- Default page to serve -->
 	<welcome-file-list>
-		<welcome-file>GWT.html</welcome-file>
+		<welcome-file>index.html</welcome-file>
 	</welcome-file-list>
 
 </web-app>
