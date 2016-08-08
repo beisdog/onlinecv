@@ -4,15 +4,22 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlType;
-@XmlType( propOrder={"category","skill","numberOfYears","yearLastUsed","skillLevel"})
+@XmlType( propOrder={"category","skill","numberOfYears","yearLastUsed","skillLevel","mainSkill"})
 @XmlAccessorType(XmlAccessType.FIELD)
 public class UserSkill {
+	
+	public static enum Category{
+		
+		PROGRAMMING,DATABASE,METHODS,TOOLS,OS,SAP,FRAMEWORKS;
+		
+	}
 
-	String category = "technical";
+	Category category = null;
 	String skill;
 	double numberOfYears;
 	int yearLastUsed;
 	SkillLevel skillLevel = SkillLevel.EXPERT;
+	boolean mainSkill = true;
 
 	public SkillLevel getSkillLevel() {
 		return skillLevel;
@@ -36,11 +43,22 @@ public class UserSkill {
 		this.yearLastUsed = yearLastUsed;
 	}
 
-	public String getCategory() {
+	public UserSkill(Category category, String skill, double numberOfYears, int yearLastUsed, SkillLevel skillLevel,
+			boolean mainSkill) {
+		super();
+		this.category = category;
+		this.skill = skill;
+		this.numberOfYears = numberOfYears;
+		this.yearLastUsed = yearLastUsed;
+		this.skillLevel = skillLevel;
+		this.mainSkill = mainSkill;
+	}
+
+	public Category getCategory() {
 		return category;
 	}
 
-	public void setCategory(String category) {
+	public void setCategory(Category category) {
 		this.category = category;
 	}
 
@@ -66,6 +84,14 @@ public class UserSkill {
 
 	public void setYearLastUsed(int yearLastUsed) {
 		this.yearLastUsed = yearLastUsed;
+	}
+
+	public boolean isMainSkill() {
+		return mainSkill;
+	}
+
+	public void setMainSkill(boolean mainSkill) {
+		this.mainSkill = mainSkill;
 	}
 
 }

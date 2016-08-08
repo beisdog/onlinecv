@@ -5,15 +5,23 @@ import java.util.ArrayList;
 import org.jongo.Jongo;
 
 import com.beisert.onlinecv.domain.AddressData;
+import com.beisert.onlinecv.domain.Certification;
 import com.beisert.onlinecv.domain.CommunicationData;
+import com.beisert.onlinecv.domain.Education;
 import com.beisert.onlinecv.domain.GenericContainer;
 import com.beisert.onlinecv.domain.I18NText;
+import com.beisert.onlinecv.domain.Job;
+import com.beisert.onlinecv.domain.LanguageSkill;
 import com.beisert.onlinecv.domain.OnlineCV;
 import com.beisert.onlinecv.domain.PersonalData;
-import com.beisert.onlinecv.domain.ProjectData;
+import com.beisert.onlinecv.domain.Project;
 import com.beisert.onlinecv.domain.SimpleDate;
 import com.beisert.onlinecv.domain.UserSkill;
+import com.beisert.onlinecv.domain.UserSkill.Category;
+import com.beisert.onlinecv.domain.UserSkill.SkillLevel;
 import com.beisert.onlinecv.domain.CommunicationData.CommunicationType;
+import com.beisert.onlinecv.domain.LanguageSkill.LanguageSkillLevel;
+import com.beisert.onlinecv.domain.LanguageText.Locale;
 import com.beisert.onlinecv.util.DateUtil;
 import com.beisert.onlinecv.util.ShellExecute;
 import com.mongodb.BasicDBObject;
@@ -119,50 +127,11 @@ public class MongoDBSingleton {
     }
     
     public static void startMongo(MongoEnv env) {
-    	
-    	//local on mac
-    	///usr/local/bin/mongod --dbpath /Users/dbe/mongodb/db --port 27017 --smallfiles --httpinterface --rest --fork --logpath /home/user/mongo.log
         ShellExecute.run(env.getCmdLine());
     }
     
-    public void dataload(){
-    	OnlineCV cv = new OnlineCV();
-    	
-    	cv.setUser("dbe");
+    
 
-        PersonalData pd = new PersonalData();
-        pd.setFirstname("David");
-        pd.setLastname("Beisert");
-        pd.setBirthday(new SimpleDate(1976, 7, 4));
-        pd.setNumberOfChildren(2);
-
-
-        UserSkill java = new UserSkill("java", 18d, 2016);
-        cv.getUserSkills().add(java);
-        UserSkill j2ee = new UserSkill("j2ee", 18d, 2016);
-        cv.getUserSkills().add(j2ee);
-        UserSkill hibernate = new UserSkill("hibernate", 18d, 2016);
-        cv.getUserSkills().add(hibernate);
-
-        ProjectData project1 =
-                               new ProjectData(new I18NText("Tolles project", "Great Project"), new I18NText("schön", "beautiful"), "BAYER",
-                            		  new SimpleDate(2016, 1, 1), new SimpleDate(2016, 8, 1), java, j2ee,
-                                               hibernate);
-        project1.getAdditionalInfos().add(new GenericContainer(new I18NText("Rolle", "Role"), new I18NText("Architekt", "Architect")));
-        cv.getProjects().add(project1);
-        cv.setPersonalData(pd);
-
-        AddressData ad = new AddressData("Farnsburgerstrasse", "54", "", "4052", "Basel", "Switzerland");
-        pd.setAddress(ad);
-        pd.setCommunicationData(new ArrayList<CommunicationData>());
-        pd.getCommunicationData().add(new CommunicationData(CommunicationType.EMAIL, "david.beisert@beisert-btc.de", ""));
-        pd.getCommunicationData().add(new CommunicationData(CommunicationType.MOBILE, "+49 151 58771341", ""));
-        
-        
-        getJongo().getCollection("cvs").insert(cv);
-        //getJongo().getCollection("cvs").getDBCollection().createIndex(new BasicDBObject("user",1),new BasicDBObject("unique",true));
-        
-    }
-
+	
 
 }

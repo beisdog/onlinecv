@@ -12,7 +12,7 @@ import javax.xml.bind.annotation.XmlType;
 
 @XmlType( propOrder={"key","title","usedSkills","description","from","to","customer","additionalInfos"})
 @XmlAccessorType(XmlAccessType.FIELD)
-public class ProjectData {
+public class Project {
 	
 	/** unique within cv and mandatory */
 	String key;
@@ -31,9 +31,9 @@ public class ProjectData {
 	
 	List<GenericContainer> additionalInfos = null;
 	
-	public ProjectData(){}
+	public Project(){}
 	
-	public ProjectData(I18NText title, I18NText description, String customer, SimpleDate from, SimpleDate to,
+	public Project(I18NText title, I18NText description, String customer, SimpleDate from, SimpleDate to,
 			UserSkill...usedSkills) {
 		super();
 		this.title = title;

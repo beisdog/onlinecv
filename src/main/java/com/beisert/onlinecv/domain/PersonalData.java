@@ -7,7 +7,7 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
 
-@XmlType( propOrder={"lastname","firstname","birthday","numberOfChildren","relationshipStatus","address","communicationData"})
+@XmlType( propOrder={"lastname","firstname","birthday","numberOfChildren","citizenship","hobbies","relationshipStatus","address","communicationData","additionalInfos"})
 @XmlAccessorType(XmlAccessType.FIELD)
 public class PersonalData {
 
@@ -17,6 +17,10 @@ public class PersonalData {
 	SimpleDate birthday;
 
 	int numberOfChildren;
+	
+	I18NText citizenship;
+	
+	I18NText hobbies;
 
 	public static enum RelationShipStatus {
 		SINGLE,WIDOWED,MARRIED,DIVORCED,IN_A_RELATIONSHIP;
@@ -27,6 +31,8 @@ public class PersonalData {
 	AddressData address;
 
 	List<CommunicationData> communicationData = new ArrayList<CommunicationData>();
+	
+	List<GenericContainer> additionalInfos = new ArrayList<GenericContainer>();
 
 	public String getLastname() {
 		return lastname;
@@ -81,6 +87,30 @@ public class PersonalData {
 
 	public void setCommunicationData(List<CommunicationData> communicationData) {
 		this.communicationData = communicationData;
+	}
+
+	public I18NText getHobbies() {
+		return hobbies;
+	}
+
+	public void setHobbies(I18NText hobbies) {
+		this.hobbies = hobbies;
+	}
+
+	public List<GenericContainer> getAdditionalInfos() {
+		return additionalInfos;
+	}
+
+	public void setAdditionalInfos(List<GenericContainer> additionalInfos) {
+		this.additionalInfos = additionalInfos;
+	}
+
+	public I18NText getCitizenship() {
+		return citizenship;
+	}
+
+	public void setCitizenship(I18NText citizenship) {
+		this.citizenship = citizenship;
 	}
 
 }

@@ -1,6 +1,5 @@
 package com.beisert.onlinecv.rest;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.ws.rs.Consumes;
@@ -16,24 +15,30 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
 
-import org.jongo.Jongo;
-import org.jongo.MongoCursor;
-
 import com.beisert.onlinecv.domain.OnlineCV;
-import com.beisert.onlinecv.service.MongoDBSingleton;
+import com.beisert.onlinecv.service.OnlineCVService;
 import com.beisert.onlinecv.util.XMLUtils;
 
-
+/**
+ * Rest facade for the online cv service that can read and save CVs.
+ * @author dbe
+ *
+ */
 @Path("/onlinecv")
 public class OnlineCVRestServiceImpl {
+	
+	/**
+	 * Stores the implementation of the online service. 
+	 * Defaults to mongo backed service but can be switches to Dummy in memory implementation.
+	 */
+	private static OnlineCVService service = ServiceImpl.mongo.impl;
 
     @GET
     @Path("{user}")
     @Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
     public Response findCVByUser(@PathParam("user") String user, @QueryParam("format")String format, @Context HttpHeaders headers) {
 
-        Jongo jongo = MongoDBSingleton.getInstance().getJongo();
-        OnlineCV cv = jongo.getCollection("cvs").findOne("{user: '"+user+"'}").as(OnlineCV.class);
+        OnlineCV cv = service.findCVByUser(user);
         
         return Response
         		.ok(cv, getMediaTypeForFormat(headers,format))
@@ -56,17 +61,33 @@ public class OnlineCVRestServiceImpl {
     @Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
     public Response findall(@QueryParam("format")String format, @Context HttpHeaders headers) {
 
-        Jongo jongo = MongoDBSingleton.getInstance().getJongo();
-        MongoCursor<OnlineCV> cursor = jongo.getCollection("cvs").find("{}").as(OnlineCV.class);
-        System.out.println("Found " + cursor.count());
-        
-        List<OnlineCV> cvs = new ArrayList<OnlineCV>();
-        while(cursor.hasNext()){
-        	cvs.add(cursor.next());
-        }
+        List<OnlineCV> cvs = service.findall();
         return Response
         		.ok(cvs, getMediaTypeForFormat(headers,format))
         		.build();
+    }
+
+    /**
+     * Switch the service implementation. You can choose between mongo and dummy.
+     * @param service: mongo or dummy
+     * @return
+     */
+    @GET
+    @Path("/switch/{service}")
+    @Produces(value={MediaType.TEXT_PLAIN})
+    public String switchService(@PathParam("service") String service) {
+        ServiceImpl serviceEnum = ServiceImpl.valueOf(service);
+        OnlineCVRestServiceImpl.service = serviceEnum.impl;
+        System.out.println("Switches to " +  serviceEnum);
+        return "Rest service now uses " + serviceEnum.toString() + " service";
+    	
+    }
+    @GET
+    @Path("/dataload")
+    @Produces(value={MediaType.TEXT_PLAIN})
+    public String dataload() {
+       int count = service.loadInitialCVsIntoDB();
+       return "loaded " + count + " cvs into the database";
     }
     
     @GET
@@ -93,9 +114,7 @@ public class OnlineCVRestServiceImpl {
     @Produces(value={MediaType.APPLICATION_JSON})
     @Consumes(MediaType.APPLICATION_JSON)
     public OnlineCV save(OnlineCV cv) {
-        Jongo jongo = MongoDBSingleton.getInstance().getJongo();
-        jongo.getCollection("cvs").save(cv);
-        return cv;
+        return service.save(cv);
     }
     
     

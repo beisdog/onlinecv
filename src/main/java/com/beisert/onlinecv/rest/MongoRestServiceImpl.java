@@ -34,15 +34,6 @@ public class MongoRestServiceImpl {
 		return Response.ok().entity("Starting " + env + " ...").build();
 	}
 	
-	@GET
-	@Path("/dataload")
-	@Produces(MediaType.TEXT_HTML)
-	public Response dataload() {
-		System.out.println("Enter dataload");
-		MongoDBSingleton.getInstance().dataload();
-		System.out.println("Exit dataload");
-		return Response.ok().entity("Loaded data").build();
-	}
 
 	@GET
 	@Path("/list/{collection}")
