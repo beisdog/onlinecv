@@ -36,7 +36,7 @@ be provided in multiple languages. This will be to use when the PDF generation i
 * after that start the Rest client by following the instructions here: https://github.com/beisdog/onlinecv-vaadin.git)
 
 ## Using Mongo DB as Backend
-* If you want to play with Mongo DB: 
+* if you want to play with Mongo DB: 
  * install Mongo DB on mac: 
   * `brew install mongo`
  * start mongo: 
@@ -73,11 +73,11 @@ The following technologies are shown:
 * XSD on the fly generation
 
 # TODOs
-* Use real logging, still system.out is used.
-* Add selenium test
-* Add unit tests
-* Add flat version of online cv for more efficient list display
-* Add Swagger UI to see the Rest API
-* Add PDF Generation
+* use real logging, still system.out is used.
+* add selenium test
+* add unit tests
+* add flat version of online cv for more efficient list display
+* add Swagger UI to see the Rest API
+* add PDF Generation
 
 
