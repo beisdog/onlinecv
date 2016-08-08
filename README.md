@@ -5,7 +5,7 @@ The Online CV is a showcase to show the combination of different technologies li
 This application manages CVs. 
 
 This project contains the service layer and exposes them as rest services.
-A sample UI is implemented in another project and can be found here (https://github.com/beisdog/onlinecv-vaadin.git)
+A sample UI is implemented in another project and can be found here https://github.com/beisdog/onlinecv-vaadin.git.
 
 The CVs are stored either in a dummy implementation or a Mongo DB. 
 You can switch the behaviour at runtime from the Admin page of this application (http://localhost:8888). 
@@ -38,7 +38,7 @@ be provided in multiple languages. This will be to use when the PDF generation i
 ## Using Mongo DB as Backend
 * If you want to play with Mongo DB: 
  * install Mongo DB on mac: 
-  * $ brew install mongo)
+  * `brew install mongo`
  * start mongo: 
   * `/usr/bin/mongod --dbpath "path to db" --port 27017 --smallfiles --httpinterface --rest --fork --logpath "path to logfile"`
  * Swith the database implementation to mongo by clicking this link once the application is running
