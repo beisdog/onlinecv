@@ -17,6 +17,7 @@ import javax.ws.rs.core.Response.Status;
 
 import com.beisert.onlinecv.domain.OnlineCV;
 import com.beisert.onlinecv.service.OnlineCVService;
+import com.beisert.onlinecv.service.ServiceImpl;
 import com.beisert.onlinecv.util.XMLUtils;
 
 /**
