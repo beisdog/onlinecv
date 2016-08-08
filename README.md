@@ -72,7 +72,7 @@ The following technologies are shown:
 * JAXB datamapping.
 * XSD on the fly generation
 
-# TODOs
+# Roadmap
 * use real logging, still system.out is used.
 * add selenium test
 * add unit tests
