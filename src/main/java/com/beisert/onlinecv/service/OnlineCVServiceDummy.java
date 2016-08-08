@@ -15,8 +15,7 @@ public class OnlineCVServiceDummy implements OnlineCVService {
 	private List<OnlineCV> cvs;
 
 	public OnlineCVServiceDummy() {
-		
-
+		loadInitialCVsIntoDB();
 	}
 
 	public OnlineCV findCVByUser(final String user) {

@@ -7,11 +7,23 @@ Attention: This is work in progress!
 This project contains a rest layer to access Online CVs that are stored in a Mongo DB.
 
 # Getting it to run
-* Checkout the git repository
-* install Mongo DB (on mac: $ brew install mongo)
-* start mongo: $ /usr/bin/mongod --dbpath <path to db> --port 27017 --smallfiles --httpinterface --rest --fork --logpath <path to logfile>
+* Checkout the git repository into a local directory on your machine:
+ * git clone https://github.com/beisdog/onlinecv.git
 
-* Run $ mvn clean install tomcat7:run
+
+* Run the application:
+ * $ mvn clean install tomcat7:run
+* Open the admin page for the rest service: http://localhost:8888/
+* After that start the Rest client by following the instructions here: https://github.com/beisdog/onlinecv-vaadin.git
+
+## Using Mongo DB as backend.
+* If you want to play with Mongo DB: 
+ * install Mongo DB on mac: 
+  * $ brew install mongo)
+ * start mongo: 
+  * $ /usr/bin/mongod --dbpath "path to db" --port 27017 --smallfiles --httpinterface --rest --fork --logpath "path to logfile"
+ * Swith the database implementation to mongo by clicking this link once the application is running
+  * http://localhost:8888/rest/onlinecv/switch/mongo
 
 # Debugging
 $ export MAVEN_OPTS -Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,address=8000,server=y,suspend=n

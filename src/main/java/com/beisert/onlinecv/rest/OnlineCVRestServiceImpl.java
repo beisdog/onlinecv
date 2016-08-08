@@ -31,7 +31,7 @@ public class OnlineCVRestServiceImpl {
 	 * Stores the implementation of the online service. 
 	 * Defaults to mongo backed service but can be switches to Dummy in memory implementation.
 	 */
-	private static OnlineCVService service = ServiceImpl.mongo.impl;
+	private static OnlineCVService service = ServiceImpl.dummy.impl;
 
     @GET
     @Path("{user}")
