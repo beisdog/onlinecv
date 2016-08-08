@@ -2,6 +2,7 @@ package com.beisert.onlinecv.service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import com.beisert.onlinecv.domain.OnlineCV;
 
@@ -12,7 +13,7 @@ import com.beisert.onlinecv.domain.OnlineCV;
  */
 public class OnlineCVServiceDummy implements OnlineCVService {
 
-	private List<OnlineCV> cvs;
+	private List<OnlineCV> cvs = new ArrayList<>();
 
 	public OnlineCVServiceDummy() {
 		loadInitialCVsIntoDB();
@@ -20,7 +21,8 @@ public class OnlineCVServiceDummy implements OnlineCVService {
 
 	public OnlineCV findCVByUser(final String user) {
 		final String input = user == null ? "" : user;
-		return cvs.stream().filter(e -> input.equals(e.getUser())).findFirst().get();
+		Optional<OnlineCV> cv = cvs.stream().filter(e -> input.equals(e.getUser())).findFirst();
+		return cv.orElseGet(null);
 	}
 
 	public List<OnlineCV> findall() {
@@ -29,12 +31,16 @@ public class OnlineCVServiceDummy implements OnlineCVService {
 	}
 
 	public OnlineCV save(OnlineCV cv) {
-		OnlineCV existing = cvs.stream().filter(e -> cv.get_id().equals(e.get_id())).findFirst().get();
+		final String id = cv.get_id() == null?"":cv.get_id();
+		Optional<OnlineCV> existing = cvs.stream().filter(e -> id.equals(e.get_id())).findFirst();
 
-		if (existing != null) {
-			cvs.remove(existing);
+		if (existing.isPresent()) {
+			cvs.remove(existing.get());
 		}
 		if (cv != null) {
+			if(cv.get_id() == null){
+				cv.set_id(System.currentTimeMillis()+"");
+			}
 			cvs.add(cv);
 		}
 		return cv;
@@ -49,8 +55,11 @@ public class OnlineCVServiceDummy implements OnlineCVService {
 
 	@Override
 	public int loadInitialCVsIntoDB() {
+		deleteAll();
 		this.cvs = new ArrayList<OnlineCV>();
-		this.cvs.add(TestDataGenerator.generateNewOnlineCVFor("dbe", "Beisert", "David"));
+		OnlineCV cv = TestDataGenerator.generateNewOnlineCVFor("dbe", "Beisert", "David");
+		cv.set_id(System.currentTimeMillis()+"");
+		this.cvs.add(cv);
 		return cvs.size();
 	}
 

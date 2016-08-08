@@ -31,14 +31,14 @@ public class OnlineCVRestServiceImpl {
 	 * Stores the implementation of the online service. 
 	 * Defaults to mongo backed service but can be switches to Dummy in memory implementation.
 	 */
-	private static OnlineCVService service = ServiceImpl.dummy.impl;
+	public static ServiceImpl service = ServiceImpl.dummy;
 
     @GET
     @Path("{user}")
     @Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
     public Response findCVByUser(@PathParam("user") String user, @QueryParam("format")String format, @Context HttpHeaders headers) {
 
-        OnlineCV cv = service.findCVByUser(user);
+        OnlineCV cv = service.impl.findCVByUser(user);
         
         return Response
         		.ok(cv, getMediaTypeForFormat(headers,format))
@@ -61,7 +61,7 @@ public class OnlineCVRestServiceImpl {
     @Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
     public Response findall(@QueryParam("format")String format, @Context HttpHeaders headers) {
 
-        List<OnlineCV> cvs = service.findall();
+        List<OnlineCV> cvs = service.impl.findall();
         return Response
         		.ok(cvs, getMediaTypeForFormat(headers,format))
         		.build();
@@ -73,20 +73,28 @@ public class OnlineCVRestServiceImpl {
      * @return
      */
     @GET
-    @Path("/switch/{service}")
+    @Path("/switchdb/{service}")
     @Produces(value={MediaType.TEXT_PLAIN})
     public String switchService(@PathParam("service") String service) {
         ServiceImpl serviceEnum = ServiceImpl.valueOf(service);
-        OnlineCVRestServiceImpl.service = serviceEnum.impl;
+        OnlineCVRestServiceImpl.service = serviceEnum;
         System.out.println("Switches to " +  serviceEnum);
         return "Rest service now uses " + serviceEnum.toString() + " service";
     	
     }
     @GET
+    @Path("/showdb/")
+    @Produces(value={MediaType.TEXT_PLAIN})
+    public String showdb() {
+        System.out.println("Uses " +  OnlineCVRestServiceImpl.service);
+        return "Rest service uses " +  OnlineCVRestServiceImpl.service.toString() + " service";
+    }
+    
+    @GET
     @Path("/dataload")
     @Produces(value={MediaType.TEXT_PLAIN})
     public String dataload() {
-       int count = service.loadInitialCVsIntoDB();
+       int count = service.impl.loadInitialCVsIntoDB();
        return "loaded " + count + " cvs into the database";
     }
     
@@ -114,7 +122,7 @@ public class OnlineCVRestServiceImpl {
     @Produces(value={MediaType.APPLICATION_JSON})
     @Consumes(MediaType.APPLICATION_JSON)
     public OnlineCV save(OnlineCV cv) {
-        return service.save(cv);
+        return service.impl.save(cv);
     }
     
     

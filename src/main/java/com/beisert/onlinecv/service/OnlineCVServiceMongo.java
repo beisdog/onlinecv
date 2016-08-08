@@ -70,6 +70,7 @@ public class OnlineCVServiceMongo implements OnlineCVService {
 
 		@Override
 		public int loadInitialCVsIntoDB() {
+			deleteAll();
 			Jongo jongo = MongoDBSingleton.getInstance().getJongo();
 			OnlineCV cv = TestDataGenerator.generateNewOnlineCVFor("dbe","Beisert","David");
 	        jongo.getCollection("cvs").insert(cv);
