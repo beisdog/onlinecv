@@ -27,13 +27,13 @@ be provided in multiple languages. This will be to use when the PDF generation i
 
 # Getting it to run
 * Checkout the git repository into a local directory on your machine:
- * git clone https://github.com/beisdog/onlinecv.git
+ * `git clone https://github.com/beisdog/onlinecv.git`
 
-* Run the application:
+* to run the application:
  * `cd onlinecv`
  * `mvn clean install tomcat7:run`
 * Open the admin page for the rest service: http://localhost:8888/
-* After that start the Rest client by following the instructions here: (https://github.com/beisdog/onlinecv-vaadin.git)
+* After that start the Rest client by following the instructions here: https://github.com/beisdog/onlinecv-vaadin.git)
 
 ## Using Mongo DB as Backend
 * If you want to play with Mongo DB: 
@@ -59,7 +59,7 @@ From the Admin UI you can
 # Debugging
 To debug set these MAVEN_OPTS in your console:
 
-`export MAVEN_OPTS -Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,address=8000,server=y,suspend=n`
+* `export MAVEN_OPTS -Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,address=8000,server=y,suspend=n`
 
 Then in your eclipse create a new Remote Debugging configuration and connect to port 8000
 
