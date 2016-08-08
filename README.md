@@ -26,14 +26,14 @@ In the data object the type I18NText is used for all fields that contain free te
 be provided in multiple languages. This will be to use when the PDF generation is implemented.  
 
 # Getting it to run
-* Checkout the git repository into a local directory on your machine:
+* checkout the git repository into a local directory on your machine:
  * `git clone https://github.com/beisdog/onlinecv.git`
 
 * to run the application:
  * `cd onlinecv`
  * `mvn clean install tomcat7:run`
-* Open the admin page for the rest service: http://localhost:8888/
-* After that start the Rest client by following the instructions here: https://github.com/beisdog/onlinecv-vaadin.git)
+* open the admin page for the rest service: http://localhost:8888/
+* after that start the Rest client by following the instructions here: https://github.com/beisdog/onlinecv-vaadin.git)
 
 ## Using Mongo DB as Backend
 * If you want to play with Mongo DB: 
@@ -41,15 +41,15 @@ be provided in multiple languages. This will be to use when the PDF generation i
   * `brew install mongo`
  * start mongo: 
   * `/usr/bin/mongod --dbpath "path to db" --port 27017 --smallfiles --httpinterface --rest --fork --logpath "path to logfile"`
- * Swith the database implementation to mongo by clicking this link once the application is running
+ * swith the database implementation to mongo by clicking this link once the application is running
   * http://localhost:8888/rest/onlinecv/switch/mongo
-  * Press the link to create some example cv in the database: http://localhost:8888/rest/onlinecv/dataload
+  * press the link to create some example cv in the database: http://localhost:8888/rest/onlinecv/dataload
 
-# Using the admin ui
+# Using the Admin UI (http://localhost:8888)
 Initially the application is running with a dummy backend implementation. If you have a running mongo installation on the default port
-you can switch to the mongo db through the admin ui located http://localhost:8888 
+you can switch to the mongo db through the Admin UI located http://localhost:8888 
 
-From the Admin UI you can 
+From the Admin UI you can do the following:
 * see the status of the application
 * switch between dummy database and mongo
 * test the rest services
@@ -59,9 +59,9 @@ From the Admin UI you can
 # Debugging
 To debug set these MAVEN_OPTS in your console:
 
-* `export MAVEN_OPTS -Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,address=8000,server=y,suspend=n`
+* `export MAVEN_OPTS -Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,address=8000,server=y,suspend=n` 
 
-Then in your eclipse create a new Remote Debugging configuration and connect to port 8000
+Then in your eclipse create a new Remote Debugging configuration and connect to port 8000 .
 
 # Technologies involved
 The following technologies are shown:
