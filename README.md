@@ -15,7 +15,8 @@ The domain objects are annotated with jaxb annotations so a schema file can be g
 
 The rest client then can use this xsd to generate javaclasses from this definition. 
 
-This approach is actually used in the [onlinecv-vaadin](https://github.com/beisdog/onlinecv-vaadin.git)
+This approach is actually used in the [onlinecv-vaadin](https://github.com/beisdog/onlinecv-vaadin.git).
+
 You can get the xsd by calling the rest service ["/rest/onlinecv/xsd"](http://localhost:8888/rest/onlinecv/xsd).
 
 
