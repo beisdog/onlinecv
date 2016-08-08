@@ -10,11 +10,13 @@ A sample UI is implemented in another project and can be found here (https://git
 The CVs are stored either in a dummy implementation or a Mongo DB. 
 You can switch the behaviour at runtime from the Admin page of this application (http://localhost:8888). 
 
+## Noteworthy Architecture Design Decisions of the rest project
+The domain objects are annotated with jaxb annotations so a schema file can be generated.
 
-## Rest interface and XSD generation
-To be able to generate a typed rest client for the service, an xsd is provided that can be used with the jaxb generator xjc to generate
-the client classes on the UI side. This approach is actually taken in the onlinecv-vaadin(https://github.com/beisdog/onlinecv-vaadin.git)
-You can get the xsd by calling the rest service "/rest/onlinecv/xsd".
+The rest client then can use this xsd to generate javaclasses from this definition. 
+
+This approach is actually used in the [onlinecv-vaadin](https://github.com/beisdog/onlinecv-vaadin.git)
+You can get the xsd by calling the rest service ["/rest/onlinecv/xsd"](http://localhost:8888/rest/onlinecv/xsd).
 
 
 # Getting it to run
