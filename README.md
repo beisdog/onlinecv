@@ -41,7 +41,7 @@ be provided in multiple languages. This will be to use when the PDF generation i
   * `brew install mongo`
  * start mongo: 
   * `/usr/bin/mongod --dbpath "path to db" --port 27017 --smallfiles --httpinterface --rest --fork --logpath "path to logfile"`
- * swith the database implementation to mongo by clicking this link once the application is running
+ * switch the database implementation to mongo by clicking this link once the application is running
   * http://localhost:8888/rest/onlinecv/switch/mongo
   * press the link to create some example cv in the database: http://localhost:8888/rest/onlinecv/dataload
 
@@ -68,7 +68,7 @@ The following technologies are shown:
 
 * jersey rest 
 * Mongo DB with Jongo lib
-* Different output format generation xml and json
+* different output format generation xml and json
 * JAXB datamapping.
 * XSD on the fly generation
 
