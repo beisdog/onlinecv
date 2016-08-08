@@ -1,10 +1,21 @@
 # onlinecv
 
-The Online CV is a showcase to show the combination of different technologies.
+The Online CV is a showcase to show the combination of different technologies like jersey rest, jaxb, mongo db, vaadin and jongo(http://jongo.org).
 
-Attention: This is work in progress! 
+This application manages CVs. 
 
-This project contains a rest layer to access Online CVs that are stored in a Mongo DB.
+This project contains the service layer and exposes several rest services.
+A sample UI is implemented in another project and can be found here (https://github.com/beisdog/onlinecv-vaadin.git)
+
+The CVs are stored either in a dummy implementation or a Mongo DB. 
+You can switch the behaviour at runtime from the Admin page of this application (http://localhost:8888). 
+
+
+## Rest interface and XSD generation
+To be able to generate a typed rest client for the service, an xsd is provided that can be used with the jaxb generator xjc to generate
+the client classes on the UI side. This approach is actually taken in the onlinecv-vaadin(https://github.com/beisdog/onlinecv-vaadin.git)
+You can get the xsd by calling the rest service "/rest/onlinecv/xsd".
+
 
 # Getting it to run
 * Checkout the git repository into a local directory on your machine:
@@ -14,7 +25,7 @@ This project contains a rest layer to access Online CVs that are stored in a Mon
  * $ cd onlinecv
  * $ mvn clean install tomcat7:run
 * Open the admin page for the rest service: http://localhost:8888/
-* After that start the Rest client by following the instructions here: https://github.com/beisdog/onlinecv-vaadin.git
+* After that start the Rest client by following the instructions here: (https://github.com/beisdog/onlinecv-vaadin.git)
 
 ## Using Mongo DB as backend.
 * If you want to play with Mongo DB: 
@@ -24,10 +35,18 @@ This project contains a rest layer to access Online CVs that are stored in a Mon
   * $ /usr/bin/mongod --dbpath "path to db" --port 27017 --smallfiles --httpinterface --rest --fork --logpath "path to logfile"
  * Swith the database implementation to mongo by clicking this link once the application is running
   * http://localhost:8888/rest/onlinecv/switch/mongo
-  * Press the link to a cv in the database: http://localhost:8888/rest/onlinecv/dataload
+  * Press the link to create some example cv in the database: http://localhost:8888/rest/onlinecv/dataload
 
 # Using the admin ui
-Initially the application is running with a dummy backend implementation 
+Initially the application is running with a dummy backend implementation. If you have a running mongo installation on the default port
+you can switch to the mongo db through the admin ui located http://localhost:8888 
+
+From the Admin UI you can 
+* see the status of the application
+* switch between dummy database and mongo
+* test the rest services
+* load and delete data in the database
+* start mongo (if installed)
 
 # Debugging
 To debug set these MAVEN_OPTS in your console:
@@ -44,12 +63,9 @@ The following technologies are shown:
 * Different output format generation xml and json
 * JAXB datamapping.
 * XSD on the fly generation
-* Codeenvy as online code editor used
- * Docker image configured with Mongo DB.
 
 # TODOs
-* Clean up code
-* Use real logging
+* Use real logging, still system.out is used.
 * Add selenium test
 * Add unit tests
 * Add flat version of online cv for more efficient list display
