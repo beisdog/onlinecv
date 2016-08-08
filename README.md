@@ -11,6 +11,8 @@ The CVs are stored either in a dummy implementation or a Mongo DB.
 You can switch the behaviour at runtime from the Admin page of this application (http://localhost:8888). 
 
 ## Noteworthy Architecture Design Decisions of the rest project
+
+### XML Schema file generation
 The domain objects are annotated with jaxb annotations so a schema file can be generated.
 
 The rest client then can use this xsd to generate javaclasses from this definition. 
@@ -18,6 +20,10 @@ The rest client then can use this xsd to generate javaclasses from this definiti
 This approach is actually used in the [onlinecv-vaadin](https://github.com/beisdog/onlinecv-vaadin.git).
 
 You can get the xsd by calling the rest service ["/rest/onlinecv/xsd"](http://localhost:8888/rest/onlinecv/xsd).
+
+### CV is multilangual
+In the data object the type I18NText is used for all fields that contain free text. The idea behind is, to provide the means that each CV can
+be provided in multiple languages. This is intended to use when a PDF generation is implemented, but currently this is still on the Todo list.  
 
 
 # Getting it to run
@@ -73,5 +79,6 @@ The following technologies are shown:
 * Add unit tests
 * Add flat version of online cv for more efficient list display
 * Add Swagger UI to see the Rest API
+* Add PDF Generation
 
 
