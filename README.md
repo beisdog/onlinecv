@@ -73,7 +73,7 @@ The following technologies are shown:
 * XSD on the fly generation
 
 # Roadmap
-* use real logging, still system.out is used.
+* use real logging, system.out is still used.
 * add selenium test
 * add unit tests
 * add flat version of online cv for more efficient list display
