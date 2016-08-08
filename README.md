@@ -19,29 +19,28 @@ The rest client then can use this xsd to generate javaclasses from this definiti
 
 This approach is actually used in the [onlinecv-vaadin](https://github.com/beisdog/onlinecv-vaadin.git).
 
-You can get the xsd by calling the rest service: (http://localhost:8888/rest/onlinecv/xsd).
+You can get the xsd by calling the rest service (http://localhost:8888/rest/onlinecv/xsd).
 
-### The CV is Multilingual
+### The CV is multilingual
 In the data object the type I18NText is used for all fields that contain free text. Through this the CV can
-be provided in multiple languages. This is intended to use when a PDF generation is implemented, but currently this is still on the Todo list.  
-
+be provided in multiple languages. This will be to use when the PDF generation is implemented.  
 
 # Getting it to run
 * Checkout the git repository into a local directory on your machine:
  * git clone https://github.com/beisdog/onlinecv.git
 
 * Run the application:
- * $ cd onlinecv
- * $ mvn clean install tomcat7:run
+ * `cd onlinecv`
+ * `mvn clean install tomcat7:run`
 * Open the admin page for the rest service: http://localhost:8888/
 * After that start the Rest client by following the instructions here: (https://github.com/beisdog/onlinecv-vaadin.git)
 
-## Using Mongo DB as backend.
+## Using Mongo DB as Backend
 * If you want to play with Mongo DB: 
  * install Mongo DB on mac: 
   * $ brew install mongo)
  * start mongo: 
-  * $ /usr/bin/mongod --dbpath "path to db" --port 27017 --smallfiles --httpinterface --rest --fork --logpath "path to logfile"
+  * `/usr/bin/mongod --dbpath "path to db" --port 27017 --smallfiles --httpinterface --rest --fork --logpath "path to logfile"`
  * Swith the database implementation to mongo by clicking this link once the application is running
   * http://localhost:8888/rest/onlinecv/switch/mongo
   * Press the link to create some example cv in the database: http://localhost:8888/rest/onlinecv/dataload
@@ -60,7 +59,7 @@ From the Admin UI you can
 # Debugging
 To debug set these MAVEN_OPTS in your console:
 
-$ export MAVEN_OPTS -Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,address=8000,server=y,suspend=n
+`export MAVEN_OPTS -Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,address=8000,server=y,suspend=n`
 
 Then in your eclipse create a new Remote Debugging configuration and connect to port 8000
 
