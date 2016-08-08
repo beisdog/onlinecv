@@ -34,7 +34,7 @@ public class TestDataGenerator {
 		OnlineCV cv = new OnlineCV();
     	
     	cv.setUser(userName);
-    	cv.setName(lastName + "," + firstName);
+    	cv.setName(lastName + ", " + firstName);
 
         PersonalData pd = new PersonalData();
         pd.setFirstname(firstName);
@@ -43,12 +43,12 @@ public class TestDataGenerator {
         pd.setNumberOfChildren(2);
         pd.setCitizenship(new I18NText("Deutsch", "German"));
         
-        pd.setHobbies(new I18NText("Laufen,Schwimmen,Reisen,Gitarre", "Running,Swimming,Travelling,Guitar"));
+        pd.setHobbies(new I18NText("Lesen, Schwimmen, Reisen, Gitarre", "Reading, Swimming, Travelling, Guitar"));
         pd.getAdditionalInfos().add(
         		new GenericContainer(new I18NText("Führerschein","Driving License"), new I18NText("Auto", "Car"))
         );
         pd.getAdditionalInfos().add(
-        		new GenericContainer(new I18NText("Schweizer Arbeitserlaubnis","Swiss Workpermit"), new I18NText("B-Bewilligung bis 2020", "B permit until 2016"))
+        		new GenericContainer(new I18NText("Schweizer Arbeitserlaubnis","Swiss work permit"), new I18NText("B-Bewilligung bis 2020", "B permit until 2016"))
         );
         
         cv.setPersonalData(pd);
@@ -198,6 +198,18 @@ public class TestDataGenerator {
         		);
         scrapping.getAdditionalInfos().add(new GenericContainer(new I18NText("Rolle", "Role"), new I18NText("Architekt", "Architect")));
         cv.getProjects().add(scrapping);
+        
+        Project additional =  new Project(
+				new I18NText("etc.", "etc."), 
+				new I18NText("", "-"), 
+				"-",
+                new SimpleDate(2000, 1, 1), 
+                new SimpleDate(2015, 3, 1), 
+                 java, j2ee,jpa,hibernate,junit,sapBPM,sapWD
+        		);
+        additional.getAdditionalInfos().add(new GenericContainer(new I18NText("Rolle", "Role"), new I18NText("Architekt", "Architect")));
+        cv.getProjects().add(additional);
+        
 		return cv;
 	}
 
