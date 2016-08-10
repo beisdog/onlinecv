@@ -8,7 +8,7 @@ This project contains the service layer and exposes them as rest services.
 A sample UI is implemented in another project and can be found here https://github.com/beisdog/onlinecv-vaadin.git.
 
 The CVs are stored either in a dummy implementation or a Mongo DB. 
-You can switch the behaviour at runtime from the Admin page of this application (http://localhost:8888). 
+You can switch the behaviour at runtime from the Admin page of this application: [http://localhost:8888](http://localhost:8888). 
 
 ## Noteworthy Architecture Design Decisions of the Rest Project
 
@@ -19,7 +19,7 @@ The rest client then can use this xsd to generate javaclasses from this definiti
 
 This approach is actually used in the [onlinecv-vaadin](https://github.com/beisdog/onlinecv-vaadin.git).
 
-You can get the xsd by calling the rest service (http://localhost:8888/rest/onlinecv/xsd).
+You can get the xsd by calling the rest service:  [http://localhost:8888/rest/onlinecv/xsd](http://localhost:8888/rest/onlinecv/xsd).
 
 ### The CV is multilingual
 In the data object the type I18NText is used for all fields that contain free text. Through this the CV can
@@ -45,9 +45,9 @@ be provided in multiple languages. This will be to use when the PDF generation i
   * http://localhost:8888/rest/onlinecv/switch/mongo
   * press the link to create some example cv in the database: http://localhost:8888/rest/onlinecv/dataload
 
-# Using the Admin UI (http://localhost:8888)
+# Using the Admin UI
 Initially the application is running with a dummy backend implementation. If you have a running mongo installation on the default port
-you can switch to the mongo db through the Admin UI located http://localhost:8888 
+you can switch to the mongo db through the Admin UI located [http://localhost:8888](http://localhost:8888)
 
 From the Admin UI you can do the following:
 * see the status of the application
