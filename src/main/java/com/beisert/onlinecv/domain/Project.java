@@ -33,9 +33,10 @@ public class Project {
 	
 	public Project(){}
 	
-	public Project(I18NText title, I18NText description, String customer, SimpleDate from, SimpleDate to,
+	public Project(String key, I18NText title, I18NText description, String customer, SimpleDate from, SimpleDate to,
 			UserSkill...usedSkills) {
 		super();
+		this.key = key;
 		this.title = title;
 		this.description = description;
 		this.customer = customer;

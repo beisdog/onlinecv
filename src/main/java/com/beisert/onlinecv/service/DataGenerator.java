@@ -177,7 +177,7 @@ public class TestDataGenerator {
         UserSkill maven = new UserSkill(Category.TOOLS,"Maven", 1d, 2016,SkillLevel.GOOD_EXPERIENCE,true);
         cv.getUserSkills().add(maven);
 
-        Project soang =  new Project(
+        Project soang =  new Project("1",
 	        				new I18NText("SOA Infrastruktur Aufbau", "SOA Infrastructure"), 
 	        				new I18NText("Aufbau eine SOA Infrastruktur mit Microservices und Camel", "Setup of SOA Infrastruktur mit Microservices und Camel"), 
 	        				"Sympany AG",
@@ -188,7 +188,7 @@ public class TestDataGenerator {
         soang.getAdditionalInfos().add(new GenericContainer(new I18NText("Rolle", "Role"), new I18NText("Architekt", "Architect")));
         cv.getProjects().add(soang);
         
-        Project scrapping =  new Project(
+        Project scrapping =  new Project("2",
 				new I18NText("Erstellung eines Workflows zur Vernichtung von Lagerbeständen", "Scrapping Workflow"), 
 				new I18NText("Budgetplanung, Resourcenplanung, Schätzungen,Technisches Design. Anforderungsmanagement. Entwickler Coaching. BPM Process Design", "-"), 
 				"Bayer AG",
@@ -199,7 +199,7 @@ public class TestDataGenerator {
         scrapping.getAdditionalInfos().add(new GenericContainer(new I18NText("Rolle", "Role"), new I18NText("Architekt", "Architect")));
         cv.getProjects().add(scrapping);
         
-        Project additional =  new Project(
+        Project additional =  new Project("3",
 				new I18NText("etc.", "etc."), 
 				new I18NText("", "-"), 
 				"-",

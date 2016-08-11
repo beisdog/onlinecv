@@ -5,7 +5,7 @@
 <!-- with a "Quirks Mode" doctype may lead to some -->
 <!-- differences in layout.                        -->
 
-<%@page import="com.beisert.onlinecv.rest.ServiceImpl"%>
+<%@page import="com.beisert.onlinecv.service.ServiceImpl"%>
 <%@page import="com.beisert.onlinecv.service.MongoDBSingleton"%>
 <%@page import="com.beisert.onlinecv.service.OnlineCVServiceMongo"%>
 <%@page import="com.beisert.onlinecv.service.OnlineCVService"%>
