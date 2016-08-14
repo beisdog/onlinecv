@@ -3,11 +3,11 @@
 The Online CV is a showcase to show the combination of different technologies like jersey rest, jaxb, mongo db, vaadin and jongo(http://jongo.org).
 
 This project contains only the UI part that accesses the online CV rest services.
-The rest services are implemented here : (https://github.com/beisdog/onlinecv.git). Please read the documentation there.
+The rest services are implemented here : onlinecv-rest. Please read the documentation there.
 
 ## Noteworthy Architecture Design Decisions of the UI Project
 ### Domain Object Generation from Xsd File
-The UI project generates the domain objects for the Online CV from a schema file that was provided by the [rest services project](https://github.com/beisdog/onlinecv). The java generator from xsd is invoked from the maven pom.xml
+The UI project generates the domain objects for the Online CV from a schema file that was provided by the rest services project: onlinecv-rest. The java generator from xsd is invoked from the maven pom.xml
 
 You can get the xsd by calling the rest service ["/rest/onlinecv/xsd"](http://localhost:8888/rest/onlinecv/xsd).
 ## Dynamic UI

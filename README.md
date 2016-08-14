@@ -4,8 +4,9 @@ The Online CV is a showcase to show the combination of different technologies li
 
 This application manages CVs. 
 
-This project contains the service layer and exposes them as rest services.
-A sample UI is implemented in another project and can be found here https://github.com/beisdog/onlinecv-vaadin.git.
+It consists of different sub projects. The folder onlinecv-rest contains the service layer and exposes them as rest services.
+A sample UI is implemented in the folder onlinecv-vaadin and the generation of the PDF,Word is done through birt in 
+the folder onlinecv-birt.
 
 The CVs are stored either in a dummy implementation or a Mongo DB. 
 You can switch the behaviour at runtime from the Admin page of this application: [http://localhost:8888](http://localhost:8888). 
@@ -17,7 +18,7 @@ The domain objects are annotated with jaxb annotations so a schema file can be g
 
 The rest client then can use this xsd to generate javaclasses from this definition. 
 
-This approach is actually used in the [onlinecv-vaadin](https://github.com/beisdog/onlinecv-vaadin.git).
+This approach is actually used in the onlinecv-vaadin project
 
 You can get the xsd by calling the rest service:  [http://localhost:8888/rest/onlinecv/xsd](http://localhost:8888/rest/onlinecv/xsd).
 
