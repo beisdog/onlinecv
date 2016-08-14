@@ -22,9 +22,10 @@ You need to run the onlinecv-rest project as well, so the report gets its xml da
 
 Then you can see a report by opening the URL under:
 
+```
 http://localhost:8090/run?__report=cv_report.rptdesign&__format=pdf&resturl=http://localhost:8888/rest/onlinecv/dbe?format=xml
-
+```
 The url has the following partameters:
 * __report : the report design file
 * __format : can be pdf, html or doc
-* resturl: That is the url where it should fetch the data from, as you can here it mus contain the user (here "dbe" and the format=xml)
+* resturl: That is the url where it should fetch the data from, as you can here it must contain the user (here "dbe" and the format=xml)
