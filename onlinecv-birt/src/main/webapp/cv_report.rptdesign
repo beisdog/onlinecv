@@ -1,0 +1,3527 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.6.0.v201606072122</property>
+    <simple-property-list name="includeResource">
+        <value>translation</value>
+    </simple-property-list>
+    <list-property name="propertyBindings">
+        <structure>
+            <property name="name">FILELIST</property>
+            <property name="id">4</property>
+            <expression name="value" type="javascript">if ( params["resturl"]  ){
+    params["resturl"] ;
+}else {
+     "http://localhost:8888/rest/onlinecv/dbe?format=xml";
+}</expression>
+        </structure>
+        <structure>
+            <property name="name">ENCODINGLIST</property>
+            <property name="id">4</property>
+        </structure>
+        <structure>
+            <property name="name">SCHEMAFILELIST</property>
+            <property name="id">4</property>
+        </structure>
+        <structure>
+            <property name="name">OdaConnProfileName</property>
+            <property name="id">4</property>
+        </structure>
+        <structure>
+            <property name="name">OdaConnProfileStorePath</property>
+            <property name="id">4</property>
+        </structure>
+    </list-property>
+    <property name="units">in</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">72</property>
+    <parameters>
+        <scalar-parameter name="resturl" id="340">
+            <text-property name="promptText">enter a rest url</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">http://localhost:8888/rest/onlinecv/dbe?format=xml</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+    </parameters>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.datatools.enablement.oda.xml" name="Data Source" id="4">
+            <property name="FILELIST">http://localhost:8888/rest/onlinecv/dbe?format=xml</property>
+            <property name="SCHEMAFILELIST">onlinecv.xsd</property>
+        </oda-data-source>
+        <script-data-source name="ScriptedDatasource" id="430"/>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.datatools.enablement.oda.xml.dataSet" name="CV_DS" id="22">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">user</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">user</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">name</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">name</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">lastname</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">lastname</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">firstname</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">firstname</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">birthday_year</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="heading">birthday_year</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">birthday_month</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="heading">birthday_month</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">birthday_day</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="heading">birthday_day</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">numberOfChildren</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="heading">numberOfChildren</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">citizenShip</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">citizenShip</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">hobbies</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">hobbies</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">relationshipStatus</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">relationshipStatus</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">street</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">street</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">houseNumber</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">houseNumber</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">additionalLine</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">additionalLine</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">zip</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">zip</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">city</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">city</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">countryName</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">countryName</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters"/>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">user</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">name</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">lastname</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">firstname</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">birthday_year</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">birthday_month</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">birthday_day</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">numberOfChildren</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">citizenShip</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">10</property>
+                        <property name="name">hobbies</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">11</property>
+                        <property name="name">relationshipStatus</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">12</property>
+                        <property name="name">street</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">13</property>
+                        <property name="name">houseNumber</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">14</property>
+                        <property name="name">additionalLine</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">15</property>
+                        <property name="name">zip</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">16</property>
+                        <property name="name">city</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">17</property>
+                        <property name="name">countryName</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">user</property>
+                    <property name="nativeName">user</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">name</property>
+                    <property name="nativeName">name</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">lastname</property>
+                    <property name="nativeName">lastname</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">firstname</property>
+                    <property name="nativeName">firstname</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">birthday_year</property>
+                    <property name="nativeName">birthday_year</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">birthday_month</property>
+                    <property name="nativeName">birthday_month</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">birthday_day</property>
+                    <property name="nativeName">birthday_day</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">numberOfChildren</property>
+                    <property name="nativeName">numberOfChildren</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">9</property>
+                    <property name="name">citizenShip</property>
+                    <property name="nativeName">citizenShip</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">10</property>
+                    <property name="name">hobbies</property>
+                    <property name="nativeName">hobbies</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">11</property>
+                    <property name="name">relationshipStatus</property>
+                    <property name="nativeName">relationshipStatus</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">12</property>
+                    <property name="name">street</property>
+                    <property name="nativeName">street</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">13</property>
+                    <property name="name">houseNumber</property>
+                    <property name="nativeName">houseNumber</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">14</property>
+                    <property name="name">additionalLine</property>
+                    <property name="nativeName">additionalLine</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">15</property>
+                    <property name="name">zip</property>
+                    <property name="nativeName">zip</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">16</property>
+                    <property name="name">city</property>
+                    <property name="nativeName">city</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">17</property>
+                    <property name="name">countryName</property>
+                    <property name="nativeName">countryName</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[table0#-TNAME-#table0#:#[/onlineCV]#:#{user;STRING;/user},{name;STRING;/name},{lastname;STRING;/personalData/lastname},{firstname;STRING;/personalData/firstname},{birthday_year;INT;/personalData/birthday/year},{birthday_month;INT;/personalData/birthday/month},{birthday_day;INT;/personalData/birthday/day},{numberOfChildren;INT;/personalData/numberOfChildren},{citizenShip;STRING;/personalData/citizenship/defaultText},{hobbies;STRING;/personalData/hobbies/defaultText},{relationshipStatus;STRING;/personalData/relationshipStatus},{street;STRING;/personalData/address/street},{houseNumber;STRING;/personalData/address/houseNumber},{additionalLine;STRING;/personalData/address/additionalLine},{zip;STRING;/personalData/address/zip},{city;STRING;/personalData/address/city},{countryName;STRING;/personalData/address/countryName}#:#<"xs","http:%%www.w3.org%2001%XMLSchema">]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>user</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>user</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>name</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>name</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>lastname</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>lastname</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>firstname</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>firstname</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>birthday_year</design:name>
+              <design:position>5</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>birthday_year</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>birthday_month</design:name>
+              <design:position>6</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>birthday_month</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>birthday_day</design:name>
+              <design:position>7</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>birthday_day</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>numberOfChildren</design:name>
+              <design:position>8</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>numberOfChildren</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>defaultText</design:name>
+              <design:position>9</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>defaultText</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>defaultText_1</design:name>
+              <design:position>10</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>defaultText_1</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>street</design:name>
+              <design:position>11</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>street</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>houseNumber</design:name>
+              <design:position>12</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>houseNumber</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>additionalLine</design:name>
+              <design:position>13</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>additionalLine</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>zip</design:name>
+              <design:position>14</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>zip</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>city</design:name>
+              <design:position>15</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>city</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>countryName</design:name>
+              <design:position>16</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>countryName</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>MAX_ROW</name>
+                    <value>-1</value>
+                </ex-property>
+                <ex-property>
+                    <name>XML_FILE</name>
+                </ex-property>
+            </list-property>
+        </oda-data-set>
+        <oda-data-set extensionID="org.eclipse.datatools.enablement.oda.xml.dataSet" name="Education_DS" id="51">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">from_year</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="heading">from_year</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">from_month</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="heading">from_month</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">from_day</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="heading">from_day</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">to_year</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="heading">to_year</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">to_month</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="heading">to_month</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">to_day</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="heading">to_day</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">title</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">title</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">description</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">description</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">company</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">company</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters"/>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">from_year</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">from_month</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">from_day</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">to_year</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">to_month</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">to_day</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">title</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">description</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">company</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">from_year</property>
+                    <property name="nativeName">from_year</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">from_month</property>
+                    <property name="nativeName">from_month</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">from_day</property>
+                    <property name="nativeName">from_day</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">to_year</property>
+                    <property name="nativeName">to_year</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">to_month</property>
+                    <property name="nativeName">to_month</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">to_day</property>
+                    <property name="nativeName">to_day</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">title</property>
+                    <property name="nativeName">title</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">description</property>
+                    <property name="nativeName">description</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">9</property>
+                    <property name="name">company</property>
+                    <property name="nativeName">company</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[table0#-TNAME-#table0#:#[/onlineCV/education]#:#{from_year;INT;/from/year},{from_month;INT;/from/month},{from_day;INT;/from/day},{to_year;INT;/to/year},{to_month;INT;/to/month},{to_day;INT;/to/day},{title;STRING;/title/defaultText},{description;STRING;/description/defaultText},{company;STRING;/company}#:#<"xs","http:%%www.w3.org%2001%XMLSchema">]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>form_year</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>form_year</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>from_month</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>from_month</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>from_day</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>from_day</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>to_year</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>to_year</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>to_month</design:name>
+              <design:position>5</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>to_month</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>to_day</design:name>
+              <design:position>6</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>to_day</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>title</design:name>
+              <design:position>7</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>title</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>description</design:name>
+              <design:position>8</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>description</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>company</design:name>
+              <design:position>9</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>company</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>MAX_ROW</name>
+                    <value>-1</value>
+                </ex-property>
+                <ex-property>
+                    <name>XML_FILE</name>
+                </ex-property>
+            </list-property>
+        </oda-data-set>
+        <oda-data-set extensionID="org.eclipse.datatools.enablement.oda.xml.dataSet" name="Certification_DS" id="91">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">year</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="heading">year</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">title</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">title</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">month</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="heading">month</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">day</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="heading">day</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters"/>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">year</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">title</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">month</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">day</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">year</property>
+                    <property name="nativeName">year</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">title</property>
+                    <property name="nativeName">title</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">month</property>
+                    <property name="nativeName">month</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">day</property>
+                    <property name="nativeName">day</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[table0#-TNAME-#table0#:#[/onlineCV/certifications]#:#{year;INT;/from/year},{title;STRING;/title/defaultText},{month;INT;/from/month},{day;INT;/from/day}#:#<"xs","http:%%www.w3.org%2001%XMLSchema">]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>year</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>year</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>month</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>month</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>day</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>day</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>title</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>title</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>MAX_ROW</name>
+                    <value>-1</value>
+                </ex-property>
+                <ex-property>
+                    <name>XML_FILE</name>
+                </ex-property>
+            </list-property>
+        </oda-data-set>
+        <oda-data-set extensionID="org.eclipse.datatools.enablement.oda.xml.dataSet" name="Jobs_DS" id="92">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">from_year</property>
+                    <text-property name="heading">from_year</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">from_month</property>
+                    <text-property name="heading">from_month</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">to_year</property>
+                    <text-property name="heading">to_year</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">to_month</property>
+                    <text-property name="heading">to_month</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">title</property>
+                    <text-property name="heading">title</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">description</property>
+                    <text-property name="heading">description</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">company</property>
+                    <text-property name="heading">company</text-property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">from_year</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">from_month</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">to_year</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">to_month</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">title</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">description</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">company</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">from_year</property>
+                    <property name="nativeName">from_year</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">from_month</property>
+                    <property name="nativeName">from_month</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">to_year</property>
+                    <property name="nativeName">to_year</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">to_month</property>
+                    <property name="nativeName">to_month</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">title</property>
+                    <property name="nativeName">title</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">description</property>
+                    <property name="nativeName">description</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">company</property>
+                    <property name="nativeName">company</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[table0#-TNAME-#table0#:#[/onlineCV/jobs]#:#{from_year;INT;/from/year},{from_month;INT;/from/month},{to_year;INT;/to/year},{to_month;INT;/to/month},{title;STRING;/title/defaultText},{description;STRING;/description/defaultText},{company;STRING;/company}#:#<"xs","http:%%www.w3.org%2001%XMLSchema">]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>from_year</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>from_year</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>from_month</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>from_month</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>to_year</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>to_year</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>to_month</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>to_month</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>title</design:name>
+              <design:position>5</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>title</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>description</design:name>
+              <design:position>6</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>description</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>company</design:name>
+              <design:position>7</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>company</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>MAX_ROW</name>
+                    <value>-1</value>
+                </ex-property>
+                <ex-property>
+                    <name>XML_FILE</name>
+                </ex-property>
+            </list-property>
+        </oda-data-set>
+        <oda-data-set extensionID="org.eclipse.datatools.enablement.oda.xml.dataSet" name="Language_DS" id="162">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">locale</property>
+                    <text-property name="heading">locale</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">skillLevel</property>
+                    <text-property name="heading">skillLevel</text-property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">locale</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">skillLevel</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">locale</property>
+                    <property name="nativeName">locale</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">skillLevel</property>
+                    <property name="nativeName">skillLevel</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[table0#-TNAME-#table0#:#[/onlineCV/languageSkills]#:#{locale;STRING;/locale},{skillLevel;STRING;/skillLevel}#:#<"xs","http:%%www.w3.org%2001%XMLSchema">]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>locale</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>locale</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>skillLevel</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>skillLevel</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>MAX_ROW</name>
+                    <value>-1</value>
+                </ex-property>
+                <ex-property>
+                    <name>XML_FILE</name>
+                </ex-property>
+            </list-property>
+        </oda-data-set>
+        <oda-data-set extensionID="org.eclipse.datatools.enablement.oda.xml.dataSet" name="UserSkills" id="269">
+            <property name="nullsOrdering">nulls lowest</property>
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">category</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">category</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">skill</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">skill</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">numberOfYears</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="heading">numberOfYears</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">yearLastUsed</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="heading">yearLastUsed</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">skillLevel</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">skillLevel</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">mainSkill</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">mainSkill</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters"/>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">category</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">skill</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">numberOfYears</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">yearLastUsed</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">skillLevel</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">mainSkill</property>
+                        <property name="dataType">boolean</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">category</property>
+                    <property name="nativeName">category</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">skill</property>
+                    <property name="nativeName">skill</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">numberOfYears</property>
+                    <property name="nativeName">numberOfYears</property>
+                    <property name="dataType">float</property>
+                    <property name="nativeDataType">8</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">yearLastUsed</property>
+                    <property name="nativeName">yearLastUsed</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">skillLevel</property>
+                    <property name="nativeName">skillLevel</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">mainSkill</property>
+                    <property name="nativeName">mainSkill</property>
+                    <property name="dataType">boolean</property>
+                    <property name="nativeDataType">16</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[table0#-TNAME-#table0#:#[/onlineCV/userSkills]#:#{category;STRING;/category},{skill;STRING;/skill},{numberOfYears;DOUBLE;/numberOfYears},{yearLastUsed;INT;/yearLastUsed},{skillLevel;STRING;/skillLevel},{mainSkill;BOOLEAN;/mainSkill}#:#<"xs","http:%%www.w3.org%2001%XMLSchema">]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>category</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>category</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>skill</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>skill</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>MAX_ROW</name>
+                    <value>-1</value>
+                </ex-property>
+                <ex-property>
+                    <name>XML_FILE</name>
+                </ex-property>
+            </list-property>
+        </oda-data-set>
+        <oda-data-set extensionID="org.eclipse.datatools.enablement.oda.xml.dataSet" name="Project_DS" id="333">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">title</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">title</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">description</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">description</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">from_year</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="heading">from_year</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">from_month</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="heading">from_month</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">to_year</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="heading">to_year</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">to_month</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="heading">to_month</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">customer</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">customer</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">key</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">key</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters"/>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">title</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">description</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">from_year</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">from_month</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">to_year</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">to_month</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">customer</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">key</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">title</property>
+                    <property name="nativeName">title</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">description</property>
+                    <property name="nativeName">description</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">from_year</property>
+                    <property name="nativeName">from_year</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">from_month</property>
+                    <property name="nativeName">from_month</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">to_year</property>
+                    <property name="nativeName">to_year</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">to_month</property>
+                    <property name="nativeName">to_month</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">customer</property>
+                    <property name="nativeName">customer</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">key</property>
+                    <property name="nativeName">key</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[table0#-TNAME-#table0#:#[/onlineCV/projects]#:#{title;STRING;/title/defaultText},{description;STRING;/description/defaultText},{from_year;INT;/from/year},{from_month;INT;/from/month},{to_year;INT;/to/year},{to_month;INT;/to/month},{customer;STRING;/customer},{key;STRING;/key}#:#<"xs","http:%%www.w3.org%2001%XMLSchema">]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>title</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>title</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>description</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>description</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>from_year</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>from_year</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>from_month</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>from_month</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>to_year</design:name>
+              <design:position>5</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>to_year</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>to_month</design:name>
+              <design:position>6</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>to_month</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>customer</design:name>
+              <design:position>7</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>customer</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>MAX_ROW</name>
+                    <value>-1</value>
+                </ex-property>
+                <ex-property>
+                    <name>XML_FILE</name>
+                </ex-property>
+            </list-property>
+        </oda-data-set>
+        <oda-data-set extensionID="org.eclipse.datatools.enablement.oda.xml.dataSet" name="Project_Skill_DS" id="409">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">skill</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">skill</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">key</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">key</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters">
+                <structure>
+                    <property name="name">projectKey</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">0</property>
+                    <property name="position">1</property>
+                    <expression name="defaultValue" type="javascript">""</expression>
+                    <property name="isOptional">false</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">skill</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">key</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">skill</property>
+                    <property name="nativeName">skill</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">key</property>
+                    <property name="nativeName">key</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[table0#-TNAME-#table0#:#[/onlineCV/projects/usedSkills]#:#{skill;STRING;/skill},{key;STRING;../key}#:#<"xs","http:%%www.w3.org%2001%XMLSchema">]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>category</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>category</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>skill</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>skill</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>numberOfYears</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>8</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>numberOfYears</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>yearLastUsed</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>yearLastUsed</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>skillLevel</design:name>
+              <design:position>5</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>skillLevel</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>mainSkill</design:name>
+              <design:position>6</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>16</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>mainSkill</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>MAX_ROW</name>
+                    <value>-1</value>
+                </ex-property>
+                <ex-property>
+                    <name>XML_FILE</name>
+                </ex-property>
+            </list-property>
+        </oda-data-set>
+        <joint-data-set name="Project_To_Skills_JDS" id="450">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">Project_DS::to_month</property>
+                    <property name="alias">to_month</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">Project_DS::to_month</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Project_DS::to_year</property>
+                    <property name="alias">to_year</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">Project_DS::to_year</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Project_DS::from_year</property>
+                    <property name="alias">from_year</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">Project_DS::from_year</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Project_Skill_DS::skill</property>
+                    <property name="alias">skill</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Project_Skill_DS::skill</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Project_DS::key</property>
+                    <property name="alias">Project_DS::key</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Project_DS::key</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Project_DS::description</property>
+                    <property name="alias">description</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Project_DS::description</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Project_Skill_DS::key</property>
+                    <property name="alias">Project_Skill_DS::key</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Project_Skill_DS::key</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Project_DS::title</property>
+                    <property name="alias">title</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Project_DS::title</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Project_DS::from_month</property>
+                    <property name="alias">from_month</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">Project_DS::from_month</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Project_DS::customer</property>
+                    <property name="alias">customer</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Project_DS::customer</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters">
+                <structure>
+                    <property name="name">Project_Skill_DS::projectKey</property>
+                    <property name="dataType">string</property>
+                    <property name="position">0</property>
+                    <expression name="defaultValue">""</expression>
+                    <property name="isOptional">false</property>
+                    <property name="allowNull">false</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">title</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">description</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">from_year</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">from_month</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">to_year</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">to_month</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">customer</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">Project_DS::key</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">skill</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">10</property>
+                        <property name="name">Project_Skill_DS::key</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <simple-property-list name="dataSets">
+                <value>Project_DS</value>
+                <value>Project_Skill_DS</value>
+            </simple-property-list>
+            <list-property name="joinConditions">
+                <structure>
+                    <property name="joinType">left-out</property>
+                    <property name="joinOperator">eq</property>
+                    <property name="leftDataSet">Project_DS</property>
+                    <property name="rightDataSet">Project_Skill_DS</property>
+                    <expression name="leftExpression">dataSetRow["key"]</expression>
+                    <expression name="rightExpression">dataSetRow["key"]</expression>
+                </structure>
+            </list-property>
+        </joint-data-set>
+    </data-sets>
+    <styles>
+        <style name="report" id="404">
+            <property name="fontFamily">"Helvetica"</property>
+        </style>
+    </styles>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <property name="leftMargin">0.7083333333333334in</property>
+            <property name="rightMargin">0.7083333333333334in</property>
+            <page-footer>
+                <text id="3">
+                    <property name="contentType">html</property>
+                    <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
+                </text>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <data id="34">
+            <property name="fontSize">16pt</property>
+            <property name="fontWeight">bold</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">medium</property>
+            <property name="textAlign">center</property>
+            <property name="dataSet">CV_DS</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">name</property>
+                    <text-property name="displayName">name</text-property>
+                    <expression name="expression" type="javascript">"Curriculum Vita " + dataSetRow["name"]</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+            </list-property>
+            <property name="resultSetColumn">name</property>
+        </data>
+        <label name="Header" id="45"/>
+        <grid name="Image-Grid" id="36">
+            <column id="37"/>
+            <column id="38">
+                <property name="textAlign">center</property>
+            </column>
+            <column id="39"/>
+            <row id="40">
+                <cell id="41"/>
+                <cell id="42">
+                    <image id="35">
+                        <property name="height">2.0972222222222223in</property>
+                        <property name="width">1.875in</property>
+                        <property name="source">file</property>
+                        <expression name="uri" type="constant">user-male-silhouette.png</expression>
+                    </image>
+                </cell>
+                <cell id="43"/>
+            </row>
+        </grid>
+        <label name="Personal Data" id="28">
+            <property name="fontFamily">"Helvetica"</property>
+            <property name="fontSize">14pt</property>
+            <property name="fontWeight">normal</property>
+            <property name="color">#666666</property>
+            <property name="textUnderline">none</property>
+            <property name="borderBottomColor">#B3B3B3</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1px</property>
+            <property name="marginTop">10pt</property>
+            <property name="textAlign">left</property>
+            <text-property name="text">Persönliche Angaben</text-property>
+        </label>
+        <grid id="5">
+            <property name="width">100%</property>
+            <column id="6">
+                <property name="width">1.5in</property>
+            </column>
+            <column id="7"/>
+            <row id="8">
+                <cell id="9">
+                    <label id="398"/>
+                    <label id="397">
+                        <text-property name="text">Adresse</text-property>
+                    </label>
+                </cell>
+                <cell id="10">
+                    <label id="144"/>
+                    <data id="23">
+                        <property name="dataSet">CV_DS</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">name</property>
+                                <text-property name="displayName">street</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["street"] + " " + dataSetRow["houseNumber"]</expression>
+                                <property name="dataType">string</property>
+                                <property name="allowExport">true</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">name</property>
+                    </data>
+                    <data id="30">
+                        <property name="dataSet">CV_DS</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">zip</property>
+                                <text-property name="displayName">zip_city</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["zip"] + " " + dataSetRow["city"]</expression>
+                                <property name="dataType">string</property>
+                                <property name="allowExport">true</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">zip</property>
+                    </data>
+                    <data id="31">
+                        <property name="dataSet">CV_DS</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">countryName</property>
+                                <text-property name="displayName">countryName</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["countryName"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">countryName</property>
+                    </data>
+                </cell>
+            </row>
+            <row id="11">
+                <cell id="12">
+                    <label id="44">
+                        <text-property name="text">Geburtsdatum</text-property>
+                    </label>
+                </cell>
+                <cell id="13">
+                    <data id="24">
+                        <property name="dataSet">CV_DS</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">birthday_day</property>
+                                <text-property name="displayName">birthday</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["birthday_day"]+"." +dataSetRow["birthday_month"]+"."+dataSetRow["birthday_year"]</expression>
+                                <property name="dataType">string</property>
+                                <property name="allowExport">true</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">birthday_day</property>
+                    </data>
+                </cell>
+            </row>
+            <row id="14">
+                <cell id="15">
+                    <label id="32">
+                        <text-property name="text">Zivilstand</text-property>
+                    </label>
+                </cell>
+                <cell id="16">
+                    <data id="33">
+                        <property name="dataSet">CV_DS</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">relationshipStatus</property>
+                                <text-property name="displayName">relationshipStatus</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["relationshipStatus"].equals("MARRIED") ? "Verheiratet" : "Ledig"</expression>
+                                <property name="dataType">string</property>
+                                <property name="allowExport">true</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">relationshipStatus</property>
+                    </data>
+                </cell>
+            </row>
+            <row id="17">
+                <cell id="18"/>
+                <cell id="19"/>
+            </row>
+        </grid>
+        <label name="Ausbildung" id="46">
+            <property name="fontFamily">"Helvetica"</property>
+            <property name="fontSize">14pt</property>
+            <property name="fontWeight">normal</property>
+            <property name="color">#666666</property>
+            <property name="textUnderline">none</property>
+            <property name="borderBottomColor">#B3B3B3</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1px</property>
+            <property name="marginTop">10pt</property>
+            <property name="textAlign">left</property>
+            <text-property name="text">Ausbildung</text-property>
+        </label>
+        <table id="52">
+            <property name="width">100%</property>
+            <property name="dataSet">Education_DS</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">from_year</property>
+                    <text-property name="displayName">from_year</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["from_year"] + "-" + dataSetRow["to_year"]</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">title</property>
+                    <text-property name="displayName">title</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["title"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">company</property>
+                    <text-property name="displayName">company</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["company"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">description</property>
+                    <text-property name="displayName">description</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["description"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <column id="71">
+                <property name="width">1.5in</property>
+            </column>
+            <column id="72"/>
+            <column id="73">
+                <property name="width">3in</property>
+            </column>
+            <header>
+                <row id="53">
+                    <cell id="54"/>
+                    <cell id="56"/>
+                    <cell id="58"/>
+                </row>
+            </header>
+            <detail>
+                <row id="60">
+                    <cell id="61">
+                        <data id="62">
+                            <property name="resultSetColumn">from_year</property>
+                        </data>
+                    </cell>
+                    <cell id="63">
+                        <data id="64">
+                            <property name="fontWeight">bold</property>
+                            <property name="textAlign">left</property>
+                            <property name="resultSetColumn">title</property>
+                        </data>
+                        <data id="74">
+                            <property name="resultSetColumn">description</property>
+                        </data>
+                    </cell>
+                    <cell id="65">
+                        <data id="66">
+                            <property name="resultSetColumn">company</property>
+                        </data>
+                    </cell>
+                </row>
+            </detail>
+            <footer>
+                <row id="67">
+                    <cell id="68"/>
+                    <cell id="69"/>
+                    <cell id="70"/>
+                </row>
+            </footer>
+        </table>
+        <label name="Weiterbildung" id="47">
+            <property name="fontFamily">"Helvetica"</property>
+            <property name="fontSize">14pt</property>
+            <property name="fontWeight">normal</property>
+            <property name="color">#666666</property>
+            <property name="textUnderline">none</property>
+            <property name="borderBottomColor">#B3B3B3</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1px</property>
+            <property name="marginTop">10pt</property>
+            <property name="textAlign">left</property>
+            <text-property name="text">Weiterbildung</text-property>
+        </label>
+        <table name="Education_Tbl" id="146">
+            <property name="dataSet">Certification_DS</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">year</property>
+                    <text-property name="displayName">year</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["year"]+"/" + dataSetRow["month"]</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">title</property>
+                    <text-property name="displayName">title</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["title"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <column id="160">
+                <property name="width">1.5in</property>
+            </column>
+            <column id="161"/>
+            <header>
+                <row id="147">
+                    <cell id="148"/>
+                    <cell id="150"/>
+                </row>
+            </header>
+            <detail>
+                <row id="152">
+                    <cell id="153">
+                        <data id="154">
+                            <property name="resultSetColumn">year</property>
+                        </data>
+                    </cell>
+                    <cell id="155">
+                        <data id="156">
+                            <property name="resultSetColumn">title</property>
+                        </data>
+                    </cell>
+                </row>
+            </detail>
+            <footer>
+                <row id="157">
+                    <cell id="158"/>
+                    <cell id="159"/>
+                </row>
+            </footer>
+        </table>
+        <label name="Kenntnisse" id="48">
+            <property name="fontFamily">"Helvetica"</property>
+            <property name="fontSize">14pt</property>
+            <property name="fontWeight">normal</property>
+            <property name="color">#666666</property>
+            <property name="textUnderline">none</property>
+            <property name="borderBottomColor">#B3B3B3</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1px</property>
+            <property name="marginTop">10pt</property>
+            <property name="textAlign">left</property>
+            <text-property name="text">Kenntnisse</text-property>
+        </label>
+        <table name="Programming" id="287">
+            <property name="dataSet">UserSkills</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">category</property>
+                    <text-property name="displayName">category</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["category"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">skill</property>
+                    <text-property name="displayName">skill</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["skill"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Concat1</property>
+                    <property name="dataType">string</property>
+                    <property name="aggregateFunction">CONCATENATE</property>
+                    <list-property name="arguments">
+                        <structure>
+                            <property name="name">Expression</property>
+                            <expression name="value" type="javascript">row["skill"]</expression>
+                        </structure>
+                        <structure>
+                            <property name="name">Separator</property>
+                            <expression name="value" type="javascript">", "</expression>
+                        </structure>
+                        <structure>
+                            <property name="name">Maxlength</property>
+                        </structure>
+                        <structure>
+                            <property name="name">Showallvalues</property>
+                        </structure>
+                    </list-property>
+                    <property name="allowExport">true</property>
+                </structure>
+            </list-property>
+            <list-property name="filter">
+                <structure>
+                    <property name="operator">eq</property>
+                    <expression name="expr" type="javascript">row["category"]</expression>
+                    <simple-property-list name="value1">
+                        <value>"PROGRAMMING"</value>
+                    </simple-property-list>
+                    <property name="updateAggregation">true</property>
+                </structure>
+            </list-property>
+            <column id="301">
+                <property name="width">1.5in</property>
+            </column>
+            <column id="302"/>
+            <header>
+                <row id="288">
+                    <property name="textAlign">left</property>
+                    <cell id="289"/>
+                    <cell id="291">
+                        <property name="fontWeight">normal</property>
+                    </cell>
+                </row>
+            </header>
+            <footer>
+                <row id="337">
+                    <cell id="338">
+                        <label id="290">
+                            <property name="textAlign">left</property>
+                            <text-property name="text">Programming</text-property>
+                        </label>
+                    </cell>
+                    <cell id="339">
+                        <text-data id="304">
+                            <property name="fontWeight">normal</property>
+                            <property name="textAlign">left</property>
+                            <expression name="valueExpr">row["Concat1"]</expression>
+                            <property name="contentType">html</property>
+                        </text-data>
+                    </cell>
+                </row>
+            </footer>
+        </table>
+        <table name="Frameworks" id="305">
+            <property name="dataSet">UserSkills</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">category</property>
+                    <text-property name="displayName">category</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["category"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">skill</property>
+                    <text-property name="displayName">skill</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["skill"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Concat1</property>
+                    <property name="dataType">string</property>
+                    <property name="aggregateFunction">CONCATENATE</property>
+                    <list-property name="arguments">
+                        <structure>
+                            <property name="name">Expression</property>
+                            <expression name="value" type="javascript">row["skill"]</expression>
+                        </structure>
+                        <structure>
+                            <property name="name">Separator</property>
+                            <expression name="value" type="javascript">", "</expression>
+                        </structure>
+                        <structure>
+                            <property name="name">Maxlength</property>
+                        </structure>
+                        <structure>
+                            <property name="name">Showallvalues</property>
+                        </structure>
+                    </list-property>
+                    <property name="allowExport">true</property>
+                </structure>
+            </list-property>
+            <list-property name="filter">
+                <structure>
+                    <property name="operator">eq</property>
+                    <expression name="expr" type="javascript">row["category"]</expression>
+                    <simple-property-list name="value1">
+                        <value>"FRAMEWORKS"</value>
+                    </simple-property-list>
+                    <property name="updateAggregation">true</property>
+                </structure>
+            </list-property>
+            <column id="311">
+                <property name="fontSize">1.5pt</property>
+                <property name="width">1.5in</property>
+            </column>
+            <column id="312"/>
+            <header>
+                <row id="306">
+                    <cell id="307"/>
+                    <cell id="309"/>
+                </row>
+            </header>
+            <footer>
+                <row id="364">
+                    <cell id="365">
+                        <label id="314">
+                            <property name="fontSize">10pt</property>
+                            <property name="textAlign">left</property>
+                            <text-property name="text">Frameworks</text-property>
+                        </label>
+                    </cell>
+                    <cell id="366">
+                        <text-data id="310">
+                            <property name="textAlign">left</property>
+                            <expression name="valueExpr">row["Concat1"]</expression>
+                            <property name="contentType">html</property>
+                        </text-data>
+                    </cell>
+                </row>
+            </footer>
+        </table>
+        <table name="SAP" id="323">
+            <property name="dataSet">UserSkills</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">category</property>
+                    <text-property name="displayName">category</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["category"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">skill</property>
+                    <text-property name="displayName">skill</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["skill"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Concat1</property>
+                    <property name="dataType">string</property>
+                    <property name="aggregateFunction">CONCATENATE</property>
+                    <list-property name="arguments">
+                        <structure>
+                            <property name="name">Expression</property>
+                            <expression name="value" type="javascript">row["skill"]</expression>
+                        </structure>
+                        <structure>
+                            <property name="name">Separator</property>
+                            <expression name="value" type="javascript">", "</expression>
+                        </structure>
+                        <structure>
+                            <property name="name">Maxlength</property>
+                        </structure>
+                        <structure>
+                            <property name="name">Showallvalues</property>
+                        </structure>
+                    </list-property>
+                    <property name="allowExport">true</property>
+                </structure>
+            </list-property>
+            <list-property name="filter">
+                <structure>
+                    <property name="operator">eq</property>
+                    <expression name="expr" type="javascript">row["category"]</expression>
+                    <simple-property-list name="value1">
+                        <value>"SAP"</value>
+                    </simple-property-list>
+                    <property name="updateAggregation">true</property>
+                </structure>
+            </list-property>
+            <column id="329">
+                <property name="width">1.5in</property>
+            </column>
+            <column id="330"/>
+            <header>
+                <row id="324">
+                    <cell id="325"/>
+                    <cell id="327"/>
+                </row>
+            </header>
+            <footer>
+                <row id="367">
+                    <cell id="368">
+                        <label id="326">
+                            <property name="textAlign">left</property>
+                            <text-property name="text">SAP</text-property>
+                        </label>
+                    </cell>
+                    <cell id="369">
+                        <text-data id="328">
+                            <property name="textAlign">left</property>
+                            <expression name="valueExpr">row["Concat1"]</expression>
+                            <property name="contentType">html</property>
+                        </text-data>
+                    </cell>
+                </row>
+            </footer>
+        </table>
+        <table name="Tools" id="315">
+            <property name="dataSet">UserSkills</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">category</property>
+                    <text-property name="displayName">category</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["category"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">skill</property>
+                    <text-property name="displayName">skill</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["skill"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Concat1</property>
+                    <property name="dataType">string</property>
+                    <property name="aggregateFunction">CONCATENATE</property>
+                    <list-property name="arguments">
+                        <structure>
+                            <property name="name">Expression</property>
+                            <expression name="value" type="javascript">row["skill"]</expression>
+                        </structure>
+                        <structure>
+                            <property name="name">Separator</property>
+                            <expression name="value" type="javascript">", "</expression>
+                        </structure>
+                        <structure>
+                            <property name="name">Maxlength</property>
+                        </structure>
+                        <structure>
+                            <property name="name">Showallvalues</property>
+                        </structure>
+                    </list-property>
+                    <property name="allowExport">true</property>
+                </structure>
+            </list-property>
+            <list-property name="filter">
+                <structure>
+                    <property name="operator">eq</property>
+                    <expression name="expr" type="javascript">row["category"]</expression>
+                    <simple-property-list name="value1">
+                        <value>"TOOLS"</value>
+                    </simple-property-list>
+                    <property name="updateAggregation">true</property>
+                </structure>
+            </list-property>
+            <column id="321">
+                <property name="width">1.5in</property>
+            </column>
+            <column id="322"/>
+            <header>
+                <row id="316">
+                    <cell id="317"/>
+                    <cell id="319"/>
+                </row>
+            </header>
+            <footer>
+                <row id="370">
+                    <cell id="371">
+                        <label id="318">
+                            <property name="textAlign">left</property>
+                            <text-property name="text">Tools</text-property>
+                        </label>
+                    </cell>
+                    <cell id="372">
+                        <text-data id="320">
+                            <property name="textAlign">left</property>
+                            <expression name="valueExpr">row["Concat1"]</expression>
+                            <property name="contentType">html</property>
+                        </text-data>
+                    </cell>
+                </row>
+            </footer>
+        </table>
+        <label name="Werdegang" id="49">
+            <property name="fontFamily">"Helvetica"</property>
+            <property name="fontSize">14pt</property>
+            <property name="fontWeight">normal</property>
+            <property name="color">#666666</property>
+            <property name="textUnderline">none</property>
+            <property name="borderBottomColor">#B3B3B3</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1px</property>
+            <property name="marginTop">10pt</property>
+            <property name="textAlign">left</property>
+            <property name="pageBreakAfter">avoid</property>
+            <property name="pageBreakBefore">auto</property>
+            <text-property name="text">Berufliche Tätigkeiten</text-property>
+        </label>
+        <table id="121">
+            <property name="pageBreakInside">avoid</property>
+            <property name="dataSet">Jobs_DS</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">from_year</property>
+                    <text-property name="displayName">from_year</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["from_year"]+"/"+dataSetRow["from_month"] + " - " +  dataSetRow["to_year"]+"/"+dataSetRow["to_month"]</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">title</property>
+                    <text-property name="displayName">title</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["title"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">company</property>
+                    <text-property name="displayName">company</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["company"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">description</property>
+                    <text-property name="displayName">description</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["description"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <column id="140">
+                <property name="width">1.5in</property>
+            </column>
+            <column id="141"/>
+            <column id="142">
+                <property name="width">3in</property>
+            </column>
+            <header>
+                <row id="122">
+                    <cell id="123"/>
+                    <cell id="125"/>
+                    <cell id="127"/>
+                </row>
+            </header>
+            <detail>
+                <row id="129">
+                    <cell id="130">
+                        <data id="131">
+                            <property name="resultSetColumn">from_year</property>
+                        </data>
+                    </cell>
+                    <cell id="132">
+                        <data id="133">
+                            <property name="fontWeight">bold</property>
+                            <property name="textAlign">left</property>
+                            <property name="resultSetColumn">title</property>
+                        </data>
+                        <data id="143">
+                            <property name="resultSetColumn">description</property>
+                        </data>
+                        <label id="145"/>
+                    </cell>
+                    <cell id="134">
+                        <data id="135">
+                            <property name="resultSetColumn">company</property>
+                        </data>
+                    </cell>
+                </row>
+            </detail>
+            <footer>
+                <row id="136">
+                    <cell id="137"/>
+                    <cell id="138"/>
+                    <cell id="139"/>
+                </row>
+            </footer>
+        </table>
+        <label name="Sprachen" id="50">
+            <property name="fontFamily">"Helvetica"</property>
+            <property name="fontSize">14pt</property>
+            <property name="fontWeight">normal</property>
+            <property name="color">#666666</property>
+            <property name="textUnderline">none</property>
+            <property name="borderBottomColor">#B3B3B3</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1px</property>
+            <property name="marginTop">10pt</property>
+            <property name="textAlign">left</property>
+            <text-property name="text">Sprachkenntnisse</text-property>
+        </label>
+        <table id="163">
+            <list-property name="mapRules">
+                <structure>
+                    <expression name="testExpr" type="javascript">row["locale"]</expression>
+                    <property name="operator">eq</property>
+                    <simple-property-list name="value1">
+                        <value type="javascript">"ENGLISH"</value>
+                    </simple-property-list>
+                    <text-property name="display" key="ENGLISH"></text-property>
+                </structure>
+                <structure>
+                    <expression name="testExpr" type="javascript">row["locale"]</expression>
+                    <property name="operator">eq</property>
+                    <simple-property-list name="value1">
+                        <value type="javascript">"GERMAN"</value>
+                    </simple-property-list>
+                    <text-property name="display" key="GERMAN"></text-property>
+                </structure>
+            </list-property>
+            <property name="dataSet">Language_DS</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">locale</property>
+                    <text-property name="displayName">locale</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["locale"]</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">skillLevel</property>
+                    <text-property name="displayName">skillLevel</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["skillLevel"]</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+            </list-property>
+            <column id="177">
+                <property name="width">1.5in</property>
+            </column>
+            <column id="178"/>
+            <header>
+                <row id="164">
+                    <cell id="165"/>
+                    <cell id="167"/>
+                </row>
+            </header>
+            <detail>
+                <row id="169">
+                    <cell id="170">
+                        <data id="171">
+                            <property name="resultSetColumn">locale</property>
+                        </data>
+                    </cell>
+                    <cell id="172">
+                        <data id="173">
+                            <list-property name="mapRules">
+                                <structure>
+                                    <expression name="testExpr" type="javascript">row["locale"]</expression>
+                                    <property name="operator">eq</property>
+                                    <simple-property-list name="value1">
+                                        <value type="javascript">"ENGLISH"</value>
+                                    </simple-property-list>
+                                    <text-property name="display" key="ENGLISH"></text-property>
+                                </structure>
+                                <structure>
+                                    <expression name="testExpr" type="javascript">row["locale"]</expression>
+                                    <property name="operator">eq</property>
+                                    <simple-property-list name="value1">
+                                        <value type="javascript">"GERMAN"</value>
+                                    </simple-property-list>
+                                    <text-property name="display" key="GERMAN"></text-property>
+                                </structure>
+                                <structure>
+                                    <expression name="testExpr" type="javascript">row["skillLevel"]</expression>
+                                    <property name="operator">eq</property>
+                                    <simple-property-list name="value1">
+                                        <value type="javascript">"MOTHERTONGUE"</value>
+                                    </simple-property-list>
+                                    <text-property name="display" key="MOTHERTONGUE"></text-property>
+                                </structure>
+                                <structure>
+                                    <expression name="testExpr" type="javascript">row["skillLevel"]</expression>
+                                    <property name="operator">eq</property>
+                                    <simple-property-list name="value1">
+                                        <value type="javascript">"VERY_GOOD"</value>
+                                    </simple-property-list>
+                                    <text-property name="display" key="VERY_GOOD"></text-property>
+                                </structure>
+                            </list-property>
+                            <property name="resultSetColumn">skillLevel</property>
+                        </data>
+                    </cell>
+                </row>
+            </detail>
+            <footer>
+                <row id="174">
+                    <cell id="175"/>
+                    <cell id="176"/>
+                </row>
+            </footer>
+        </table>
+        <label name="Skills" id="487">
+            <property name="fontFamily">"Helvetica"</property>
+            <property name="fontSize">14pt</property>
+            <property name="fontWeight">normal</property>
+            <property name="color">#666666</property>
+            <property name="textUnderline">none</property>
+            <property name="borderBottomColor">#B3B3B3</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1px</property>
+            <property name="marginTop">10pt</property>
+            <property name="textAlign">left</property>
+            <property name="pageBreakAfter">avoid</property>
+            <property name="pageBreakBefore">always</property>
+            <text-property name="text">Skillmatrix</text-property>
+        </label>
+        <table name="UserSkills_Tbl" id="488">
+            <property name="dataSet">UserSkills</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">category</property>
+                    <text-property name="displayName">category</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["category"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">skill</property>
+                    <text-property name="displayName">skill</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["skill"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">numberOfYears</property>
+                    <text-property name="displayName">numberOfYears</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["numberOfYears"]</expression>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="name">yearLastUsed</property>
+                    <text-property name="displayName">yearLastUsed</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["yearLastUsed"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">skillLevel</property>
+                    <text-property name="displayName">skillLevel</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["skillLevel"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">mainSkill</property>
+                    <text-property name="displayName">mainSkill</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["mainSkill"]</expression>
+                    <property name="dataType">boolean</property>
+                </structure>
+            </list-property>
+            <column id="523"/>
+            <column id="524"/>
+            <column id="525"/>
+            <column id="526"/>
+            <header>
+                <row id="489">
+                    <cell id="492">
+                        <label id="493">
+                            <property name="textAlign">left</property>
+                            <text-property name="text">Skill</text-property>
+                        </label>
+                    </cell>
+                    <cell id="494">
+                        <label id="495">
+                            <property name="textAlign">left</property>
+                            <text-property name="text">Erfahrung in Jahren</text-property>
+                        </label>
+                    </cell>
+                    <cell id="496">
+                        <label id="497">
+                            <property name="textAlign">left</property>
+                            <text-property name="text">Zuletzt benutzt</text-property>
+                        </label>
+                    </cell>
+                    <cell id="498">
+                        <label id="499">
+                            <property name="textAlign">left</property>
+                            <text-property name="text">Level</text-property>
+                        </label>
+                    </cell>
+                </row>
+            </header>
+            <group id="528">
+                <property name="groupName">category</property>
+                <expression name="keyExpr" type="javascript">row["category"]</expression>
+                <structure name="toc">
+                    <expression name="expressionValue" type="javascript">row["category"]</expression>
+                </structure>
+                <property name="hideDetail">false</property>
+                <header>
+                    <row id="529">
+                        <cell id="531">
+                            <property name="colSpan">4</property>
+                            <property name="rowSpan">1</property>
+                            <data id="543">
+                                <property name="backgroundColor">#B3B3B3</property>
+                                <property name="fontWeight">bold</property>
+                                <property name="textAlign">center</property>
+                                <list-property name="mapRules">
+                                    <structure>
+                                        <expression name="testExpr" type="javascript">row["category"]</expression>
+                                        <property name="operator">eq</property>
+                                        <simple-property-list name="value1">
+                                            <value type="javascript">"FRAMEWORKS"</value>
+                                        </simple-property-list>
+                                        <text-property name="display" key="FRAMEWORKS"></text-property>
+                                    </structure>
+                                    <structure>
+                                        <expression name="testExpr" type="javascript">row["category"]</expression>
+                                        <property name="operator">eq</property>
+                                        <simple-property-list name="value1">
+                                            <value type="javascript">"PROGRAMMING"</value>
+                                        </simple-property-list>
+                                        <text-property name="display" key="PROGRAMMING"></text-property>
+                                    </structure>
+                                    <structure>
+                                        <expression name="testExpr" type="javascript">row["category"]</expression>
+                                        <property name="operator">eq</property>
+                                        <simple-property-list name="value1">
+                                            <value type="javascript">"TOOLS"</value>
+                                        </simple-property-list>
+                                        <text-property name="display" key="TOOLS"></text-property>
+                                    </structure>
+                                </list-property>
+                                <property name="resultSetColumn">category</property>
+                            </data>
+                        </cell>
+                    </row>
+                </header>
+                <footer>
+                    <row id="536">
+                        <cell id="538"/>
+                        <cell id="539"/>
+                        <cell id="540"/>
+                        <cell id="541"/>
+                    </row>
+                </footer>
+            </group>
+            <detail>
+                <row id="502">
+                    <property name="borderBottomColor">#B3B3B3</property>
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">thin</property>
+                    <property name="borderLeftColor">#B3B3B3</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">thin</property>
+                    <property name="borderRightColor">#B3B3B3</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">thin</property>
+                    <property name="borderTopColor">#B3B3B3</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">thin</property>
+                    <cell id="505">
+                        <data id="506">
+                            <property name="resultSetColumn">skill</property>
+                        </data>
+                    </cell>
+                    <cell id="507">
+                        <data id="508">
+                            <property name="resultSetColumn">numberOfYears</property>
+                        </data>
+                    </cell>
+                    <cell id="509">
+                        <data id="510">
+                            <property name="resultSetColumn">yearLastUsed</property>
+                        </data>
+                    </cell>
+                    <cell id="511">
+                        <data id="512">
+                            <list-property name="mapRules">
+                                <structure>
+                                    <expression name="testExpr" type="javascript">row["skillLevel"]</expression>
+                                    <property name="operator">eq</property>
+                                    <simple-property-list name="value1">
+                                        <value type="javascript">"EXPERT"</value>
+                                    </simple-property-list>
+                                    <text-property name="display" key="EXPERT"></text-property>
+                                </structure>
+                                <structure>
+                                    <expression name="testExpr" type="javascript">row["skillLevel"]</expression>
+                                    <property name="operator">eq</property>
+                                    <simple-property-list name="value1">
+                                        <value type="javascript">"GOOD_EXPERIENCE"</value>
+                                    </simple-property-list>
+                                    <text-property name="display" key="GOOD_EXPERIENCE"></text-property>
+                                </structure>
+                            </list-property>
+                            <property name="resultSetColumn">skillLevel</property>
+                        </data>
+                    </cell>
+                </row>
+            </detail>
+            <footer>
+                <row id="515">
+                    <cell id="517"/>
+                    <cell id="518"/>
+                    <cell id="519"/>
+                    <cell id="520"/>
+                </row>
+            </footer>
+        </table>
+        <label name="Projects" id="332">
+            <property name="fontFamily">"Helvetica"</property>
+            <property name="fontSize">14pt</property>
+            <property name="fontWeight">normal</property>
+            <property name="color">#666666</property>
+            <property name="textUnderline">none</property>
+            <property name="borderBottomColor">#B3B3B3</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1px</property>
+            <property name="marginTop">10pt</property>
+            <property name="textAlign">left</property>
+            <property name="pageBreakBefore">always</property>
+            <text-property name="text">Projekte</text-property>
+        </label>
+        <table name="Projects_tbl" id="341">
+            <property name="pageBreakBefore">avoid</property>
+            <property name="dataSet">Project_DS</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">title</property>
+                    <text-property name="displayName">from</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["from_year"]+"/" + dataSetRow["from_month"]+"-"
++ dataSetRow["to_year"] + "/" + dataSetRow["to_month"]</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">from_year</property>
+                    <text-property name="displayName">title</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["title"]</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">to_year</property>
+                    <text-property name="displayName">company</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["customer"]</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">description</property>
+                    <text-property name="displayName">description</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["description"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">key</property>
+                    <text-property name="displayName">key</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["key"]</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">customer</property>
+                    <expression name="expression" type="javascript">dataSetRow["customer"]</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+            </list-property>
+            <column id="360">
+                <property name="width">1.5in</property>
+            </column>
+            <column id="361"/>
+            <column id="362"/>
+            <header>
+                <row id="342">
+                    <cell id="343"/>
+                    <cell id="345"/>
+                    <cell id="347"/>
+                </row>
+            </header>
+            <detail>
+                <row id="349">
+                    <cell id="350">
+                        <property name="paddingTop">5pt</property>
+                        <data id="351">
+                            <property name="fontWeight">bold</property>
+                            <property name="paddingRight">20pt</property>
+                            <property name="textAlign">right</property>
+                            <property name="resultSetColumn">title</property>
+                        </data>
+                    </cell>
+                    <cell id="352">
+                        <property name="paddingTop">5pt</property>
+                        <data id="353">
+                            <property name="fontWeight">bold</property>
+                            <property name="resultSetColumn">from_year</property>
+                        </data>
+                    </cell>
+                    <cell id="354">
+                        <property name="paddingTop">5pt</property>
+                        <data id="468">
+                            <property name="fontWeight">bold</property>
+                            <property name="resultSetColumn">customer</property>
+                        </data>
+                    </cell>
+                </row>
+                <row id="483">
+                    <cell id="484">
+                        <label id="477">
+                            <property name="paddingLeft">1pt</property>
+                            <property name="paddingRight">20pt</property>
+                            <property name="textAlign">right</property>
+                            <text-property name="text">Beschreibung</text-property>
+                        </label>
+                    </cell>
+                    <cell id="485">
+                        <property name="colSpan">2</property>
+                        <property name="rowSpan">1</property>
+                        <data id="363">
+                            <property name="resultSetColumn">description</property>
+                        </data>
+                    </cell>
+                </row>
+                <row id="473">
+                    <cell id="474">
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <label id="478">
+                            <property name="paddingLeft">1pt</property>
+                            <property name="paddingRight">20pt</property>
+                            <property name="textAlign">right</property>
+                            <text-property name="text">Skills</text-property>
+                        </label>
+                    </cell>
+                    <cell id="475">
+                        <property name="colSpan">2</property>
+                        <property name="rowSpan">1</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <table name="Proj_Skills" id="451">
+                            <property name="dataSet">Project_To_Skills_JDS</property>
+                            <list-property name="paramBindings">
+                                <structure>
+                                    <property name="paramName">Project_Skill_DS::projectKey</property>
+                                    <simple-property-list name="expression">
+                                        <value type="javascript">row["key"]</value>
+                                    </simple-property-list>
+                                </structure>
+                            </list-property>
+                            <list-property name="boundDataColumns">
+                                <structure>
+                                    <property name="name">skill</property>
+                                    <text-property name="displayName">Project_Skill_DS::skill</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["skill"]</expression>
+                                    <property name="dataType">string</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">Project_Skill_DS::key</property>
+                                    <text-property name="displayName">Project_Skill_DS::key</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["Project_Skill_DS::key"]</expression>
+                                    <property name="dataType">string</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">skillsAggr</property>
+                                    <property name="dataType">string</property>
+                                    <property name="aggregateFunction">CONCATENATE</property>
+                                    <list-property name="arguments">
+                                        <structure>
+                                            <property name="name">Expression</property>
+                                            <expression name="value" type="javascript">row["skill"]</expression>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">Separator</property>
+                                            <expression name="value" type="javascript">", "</expression>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">Maxlength</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">Showallvalues</property>
+                                        </structure>
+                                    </list-property>
+                                    <property name="allowExport">true</property>
+                                </structure>
+                            </list-property>
+                            <list-property name="filter">
+                                <structure>
+                                    <property name="operator">eq</property>
+                                    <expression name="expr" type="javascript">row["Project_Skill_DS::key"]</expression>
+                                    <simple-property-list name="value1">
+                                        <value>row._outer["key"]</value>
+                                    </simple-property-list>
+                                    <property name="updateAggregation">true</property>
+                                </structure>
+                            </list-property>
+                            <column id="465"/>
+                            <footer>
+                                <row id="462">
+                                    <cell id="463">
+                                        <text-data id="467">
+                                            <expression name="valueExpr">row["skillsAggr"]</expression>
+                                            <property name="contentType">html</property>
+                                        </text-data>
+                                    </cell>
+                                </row>
+                            </footer>
+                        </table>
+                    </cell>
+                </row>
+            </detail>
+            <footer>
+                <row id="356">
+                    <cell id="357"/>
+                    <cell id="358"/>
+                    <cell id="359"/>
+                </row>
+            </footer>
+        </table>
+    </body>
+</report>

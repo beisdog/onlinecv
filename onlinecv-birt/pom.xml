@@ -1,0 +1,108 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.beisert</groupId>
+	<artifactId>onlinecv-birt</artifactId>
+	<packaging>war</packaging>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>onlinecv-birt Maven Webapp</name>
+	<url>http://maven.apache.org</url>
+
+	<properties>
+		<tomcat.http.port>8090</tomcat.http.port>
+	</properties>
+	<repositories>
+		<repository>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+				<updatePolicy>daily</updatePolicy>
+				<checksumPolicy>ignore</checksumPolicy>
+			</snapshots>
+			<id>sonatype-nexus-snapshots</id>
+			<name>Sonatype Nexus Snapshots</name>
+			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+		</repository>
+
+		<repository>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+				<updatePolicy>daily</updatePolicy>
+				<checksumPolicy>ignore</checksumPolicy>
+			</snapshots>
+			<id>sonatype-nexus-releases</id>
+			<name>Sonatype Nexus Snapshots</name>
+			<url>https://oss.sonatype.org/content/repositories/releases</url>
+		</repository>
+	</repositories>
+	<dependencies>
+<!-- 		<dependency> -->
+<!-- 		<groupId>org.eclipse.birt.runtime</groupId> -->
+<!-- 		<artifactId>org.eclipse.birt.runtime</artifactId> -->
+<!-- 		<version>4.5.0</version> -->
+<!-- 		</dependency> -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>2.5</version>
+			<scope>provided</scope>
+		</dependency>
+
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>3.8.1</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+	<build>
+		<finalName>onlinecv-birt</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.eclipse.jetty</groupId>
+				<artifactId>jetty-maven-plugin</artifactId>
+				<version>9.3.0.v20150612</version>
+				<configuration>
+				<systemProperties>
+						<systemProperty>
+							<!-- needed otherwise exception is thrown -->
+							<name>org.apache.commons.logging.LogFactory</name>
+							<value>org.apache.commons.logging.impl.LogFactoryImpl</value>
+						</systemProperty>
+					</systemProperties>
+				</configuration>
+			</plugin>
+			<!-- Tomcat (Not needed now) -->
+			<plugin>
+				<groupId>org.apache.tomcat.maven</groupId>
+				<artifactId>tomcat7-maven-plugin</artifactId>
+				<version>2.1</version>
+				<configuration>
+					<port>${tomcat.http.port}</port>
+					<useTestClasspath>true</useTestClasspath>
+					<path>/</path>
+					<systemProperties>
+							<!-- needed otherwise exception is thrown -->
+							<org.apache.commons.logging.LogFactory>
+							org.apache.commons.logging.impl.LogFactoryImpl
+							</org.apache.commons.logging.LogFactory>
+					</systemProperties>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

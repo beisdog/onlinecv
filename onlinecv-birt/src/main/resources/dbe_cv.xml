@@ -1,0 +1,654 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<onlineCV>
+    <_id>57a8ea61bfefc33b146d4fd6</_id>
+    <user>dbe</user>
+    <name>Beisert, David</name>
+    <personalData>
+        <lastname>Beisert</lastname>
+        <firstname>David</firstname>
+        <birthday>
+            <year>1976</year>
+            <month>7</month>
+            <day>4</day>
+        </birthday>
+        <numberOfChildren>2</numberOfChildren>
+        <citizenship>
+            <defaultText>Deutsch</defaultText>
+            <languageTexts>
+                <locale>ENGLISH</locale><text>German</text></languageTexts>
+        </citizenship>
+        <hobbies>
+            <defaultText>Lesen, Schwimmen, Reisen, Gitarre</defaultText>
+            <languageTexts>
+                <locale>ENGLISH</locale><text>Reading, Swimming, Travelling, Guitar</text></languageTexts>
+        </hobbies>
+        <relationshipStatus>MARRIED</relationshipStatus><address><street>Farnsburgerstrasse</street><houseNumber>54</houseNumber><additionalLine></additionalLine><zip>4052</zip><city>Basel</city><countryName>Switzerland</countryName></address>
+        <communicationData>
+            <type>EMAIL</type><data>david.beisert@beisert-btc.de</data>
+            <additionalInfo></additionalInfo>
+        </communicationData>
+        <communicationData>
+            <type>MOBILE</type><data>+49 151 58771341</data>
+            <additionalInfo></additionalInfo>
+        </communicationData>
+        <additionalInfos>
+            <title>
+                <defaultText>Führerschein</defaultText>
+                <languageTexts>
+                    <locale>ENGLISH</locale><text>Driving License</text></languageTexts>
+            </title>
+            <value>
+                <defaultText>Auto</defaultText>
+                <languageTexts>
+                    <locale>ENGLISH</locale><text>Car</text></languageTexts>
+            </value>
+        </additionalInfos>
+        <additionalInfos>
+            <title>
+                <defaultText>Schweizer Arbeitserlaubnis</defaultText>
+                <languageTexts>
+                    <locale>ENGLISH</locale><text>Swiss work permit</text></languageTexts>
+            </title>
+            <value>
+                <defaultText>B-Bewilligung bis 2020</defaultText>
+                <languageTexts>
+                    <locale>ENGLISH</locale><text>B permit until 2016</text></languageTexts>
+            </value>
+        </additionalInfos>
+    </personalData>
+    <education>
+        <from>
+            <year>1992</year>
+            <month>6</month>
+            <day>1</day>
+        </from>
+        <to>
+            <year>1995</year>
+            <month>6</month>
+            <day>1</day>
+        </to>
+        <title>
+            <defaultText>Abitur</defaultText>
+            <languageTexts>
+                <locale>ENGLISH</locale><text>Highschool with permission to study</text></languageTexts>
+        </title>
+        <description>
+            <defaultText></defaultText>
+            <languageTexts>
+                <locale>ENGLISH</locale><text></text></languageTexts>
+        </description>
+        <company>Rudi-Stephan Gymnasium Worms</company>
+    </education>
+    <education>
+        <from>
+            <year>1998</year>
+            <month>8</month>
+            <day>1</day>
+        </from>
+        <to>
+            <year>2000</year>
+            <month>9</month>
+            <day>1</day>
+        </to>
+        <title>
+            <defaultText>Ausbildung IT Fachinformatiker</defaultText>
+            <languageTexts>
+                <locale>ENGLISH</locale><text>Dual Education IT Applied Computer Science </text></languageTexts>
+        </title>
+        <description>
+            <defaultText>Ausbildung als IT-Fachinformatiker bei Bechtle IT-Systemhaus and Werner of Siemens School</defaultText>
+            <languageTexts>
+                <locale>ENGLISH</locale><text>Work and study</text></languageTexts>
+        </description>
+        <company>Bechtle IT-Systemhaus, Werner von Siemens Schule</company>
+    </education>
+    <certifications>
+        <from>
+            <year>2016</year>
+            <month>5</month>
+            <day>1</day>
+        </from>
+        <title>
+            <defaultText>ITIL Foundation zertifiziert</defaultText>
+            <languageTexts>
+                <locale>ENGLISH</locale><text>ITIL Foundation certified</text></languageTexts>
+        </title>
+    </certifications>
+    <jobs>
+        <from>
+            <year>2016</year>
+            <month>4</month>
+            <day>18</day>
+        </from>
+        <to>
+            <year>2016</year>
+            <month>10</month>
+            <day>30</day>
+        </to>
+        <title>
+            <defaultText>IT Architekt</defaultText>
+            <languageTexts>
+                <locale>ENGLISH</locale><text>IT Architect</text></languageTexts>
+        </title>
+        <description>
+            <defaultText>Verantwortllich for Architektur</defaultText>
+            <languageTexts>
+                <locale>ENGLISH</locale><text>Responsible for architectur</text></languageTexts>
+        </description>
+        <company>Sympany</company>
+    </jobs>
+    <jobs>
+        <from>
+            <year>2014</year>
+            <month>10</month>
+            <day>1</day>
+        </from>
+        <to>
+            <year>2016</year>
+            <month>3</month>
+            <day>31</day>
+        </to>
+        <title>
+            <defaultText>Beisert-BTC als freier J2EE und SAP Netweaver Berater.</defaultText>
+            <languageTexts>
+                <locale>ENGLISH</locale><text>IT Freelancer for J2EE and SAP Netweaver</text></languageTexts>
+        </title>
+        <description>
+            <defaultText>(Siehe angefügte Projektliste)</defaultText>
+            <languageTexts>
+                <locale>ENGLISH</locale><text>See project list</text></languageTexts>
+        </description>
+        <company>Beisert-BTC</company>
+    </jobs>
+    <jobs>
+        <from>
+            <year>2002</year>
+            <month>3</month>
+            <day>1</day>
+        </from>
+        <to>
+            <year>2004</year>
+            <month>9</month>
+            <day>31</day>
+        </to>
+        <title>
+            <defaultText>Berater für SAP AG und Axentiv AG</defaultText>
+            <languageTexts>
+                <locale>ENGLISH</locale><text>Consultant for SAP AG and Axentiv AG</text></languageTexts>
+        </title>
+        <description>
+            <defaultText>Spezialist für J2EE und SAP Netweaver</defaultText>
+            <languageTexts>
+                <locale>ENGLISH</locale><text>Specializing in J2EE and SAP Netweaver</text></languageTexts>
+        </description>
+        <company>Axentiv AG</company>
+    </jobs>
+    <jobs>
+        <from>
+            <year>2000</year>
+            <month>9</month>
+            <day>1</day>
+        </from>
+        <to>
+            <year>2001</year>
+            <month>12</month>
+            <day>31</day>
+        </to>
+        <title>
+            <defaultText>Software Entwickler</defaultText>
+            <languageTexts>
+                <locale>ENGLISH</locale><text>Software Developer</text></languageTexts>
+        </title>
+        <description>
+            <defaultText>Spezialist für e-Commerce und IBM WebShere</defaultText>
+            <languageTexts>
+                <locale>ENGLISH</locale><text>Specializing in e-Commerce and IBM WebSphere</text></languageTexts>
+        </description>
+        <company>Cenit AG</company>
+    </jobs>
+    <jobs>
+        <from>
+            <year>2000</year>
+            <month>7</month>
+            <day>1</day>
+        </from>
+        <to>
+            <year>2000</year>
+            <month>8</month>
+            <day>30</day>
+        </to>
+        <title>
+            <defaultText>Software Entwickler</defaultText>
+            <languageTexts>
+                <locale>ENGLISH</locale><text>Software Developer</text></languageTexts>
+        </title>
+        <description>
+            <defaultText>Spezialist für Groupware und Web Development</defaultText>
+            <languageTexts>
+                <locale>ENGLISH</locale><text>Specializing in Groupware and Web Development</text></languageTexts>
+        </description>
+        <company>Bechtle IT Systemhaus</company>
+    </jobs>
+    <jobs>
+        <from>
+            <year>1998</year>
+            <month>9</month>
+            <day>1</day>
+        </from>
+        <to>
+            <year>2000</year>
+            <month>7</month>
+            <day>31</day>
+        </to>
+        <title>
+            <defaultText>Ausbildung zum IT-Fachinformatiker (.NET, Lotus Notes)</defaultText>
+            <languageTexts>
+                <locale>ENGLISH</locale><text></text></languageTexts>
+        </title>
+        <description>
+            <defaultText>Spezialisierung auf Anwendungsentwicklung</defaultText>
+            <languageTexts>
+                <locale>ENGLISH</locale><text>Specializing in Application Development</text></languageTexts>
+        </description>
+        <company>Bechtle IT Systemhaus</company>
+    </jobs>
+    <jobs>
+        <from>
+            <year>1997</year>
+            <month>9</month>
+            <day>1</day>
+        </from>
+        <to>
+            <year>1998</year>
+            <month>8</month>
+            <day>31</day>
+        </to>
+        <title>
+            <defaultText>Zivildienst</defaultText>
+            <languageTexts>
+                <locale>ENGLISH</locale><text>Civil service (like military service)</text></languageTexts>
+        </title>
+        <description>
+            <defaultText>Altersheim und Behindertenheim</defaultText>
+            <languageTexts>
+                <locale>ENGLISH</locale><text>Seniors home and handicapped home</text></languageTexts>
+        </description>
+        <company>DRK</company>
+    </jobs>
+    <jobs>
+        <from>
+            <year>1995</year>
+            <month>9</month>
+            <day>1</day>
+        </from>
+        <to>
+            <year>1997</year>
+            <month>9</month>
+            <day>1</day>
+        </to>
+        <title>
+            <defaultText>Caritative Arbeit</defaultText>
+            <languageTexts>
+                <locale>ENGLISH</locale><text>Charity service</text></languageTexts>
+        </title>
+        <description>
+            <defaultText>Kapstadt, Südafrika</defaultText>
+            <languageTexts>
+                <locale>ENGLISH</locale><text>Capetown, South Africa</text></languageTexts>
+        </description>
+        <company> </company>
+    </jobs>
+    <languageSkills>
+        <locale>GERMAN</locale>
+        <skillLevel>MOTHERTONGUE</skillLevel>
+    </languageSkills>
+    <languageSkills>
+        <locale>ENGLISH</locale>
+        <skillLevel>VERY_GOOD</skillLevel>
+    </languageSkills>
+    <userSkills>
+        <category>PROGRAMMING</category>
+        <skill>Java</skill>
+        <numberOfYears>18.0</numberOfYears>
+        <yearLastUsed>2016</yearLastUsed>
+        <skillLevel>EXPERT</skillLevel>
+        <mainSkill>true</mainSkill>
+    </userSkills>
+    <userSkills>
+        <category>PROGRAMMING</category>
+        <skill>J2EE</skill>
+        <numberOfYears>18.0</numberOfYears>
+        <yearLastUsed>2016</yearLastUsed>
+        <skillLevel>EXPERT</skillLevel>
+        <mainSkill>true</mainSkill>
+    </userSkills>
+    <userSkills>
+        <category>FRAMEWORKS</category>
+        <skill>Hibernate</skill>
+        <numberOfYears>10.0</numberOfYears>
+        <yearLastUsed>2016</yearLastUsed>
+        <skillLevel>EXPERT</skillLevel>
+        <mainSkill>true</mainSkill>
+    </userSkills>
+    <userSkills>
+        <category>FRAMEWORKS</category>
+        <skill>JPA</skill>
+        <numberOfYears>5.0</numberOfYears>
+        <yearLastUsed>2016</yearLastUsed>
+        <skillLevel>EXPERT</skillLevel>
+        <mainSkill>true</mainSkill>
+    </userSkills>
+    <userSkills>
+        <category>FRAMEWORKS</category>
+        <skill>Spring</skill>
+        <numberOfYears>10.0</numberOfYears>
+        <yearLastUsed>2016</yearLastUsed>
+        <skillLevel>GOOD_EXPERIENCE</skillLevel>
+        <mainSkill>true</mainSkill>
+    </userSkills>
+    <userSkills>
+        <category>FRAMEWORKS</category>
+        <skill>Camel</skill>
+        <numberOfYears>1.0</numberOfYears>
+        <yearLastUsed>2016</yearLastUsed>
+        <skillLevel>GOOD_EXPERIENCE</skillLevel>
+        <mainSkill>true</mainSkill>
+    </userSkills>
+    <userSkills>
+        <category>FRAMEWORKS</category>
+        <skill>JUnit</skill>
+        <numberOfYears>10.0</numberOfYears>
+        <yearLastUsed>2016</yearLastUsed>
+        <skillLevel>EXPERT</skillLevel>
+        <mainSkill>true</mainSkill>
+    </userSkills>
+    <userSkills>
+        <category>SAP</category>
+        <skill>SAP BPM</skill>
+        <numberOfYears>6.0</numberOfYears>
+        <yearLastUsed>2016</yearLastUsed>
+        <skillLevel>EXPERT</skillLevel>
+        <mainSkill>true</mainSkill>
+    </userSkills>
+    <userSkills>
+        <category>SAP</category>
+        <skill>SAP Web Dynpro Java</skill>
+        <numberOfYears>10.0</numberOfYears>
+        <yearLastUsed>2016</yearLastUsed>
+        <skillLevel>EXPERT</skillLevel>
+        <mainSkill>true</mainSkill>
+    </userSkills>
+    <userSkills>
+        <category>TOOLS</category>
+        <skill>Git</skill>
+        <numberOfYears>1.0</numberOfYears>
+        <yearLastUsed>2016</yearLastUsed>
+        <skillLevel>GOOD_EXPERIENCE</skillLevel>
+        <mainSkill>true</mainSkill>
+    </userSkills>
+    <userSkills>
+        <category>TOOLS</category>
+        <skill>Maven</skill>
+        <numberOfYears>1.0</numberOfYears>
+        <yearLastUsed>2016</yearLastUsed>
+        <skillLevel>GOOD_EXPERIENCE</skillLevel>
+        <mainSkill>true</mainSkill>
+    </userSkills>
+    <projects>
+        <title>
+            <defaultText>SOA Infrastruktur Aufbau</defaultText>
+            <languageTexts>
+                <locale>ENGLISH</locale><text>SOA Infrastructure</text></languageTexts>
+        </title>
+        <usedSkills>
+            <category>PROGRAMMING</category>
+            <skill>Java</skill>
+            <numberOfYears>18.0</numberOfYears>
+            <yearLastUsed>2016</yearLastUsed>
+            <skillLevel>EXPERT</skillLevel>
+            <mainSkill>true</mainSkill>
+        </usedSkills>
+        <usedSkills>
+            <category>PROGRAMMING</category>
+            <skill>J2EE</skill>
+            <numberOfYears>18.0</numberOfYears>
+            <yearLastUsed>2016</yearLastUsed>
+            <skillLevel>EXPERT</skillLevel>
+            <mainSkill>true</mainSkill>
+        </usedSkills>
+        <usedSkills>
+            <category>FRAMEWORKS</category>
+            <skill>JPA</skill>
+            <numberOfYears>5.0</numberOfYears>
+            <yearLastUsed>2016</yearLastUsed>
+            <skillLevel>EXPERT</skillLevel>
+            <mainSkill>true</mainSkill>
+        </usedSkills>
+        <usedSkills>
+            <category>FRAMEWORKS</category>
+            <skill>Camel</skill>
+            <numberOfYears>1.0</numberOfYears>
+            <yearLastUsed>2016</yearLastUsed>
+            <skillLevel>GOOD_EXPERIENCE</skillLevel>
+            <mainSkill>true</mainSkill>
+        </usedSkills>
+        <usedSkills>
+            <category>TOOLS</category>
+            <skill>Maven</skill>
+            <numberOfYears>1.0</numberOfYears>
+            <yearLastUsed>2016</yearLastUsed>
+            <skillLevel>GOOD_EXPERIENCE</skillLevel>
+            <mainSkill>true</mainSkill>
+        </usedSkills>
+        <description>
+            <defaultText>Aufbau eine SOA Infrastruktur mit Microservices und Camel</defaultText>
+            <languageTexts>
+                <locale>ENGLISH</locale><text>Setup of SOA Infrastruktur mit Microservices und Camel</text></languageTexts>
+        </description>
+        <from>
+            <year>2016</year>
+            <month>1</month>
+            <day>1</day>
+        </from>
+        <to>
+            <year>2016</year>
+            <month>8</month>
+            <day>1</day>
+        </to>
+        <customer>Sympany AG</customer>
+        <additionalInfos>
+            <title>
+                <defaultText>Rolle</defaultText>
+                <languageTexts>
+                    <locale>ENGLISH</locale><text>Role</text></languageTexts>
+            </title>
+            <value>
+                <defaultText>Architekt</defaultText>
+                <languageTexts>
+                    <locale>ENGLISH</locale><text>Architect</text></languageTexts>
+            </value>
+        </additionalInfos>
+    </projects>
+    <projects>
+        <title>
+            <defaultText>Erstellung eines Workflows zur Vernichtung von Lagerbeständen</defaultText>
+            <languageTexts>
+                <locale>ENGLISH</locale><text>Scrapping Workflow</text></languageTexts>
+        </title>
+        <usedSkills>
+            <category>PROGRAMMING</category>
+            <skill>Java</skill>
+            <numberOfYears>18.0</numberOfYears>
+            <yearLastUsed>2016</yearLastUsed>
+            <skillLevel>EXPERT</skillLevel>
+            <mainSkill>true</mainSkill>
+        </usedSkills>
+        <usedSkills>
+            <category>PROGRAMMING</category>
+            <skill>J2EE</skill>
+            <numberOfYears>18.0</numberOfYears>
+            <yearLastUsed>2016</yearLastUsed>
+            <skillLevel>EXPERT</skillLevel>
+            <mainSkill>true</mainSkill>
+        </usedSkills>
+        <usedSkills>
+            <category>FRAMEWORKS</category>
+            <skill>JPA</skill>
+            <numberOfYears>5.0</numberOfYears>
+            <yearLastUsed>2016</yearLastUsed>
+            <skillLevel>EXPERT</skillLevel>
+            <mainSkill>true</mainSkill>
+        </usedSkills>
+        <usedSkills>
+            <category>FRAMEWORKS</category>
+            <skill>Hibernate</skill>
+            <numberOfYears>10.0</numberOfYears>
+            <yearLastUsed>2016</yearLastUsed>
+            <skillLevel>EXPERT</skillLevel>
+            <mainSkill>true</mainSkill>
+        </usedSkills>
+        <usedSkills>
+            <category>FRAMEWORKS</category>
+            <skill>JUnit</skill>
+            <numberOfYears>10.0</numberOfYears>
+            <yearLastUsed>2016</yearLastUsed>
+            <skillLevel>EXPERT</skillLevel>
+            <mainSkill>true</mainSkill>
+        </usedSkills>
+        <usedSkills>
+            <category>SAP</category>
+            <skill>SAP BPM</skill>
+            <numberOfYears>6.0</numberOfYears>
+            <yearLastUsed>2016</yearLastUsed>
+            <skillLevel>EXPERT</skillLevel>
+            <mainSkill>true</mainSkill>
+        </usedSkills>
+        <usedSkills>
+            <category>SAP</category>
+            <skill>SAP Web Dynpro Java</skill>
+            <numberOfYears>10.0</numberOfYears>
+            <yearLastUsed>2016</yearLastUsed>
+            <skillLevel>EXPERT</skillLevel>
+            <mainSkill>true</mainSkill>
+        </usedSkills>
+        <description>
+            <defaultText>Budgetplanung, Resourcenplanung, Schätzungen,Technisches Design. Anforderungsmanagement. Entwickler Coaching. BPM Process Design</defaultText>
+            <languageTexts>
+                <locale>ENGLISH</locale><text>-</text></languageTexts>
+        </description>
+        <from>
+            <year>2015</year>
+            <month>8</month>
+            <day>1</day>
+        </from>
+        <to>
+            <year>2016</year>
+            <month>4</month>
+            <day>1</day>
+        </to>
+        <customer>Bayer AG</customer>
+        <additionalInfos>
+            <title>
+                <defaultText>Rolle</defaultText>
+                <languageTexts>
+                    <locale>ENGLISH</locale><text>Role</text></languageTexts>
+            </title>
+            <value>
+                <defaultText>Architekt</defaultText>
+                <languageTexts>
+                    <locale>ENGLISH</locale><text>Architect</text></languageTexts>
+            </value>
+        </additionalInfos>
+    </projects>
+    <projects>
+        <title>
+            <defaultText>etc.</defaultText>
+            <languageTexts>
+                <locale>ENGLISH</locale><text>etc.</text></languageTexts>
+        </title>
+        <usedSkills>
+            <category>PROGRAMMING</category>
+            <skill>Java</skill>
+            <numberOfYears>18.0</numberOfYears>
+            <yearLastUsed>2016</yearLastUsed>
+            <skillLevel>EXPERT</skillLevel>
+            <mainSkill>true</mainSkill>
+        </usedSkills>
+        <usedSkills>
+            <category>PROGRAMMING</category>
+            <skill>J2EE</skill>
+            <numberOfYears>18.0</numberOfYears>
+            <yearLastUsed>2016</yearLastUsed>
+            <skillLevel>EXPERT</skillLevel>
+            <mainSkill>true</mainSkill>
+        </usedSkills>
+        <usedSkills>
+            <category>FRAMEWORKS</category>
+            <skill>JPA</skill>
+            <numberOfYears>5.0</numberOfYears>
+            <yearLastUsed>2016</yearLastUsed>
+            <skillLevel>EXPERT</skillLevel>
+            <mainSkill>true</mainSkill>
+        </usedSkills>
+        <usedSkills>
+            <category>FRAMEWORKS</category>
+            <skill>Hibernate</skill>
+            <numberOfYears>10.0</numberOfYears>
+            <yearLastUsed>2016</yearLastUsed>
+            <skillLevel>EXPERT</skillLevel>
+            <mainSkill>true</mainSkill>
+        </usedSkills>
+        <usedSkills>
+            <category>FRAMEWORKS</category>
+            <skill>JUnit</skill>
+            <numberOfYears>10.0</numberOfYears>
+            <yearLastUsed>2016</yearLastUsed>
+            <skillLevel>EXPERT</skillLevel>
+            <mainSkill>true</mainSkill>
+        </usedSkills>
+        <usedSkills>
+            <category>SAP</category>
+            <skill>SAP BPM</skill>
+            <numberOfYears>6.0</numberOfYears>
+            <yearLastUsed>2016</yearLastUsed>
+            <skillLevel>EXPERT</skillLevel>
+            <mainSkill>true</mainSkill>
+        </usedSkills>
+        <usedSkills>
+            <category>SAP</category>
+            <skill>SAP Web Dynpro Java</skill>
+            <numberOfYears>10.0</numberOfYears>
+            <yearLastUsed>2016</yearLastUsed>
+            <skillLevel>EXPERT</skillLevel>
+            <mainSkill>true</mainSkill>
+        </usedSkills>
+        <description>
+            <defaultText></defaultText>
+            <languageTexts>
+                <locale>ENGLISH</locale><text>-</text></languageTexts>
+        </description>
+        <from>
+            <year>2000</year>
+            <month>1</month>
+            <day>1</day>
+        </from>
+        <to>
+            <year>2015</year>
+            <month>3</month>
+            <day>1</day>
+        </to>
+        <customer>-</customer>
+        <additionalInfos>
+            <title>
+                <defaultText>Rolle</defaultText>
+                <languageTexts>
+                    <locale>ENGLISH</locale><text>Role</text></languageTexts>
+            </title>
+            <value>
+                <defaultText>Architekt</defaultText>
+                <languageTexts>
+                    <locale>ENGLISH</locale><text>Architect</text></languageTexts>
+            </value>
+        </additionalInfos>
+    </projects>
+</onlineCV>
