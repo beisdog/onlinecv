@@ -10,10 +10,12 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlType;
 
-@XmlType( propOrder={"key","title","usedSkills","description","from","to","customer","additionalInfos"})
+@XmlType( propOrder={"key","title","usedSkills","description","from","to","customer","industry",
+		"projectLocation","projectSize","role","objective","responsibility","benefitForCustomer","additionalInfos"})
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Project {
 	
+		
 	/** unique within cv and mandatory */
 	String key;
 	
@@ -29,9 +31,29 @@ public class Project {
 	
 	String customer;
 	
+	I18NText industry;
+	
+	I18NText projectLocation;
+	
+	I18NText projectSize;
+	
+	I18NText role;
+	
+	I18NText objective;
+	
+	I18NText responsibility;
+	
+	I18NText benefitForCustomer;
+	
 	List<GenericContainer> additionalInfos = null;
 	
 	public Project(){}
+	
+	public Project(String key, I18NText title) {
+		super();
+		this.key = key;
+		this.title = title;
+	}
 	
 	public Project(String key, I18NText title, I18NText description, String customer, SimpleDate from, SimpleDate to,
 			UserSkill...usedSkills) {
@@ -110,6 +132,66 @@ public class Project {
 
 	public void setKey(String key) {
 		this.key = key;
+	}
+
+	public I18NText getIndustry() {
+		return industry;
+	}
+
+	public void setIndustry(I18NText industry) {
+		this.industry = industry;
+	}
+
+	public I18NText getProjectLocation() {
+		return projectLocation;
+	}
+
+	public void setProjectLocation(I18NText projectLocation) {
+		this.projectLocation = projectLocation;
+	}
+
+	public I18NText getProjectSize() {
+		return projectSize;
+	}
+
+	public void setProjectSize(I18NText projectSize) {
+		this.projectSize = projectSize;
+	}
+
+	public I18NText getRole() {
+		return role;
+	}
+
+	public void setRole(I18NText role) {
+		this.role = role;
+	}
+
+	public I18NText getObjective() {
+		return objective;
+	}
+
+	public void setObjective(I18NText objective) {
+		this.objective = objective;
+	}
+
+	public I18NText getResponsibility() {
+		return responsibility;
+	}
+
+	public void setResponsibility(I18NText responsibility) {
+		this.responsibility = responsibility;
+	}
+
+	public I18NText getBenefitForCustomer() {
+		return benefitForCustomer;
+	}
+
+	public void setBenefitForCustomer(I18NText benefitForCustomer) {
+		this.benefitForCustomer = benefitForCustomer;
+	}
+
+	public void skills(UserSkill...skills) {
+		this.usedSkills = Arrays.asList(skills);
 	}
 	
 	

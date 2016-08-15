@@ -7,7 +7,7 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
 
-@XmlType( propOrder={"lastname","firstname","birthday","numberOfChildren","citizenship","hobbies","relationshipStatus","address","communicationData","additionalInfos"})
+@XmlType( propOrder={"lastname","firstname","birthday","numberOfChildren","citizenship","workPermit","hobbies","relationshipStatus","address","communicationData","additionalInfos"})
 @XmlAccessorType(XmlAccessType.FIELD)
 public class PersonalData {
 
@@ -21,6 +21,8 @@ public class PersonalData {
 	I18NText citizenship;
 	
 	I18NText hobbies;
+	
+	I18NText workPermit;
 
 	public static enum RelationShipStatus {
 		SINGLE,WIDOWED,MARRIED,DIVORCED,IN_A_RELATIONSHIP;
@@ -111,6 +113,14 @@ public class PersonalData {
 
 	public void setCitizenship(I18NText citizenship) {
 		this.citizenship = citizenship;
+	}
+
+	public I18NText getWorkPermit() {
+		return workPermit;
+	}
+
+	public void setWorkPermit(I18NText workPermit) {
+		this.workPermit = workPermit;
 	}
 
 }

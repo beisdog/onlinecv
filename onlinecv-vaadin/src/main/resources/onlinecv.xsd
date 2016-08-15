@@ -24,6 +24,8 @@
       <xs:element name="firstname" type="xs:string" minOccurs="0"/>
       <xs:element name="birthday" type="simpleDate" minOccurs="0"/>
       <xs:element name="numberOfChildren" type="xs:int"/>
+      <xs:element name="citizenship" type="i18NText" minOccurs="0"/>
+      <xs:element name="workPermit" type="i18NText" minOccurs="0"/>
       <xs:element name="hobbies" type="i18NText" minOccurs="0"/>
       <xs:element name="relationshipStatus" type="relationShipStatus" minOccurs="0"/>
       <xs:element name="address" type="addressData" minOccurs="0"/>
@@ -37,6 +39,20 @@
       <xs:element name="year" type="xs:int"/>
       <xs:element name="month" type="xs:int"/>
       <xs:element name="day" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="i18NText">
+    <xs:sequence>
+      <xs:element name="defaultText" type="xs:string" minOccurs="0"/>
+      <xs:element name="languageTexts" type="languageText" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="languageText">
+    <xs:sequence>
+      <xs:element name="locale" type="locale" minOccurs="0"/>
+      <xs:element name="text" type="xs:string" minOccurs="0"/>
     </xs:sequence>
   </xs:complexType>
 
@@ -59,6 +75,14 @@
     </xs:sequence>
   </xs:complexType>
 
+  <xs:complexType name="genericContainer">
+    <xs:sequence>
+      <xs:element name="title" type="i18NText" minOccurs="0"/>
+      <xs:element name="value" type="i18NText" minOccurs="0"/>
+      <xs:element name="children" type="genericContainer" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
   <xs:complexType name="education">
     <xs:sequence>
       <xs:element name="from" type="simpleDate" minOccurs="0"/>
@@ -66,20 +90,6 @@
       <xs:element name="title" type="i18NText" minOccurs="0"/>
       <xs:element name="description" type="i18NText" minOccurs="0"/>
       <xs:element name="company" type="xs:string" minOccurs="0"/>
-    </xs:sequence>
-  </xs:complexType>
-
-  <xs:complexType name="i18NText">
-    <xs:sequence>
-      <xs:element name="defaultText" type="xs:string" minOccurs="0"/>
-      <xs:element name="languageTexts" type="languageText" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
-    </xs:sequence>
-  </xs:complexType>
-
-  <xs:complexType name="languageText">
-    <xs:sequence>
-      <xs:element name="locale" type="locale" minOccurs="0"/>
-      <xs:element name="text" type="xs:string" minOccurs="0"/>
     </xs:sequence>
   </xs:complexType>
 
@@ -127,17 +137,25 @@
       <xs:element name="from" type="simpleDate" minOccurs="0"/>
       <xs:element name="to" type="simpleDate" minOccurs="0"/>
       <xs:element name="customer" type="xs:string" minOccurs="0"/>
+      <xs:element name="industry" type="i18NText" minOccurs="0"/>
+      <xs:element name="projectLocation" type="i18NText" minOccurs="0"/>
+      <xs:element name="projectSize" type="i18NText" minOccurs="0"/>
+      <xs:element name="role" type="i18NText" minOccurs="0"/>
+      <xs:element name="objective" type="i18NText" minOccurs="0"/>
+      <xs:element name="responsibility" type="i18NText" minOccurs="0"/>
+      <xs:element name="benefitForCustomer" type="i18NText" minOccurs="0"/>
       <xs:element name="additionalInfos" type="genericContainer" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
 
-  <xs:complexType name="genericContainer">
-    <xs:sequence>
-      <xs:element name="title" type="i18NText" minOccurs="0"/>
-      <xs:element name="value" type="i18NText" minOccurs="0"/>
-      <xs:element name="children" type="genericContainer" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
-    </xs:sequence>
-  </xs:complexType>
+  <xs:simpleType name="locale">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ENGLISH"/>
+      <xs:enumeration value="FRENCH"/>
+      <xs:enumeration value="ITALIAN"/>
+      <xs:enumeration value="GERMAN"/>
+    </xs:restriction>
+  </xs:simpleType>
 
   <xs:simpleType name="relationShipStatus">
     <xs:restriction base="xs:string">
@@ -155,15 +173,6 @@
       <xs:enumeration value="PHONE"/>
       <xs:enumeration value="SKYPE"/>
       <xs:enumeration value="MOBILE"/>
-    </xs:restriction>
-  </xs:simpleType>
-
-  <xs:simpleType name="locale">
-    <xs:restriction base="xs:string">
-      <xs:enumeration value="ENGLISH"/>
-      <xs:enumeration value="FRENCH"/>
-      <xs:enumeration value="ITALIAN"/>
-      <xs:enumeration value="GERMAN"/>
     </xs:restriction>
   </xs:simpleType>
 
@@ -185,6 +194,7 @@
       <xs:enumeration value="OS"/>
       <xs:enumeration value="SAP"/>
       <xs:enumeration value="FRAMEWORKS"/>
+      <xs:enumeration value="SERVER"/>
     </xs:restriction>
   </xs:simpleType>
 
