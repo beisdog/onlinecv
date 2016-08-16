@@ -15,6 +15,8 @@ import org.bson.Document;
 import com.beisert.onlinecv.service.MongoDBSingleton;
 import com.mongodb.Block;
 import com.mongodb.client.FindIterable;
+
+import io.swagger.annotations.*;
 /**
  * Simple rest interface to control and query mongo.
  * Just for troubleshooting.
@@ -22,9 +24,14 @@ import com.mongodb.client.FindIterable;
  *
  */
 @Path("/mongo")
+@Api(value="/mongo", description = "Endpoint for testing Mongo DB")
 public class MongoRestServiceImpl {
 
 	@GET
+//	@ApiOperation(
+//		    value = "Start mongo DB for the specified environment", 
+//		    notes = "environment can be: LOCAL or CODENVY"
+//		    )
 	@Path("/start/{env}")
 	@Produces(MediaType.TEXT_HTML)
 	public Response startMongo(@PathParam("env") String env) {

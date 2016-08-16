@@ -31,7 +31,7 @@ The folder
 
 # Roadmap
 * REST: use real logging, system.out is still used.
-* REST: add Swagger UI to see the Rest API
+* REST: document return types of restmethods with swagger annotations
 * add selenium test
 * add unit tests
 * Add a pom.xml here in the root folder that can run all 3 services at once.

@@ -16,9 +16,11 @@ import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
 
 import com.beisert.onlinecv.domain.OnlineCV;
-import com.beisert.onlinecv.service.OnlineCVService;
 import com.beisert.onlinecv.service.ServiceImpl;
 import com.beisert.onlinecv.util.XMLUtils;
+
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 
 /**
  * Rest facade for the online cv service that can read and save CVs.
@@ -26,6 +28,7 @@ import com.beisert.onlinecv.util.XMLUtils;
  *
  */
 @Path("/onlinecv")
+@Api(value="/onlinecv", description = "Endpoint for the onlinecv")
 public class OnlineCVRestServiceImpl {
 	
 	/**
@@ -35,6 +38,10 @@ public class OnlineCVRestServiceImpl {
 	public static ServiceImpl service = ServiceImpl.dummy;
 
     @GET
+    @ApiOperation(
+    	    value = "Find CV by user", 
+    	    notes = "Find CV by user: a valid user is for example: dbe"
+    	    )
     @Path("{user}")
     @Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
     public Response findCVByUser(@PathParam("user") String user, @QueryParam("format")String format, @Context HttpHeaders headers) {
@@ -59,6 +66,10 @@ public class OnlineCVRestServiceImpl {
     
     @GET
     @Path("/")
+    @ApiOperation(
+    	    value = "Find all CVs", 
+    	    notes = "Find all CVs"
+    	    )
     @Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
     public Response findall(@QueryParam("format")String format, @Context HttpHeaders headers) {
 

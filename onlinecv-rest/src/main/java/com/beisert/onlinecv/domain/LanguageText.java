@@ -3,9 +3,12 @@ package com.beisert.onlinecv.domain;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 
+import io.swagger.annotations.ApiModel;
+
 /**
  * Part of I18Text.
  */
+@ApiModel
 @XmlAccessorType(XmlAccessType.FIELD)
 public class LanguageText {
 	

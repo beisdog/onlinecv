@@ -7,6 +7,9 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
 
+import io.swagger.annotations.ApiModel;
+
+@ApiModel
 @XmlType( propOrder={"lastname","firstname","birthday","numberOfChildren","citizenship","workPermit","hobbies","relationshipStatus","address","communicationData","additionalInfos"})
 @XmlAccessorType(XmlAccessType.FIELD)
 public class PersonalData {

@@ -7,16 +7,20 @@ import javax.xml.bind.annotation.XmlType;
 
 import com.beisert.onlinecv.domain.LanguageText.Locale;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
 /**
  * Represents a multilanguage struct.
  */
+@ApiModel
 @XmlType( propOrder={"defaultText","languageTexts"})
 public class I18NText {
 
 	String defaultText;
 
 	List<LanguageText> languageTexts = new ArrayList<LanguageText>();
-
+	
 	public String getDefaultText() {
 		return defaultText;
 	}

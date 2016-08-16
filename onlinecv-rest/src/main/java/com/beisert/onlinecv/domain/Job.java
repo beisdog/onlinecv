@@ -2,6 +2,9 @@ package com.beisert.onlinecv.domain;
 
 import javax.xml.bind.annotation.XmlType;
 
+import io.swagger.annotations.ApiModel;
+
+@ApiModel
 @XmlType(propOrder={"from","to","title","description","company"})
 public class Job {
 	

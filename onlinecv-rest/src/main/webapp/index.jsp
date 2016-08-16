@@ -81,6 +81,7 @@ boolean usingDummyService = (OnlineCVRestServiceImpl.service == ServiceImpl.dumm
 </p>
 <h2>Rest Methods to read CV Data</h2>
 <ul>
+	<li><a href="swagger-ui/index.html" target="newwindow">Show Swagger Rest Definition</a></li>
    <li><a href="rest/onlinecv?format=json" target="right">Show all CVs as json</a></li>
    <li><a href="rest/onlinecv/dbe?format=xml" target="_newXml">Show CV for user "dbe" as xml</a></li>
    <li><a href="rest/onlinecv/dbe?format=json" target="right">Show CV for user "dbe" as JSON</a></li>

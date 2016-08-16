@@ -5,6 +5,9 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlType;
 
+import io.swagger.annotations.ApiModel;
+
+@ApiModel
 @XmlType( propOrder={"type","data","additionalInfo"})
 @XmlAccessorType(XmlAccessType.FIELD)
 public class CommunicationData {

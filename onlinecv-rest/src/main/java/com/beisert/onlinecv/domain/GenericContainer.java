@@ -5,6 +5,10 @@ import java.util.List;
 
 import javax.xml.bind.annotation.XmlType;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
+@ApiModel
 @XmlType( propOrder={"title","value","children"})
 public class GenericContainer {
 	
@@ -22,6 +26,7 @@ public class GenericContainer {
 		this.value = value;
 	}
 
+	@ApiModelProperty
 	public I18NText getTitle() {
 		return title;
 	}
@@ -30,6 +35,7 @@ public class GenericContainer {
 		this.title = title;
 	}
 
+	@ApiModelProperty
 	public I18NText getValue() {
 		return value;
 	}
@@ -37,7 +43,9 @@ public class GenericContainer {
 	public void setValue(I18NText value) {
 		this.value = value;
 	}
-
+	
+	//Added this as hidden to swagger because it is recursive and caused problems
+	@ApiModelProperty(hidden=true)
 	public List<GenericContainer> getChildren() {
 		return children;
 	}

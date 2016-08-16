@@ -13,9 +13,12 @@ import javax.xml.bind.annotation.XmlType;
 import org.jongo.marshall.jackson.oid.MongoId;
 import org.jongo.marshall.jackson.oid.MongoObjectId;
 
+import io.swagger.annotations.ApiModel;
+
 /**
  * Data object for an online cv
  */
+@ApiModel
 @XmlType( propOrder={"_id","user","name","personalData","education","certifications","jobs","languageSkills","userSkills","projects"})
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)

@@ -2,6 +2,7 @@ package com.beisert.onlinecv.domain;
 
 import com.beisert.onlinecv.domain.LanguageText.Locale;
 
+
 public class LanguageSkill {
 	
 	Locale locale;

@@ -10,6 +10,8 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlType;
 
+import io.swagger.annotations.ApiModel;
+@ApiModel
 @XmlType( propOrder={"key","title","usedSkills","description","from","to","customer","industry",
 		"projectLocation","projectSize","role","objective","responsibility","benefitForCustomer","additionalInfos"})
 @XmlAccessorType(XmlAccessType.FIELD)
