@@ -216,7 +216,12 @@ public class DataGenerator {
         cv.getUserSkills().add(iview);
         UserSkill nwdi = new UserSkill(Category.SAP,"Netweaver Development Infrastructure Administration", 8d, 2014,SkillLevel.EXPERT,true);
         cv.getUserSkills().add(nwdi);
-        
+        UserSkill eco = new UserSkill(Category.SAP,"SAP Ecommerce 7.0", 1d, 2010,SkillLevel.BEGINNER,false);
+        cv.getUserSkills().add(eco);
+        UserSkill sapMobile = new UserSkill(Category.SAP,"SAP Mobile", 1d, 2010,SkillLevel.BEGINNER,false);
+        cv.getUserSkills().add(sapMobile);
+        UserSkill abap = new UserSkill(Category.SAP,"ABAP OO", 1d, 2010,SkillLevel.BEGINNER,false);
+        cv.getUserSkills().add(abap);
         
         //Tools
         UserSkill git = new UserSkill(Category.TOOLS,"Git", 1d, 2016,SkillLevel.GOOD_EXPERIENCE,true);
@@ -410,7 +415,91 @@ public class DataGenerator {
         p.setProjectLocation(new I18NText("Saudi Arabien", "Saudi Arabia"));
         p.setIndustry(new I18NText("Stahl", "Steel"));
         cv.getProjects().add(p);
-        
+        //LSO
+        p =  new Project("sapLso",new I18NText("Anforderungen und Architektur für Schulungsportal (LSO)", "-")); 
+        p.setDescription(new I18NText(
+        		"Erstellung von Anforderungen und einer Architektur für ein Schulungsportal basierend auf SAP Ecommerce und LSO", 
+        		"-"));
+        p.setCustomer("SAP Custom Development");
+        p.setFrom(new SimpleDate(2010, 10, 1)); 
+        p.setTo( new SimpleDate(2010, 11, 1));
+        p.skills( java, j2ee,jpa,jsf,scrum,nwdi);
+        p.setProjectSize(new I18NText("3 Architekten", "3 Architects"));
+        p.setRole(new I18NText("Architekt","Architekt"));
+        p.setResponsibility(new I18NText(
+        		"Aufnehmen von Anforderungen, Architektur Richtlinien, Code Conventions, NWDI Architektur, Prototyp Entwicklung mit JSF und SAP WEC Framework ",
+        		"-"));
+        p.setProjectLocation(new I18NText("Deutschland", "Germany"));
+        p.setIndustry(new I18NText("ISV", "ISV"));
+        cv.getProjects().add(p);
+        //Südzucker Struts
+        p =  new Project("szstruts",new I18NText("Wartung von Struts und Web Dynpro Anwendungen (1 Tag/Woche)", "-")); 
+        p.setDescription(new I18NText(
+        		"Erweiterung und Bugfixing des Portals und der Rohstoffanwendungen", 
+        		"-"));
+        p.setCustomer("Südzucker");
+        p.setFrom(new SimpleDate(2010, 4, 1)); 
+        p.setTo( new SimpleDate(2010, 12, 1));
+        p.skills( java, j2ee,jpa,jsf,sapWD,nwdi);
+        p.setProjectSize(new I18NText("1 Entwickler", "1 Developer"));
+        p.setRole(new I18NText("Entwickler","Developer"));
+        p.setResponsibility(new I18NText(
+        		"Existierende Struts und Web Dynpro Anwendungen pflegen und erweitern. Es wurde ein neues Layout Konzept und Navigationsframework für die Strutsanwendungen implementiert",
+        		"-"));
+        p.setProjectLocation(new I18NText("Deutschland", "Germany"));
+        p.setIndustry(new I18NText("Zucker", "Sugar"));
+        cv.getProjects().add(p);
+        //NEO
+        p =  new Project("neo1",new I18NText("Entwicklung SAP Mobile, SAP ECO und NWDI ", "-")); 
+        p.setDescription(new I18NText(
+        		"Unterstützung einer Beratungsfirmen in verschiedenen Projekten mit SAP Mobile 7.0 und SAP Ecommerce 7.0", 
+        		"-"));
+        p.setCustomer("NEO");
+        p.setFrom(new SimpleDate(2010, 4, 1)); 
+        p.setTo( new SimpleDate(2010, 12, 1));
+        p.skills( java, j2ee,jpa,jsf,sapMobile,eco,abap,nwdi,ws);
+        p.setProjectSize(new I18NText("1 Entwickler", "1 Developer"));
+        p.setRole(new I18NText("Entwickler","Developer"));
+        p.setResponsibility(new I18NText(
+        		"Verschiedene Erweiterungen im SAP ECO Bereicht, neue Felder, Einführung von Ajax Funktionalität. Erstellung von PDA Dialogen für die Erfassung von Messpunkten bei Instandhaltung (SAP PM). ABAP RFC Webservice Erstellung",
+        		"-"));
+        p.setProjectLocation(new I18NText("Deutschland", "Germany"));
+        p.setIndustry(new I18NText("IT Consulting", "IT Consulting"));
+        cv.getProjects().add(p);
+        //Web Channel
+        p =  new Project("sapwec",new I18NText("CRM Web Channel Framework Entwicklung", "-")); 
+        p.setDescription(new I18NText(
+        		"Implementierung eines Konfigurationsmodul für den SAP CRM Webchannel", 
+        		"-"));
+        p.setCustomer("SAP Custom Development");
+        p.setFrom(new SimpleDate(2009, 10, 1)); 
+        p.setTo( new SimpleDate(2010, 3, 1));
+        p.skills( java, j2ee,jpa,jsf,eco,nwdi);
+        p.setProjectSize(new I18NText("15 Entwickler", "15 Developer"));
+        p.setRole(new I18NText("Konzeption, Berater, Entwickler","Design, Consultant, Developer"));
+        p.setResponsibility(new I18NText(
+        		"Konzeption und Design. Anleitung von SAP Mitarbeitern zum Thema JPA und EJB. Entwicklung und Unterstützung bei der Persistenzschicht der Konfigurationsmoduls. Erstellung einer zentralen Test Infrastruktur",
+        		"-"));
+        p.setProjectLocation(new I18NText("Deutschland", "Germany"));
+        p.setIndustry(new I18NText("ISV", "ISV"));
+        cv.getProjects().add(p);
+        //Finocom
+        p =  new Project("fino1",new I18NText("Neuentwicklung Call Center Lösung/ Hosted PBX/ CTI", "-")); 
+        p.setDescription(new I18NText(
+        		"Implementierung eine Call Center Lösung basierend auf Open Source Produkten.", 
+        		"-"));
+        p.setCustomer("Finocom");
+        p.setFrom(new SimpleDate(2009, 3, 1)); 
+        p.setTo( new SimpleDate(2009, 10, 1));
+        p.skills( java, j2ee, tomcat,rails, php, linux, mysql);
+        p.setProjectSize(new I18NText("3 Entwickler (1 Offshore), 1 Architekt", "3 Developer (1 Offshore), 1 Architect"));
+        p.setRole(new I18NText("Architect, Projectlead, Developer","Architect, Projectlead, Developer"));
+        p.setResponsibility(new I18NText(
+        		"Konzeption und Design. Anleitung von 1 Offshore und 1 deutschen Entwickler. Entwicklung von Warteschleifenfunktionalität (PHP), Call Telephonie Client (Swing, Jabber), Echtzeitreporting (Flex, Java)",
+        		"-"));
+        p.setProjectLocation(new I18NText("Deutschland", "Germany"));
+        p.setIndustry(new I18NText("ISV", "ISV"));
+        cv.getProjects().add(p);
         
 		return cv;
 	}
