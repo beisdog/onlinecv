@@ -17,7 +17,6 @@ public class Job {
 
 	I18NText description;
 	
-	
 	String company;
 	
 	public Job(){}

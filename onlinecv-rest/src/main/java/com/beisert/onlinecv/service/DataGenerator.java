@@ -96,6 +96,16 @@ public class DataGenerator {
         //JOBS
         cv.getJobs()
         .add(new Job(
+        		new SimpleDate(2016,11,11),
+        		new SimpleDate(2017,6,30), 
+        		new I18NText("deep tc als freier J2EE und SAP Netweaver Berater.","IT Freelancer"), 
+        		new I18NText("(Siehe angefügte Projektliste)","See project list"),
+        		"deep tc GmbH"
+        		)
+        );
+        
+        cv.getJobs()
+        .add(new Job(
         		new SimpleDate(2016,4,18),
         		new SimpleDate(2016,10,30), 
         		new I18NText("IT Architekt","IT Architect"), 
@@ -154,33 +164,35 @@ public class DataGenerator {
         );
         
         //skills
-        UserSkill java = new UserSkill(Category.PROGRAMMING,"Java", 18d, 2016, SkillLevel.EXPERT, true);
+        UserSkill java = new UserSkill(Category.PROGRAMMING,"Java", 18d, 2017, SkillLevel.EXPERT, true);
         cv.getUserSkills().add(java);
-        UserSkill j2ee = new UserSkill(Category.PROGRAMMING,"J2EE (EJB,JMS,Servlet)", 18d, 2016,SkillLevel.EXPERT,true);
+        UserSkill j2ee = new UserSkill(Category.PROGRAMMING,"J2EE (EJB,JMS,Servlet)", 18d, 2017,SkillLevel.EXPERT,true);
         cv.getUserSkills().add(j2ee);
         
-        UserSkill hibernate = new UserSkill(Category.PROGRAMMING,"Hibernate", 10d, 2016,SkillLevel.EXPERT,true);
+        UserSkill hibernate = new UserSkill(Category.PROGRAMMING,"Hibernate", 10d, 2017,SkillLevel.EXPERT,true);
         cv.getUserSkills().add(hibernate);
-        UserSkill jpa = new UserSkill(Category.PROGRAMMING,"JPA", 5d, 2016,SkillLevel.EXPERT,true);
+        UserSkill jpa = new UserSkill(Category.PROGRAMMING,"JPA", 5d, 2017,SkillLevel.EXPERT,true);
         cv.getUserSkills().add(jpa);
-        UserSkill spring = new UserSkill(Category.PROGRAMMING,"Spring", 10d, 2016, SkillLevel.GOOD_EXPERIENCE,true);
+        UserSkill rest = new UserSkill(Category.PROGRAMMING,"Rest", 3d, 2017,SkillLevel.EXPERT,false);
+        cv.getUserSkills().add(rest);
+        UserSkill spring = new UserSkill(Category.PROGRAMMING,"Spring", 10d, 2017, SkillLevel.GOOD_EXPERIENCE,true);
         cv.getUserSkills().add(spring);
-        UserSkill camel = new UserSkill(Category.PROGRAMMING,"Camel", 1d, 2016, SkillLevel.GOOD_EXPERIENCE,true);
+        UserSkill camel = new UserSkill(Category.PROGRAMMING,"Camel", 1d, 2016, SkillLevel.GOOD_EXPERIENCE,false);
         cv.getUserSkills().add(camel);
-        UserSkill junit = new UserSkill(Category.PROGRAMMING,"JUnit", 10d, 2016, SkillLevel.EXPERT,true);
+        UserSkill junit = new UserSkill(Category.PROGRAMMING,"JUnit", 10d, 2017, SkillLevel.EXPERT,true);
         cv.getUserSkills().add(junit);
         //XSLT
         UserSkill fop = new UserSkill(Category.PROGRAMMING,"XSLT/FOP", 2d, 2016, SkillLevel.GOOD_EXPERIENCE,false);
         cv.getUserSkills().add(fop);
-        UserSkill jquery = new UserSkill(Category.PROGRAMMING,"JQuery", 2d, 2016, SkillLevel.GOOD_EXPERIENCE,false);
+        UserSkill jquery = new UserSkill(Category.PROGRAMMING,"JQuery", 2d, 2017, SkillLevel.GOOD_EXPERIENCE,false);
         cv.getUserSkills().add(jquery);
-        UserSkill angular = new UserSkill(Category.PROGRAMMING,"AngularJS", 0.5d, 2016, SkillLevel.BEGINNER,false);
+        UserSkill angular = new UserSkill(Category.PROGRAMMING,"Angular 2", 1d, 2017, SkillLevel.GOOD_EXPERIENCE,true);
         cv.getUserSkills().add(angular);
-        UserSkill html = new UserSkill(Category.PROGRAMMING,"HTML/CSS", 0.5d, 2016, SkillLevel.GOOD_EXPERIENCE,false);
+        UserSkill html = new UserSkill(Category.PROGRAMMING,"HTML/CSS", 1d, 2017, SkillLevel.GOOD_EXPERIENCE,false);
         cv.getUserSkills().add(html);
         UserSkill net = new UserSkill(Category.PROGRAMMING,"C#, ASP .NET", 2d, 2008, SkillLevel.GOOD_EXPERIENCE,false);
         cv.getUserSkills().add(net);
-        UserSkill rails = new UserSkill(Category.PROGRAMMING,"Ruby on Rails", 2d, 2008, SkillLevel.GOOD_EXPERIENCE,false);
+        UserSkill rails = new UserSkill(Category.PROGRAMMING,"Ruby on Rails", 2d, 2017, SkillLevel.GOOD_EXPERIENCE,false);
         cv.getUserSkills().add(rails);
         UserSkill php = new UserSkill(Category.PROGRAMMING,"PHP", 5d, 2014, SkillLevel.BEGINNER,false);
         cv.getUserSkills().add(php);
@@ -188,31 +200,33 @@ public class DataGenerator {
         cv.getUserSkills().add(grails);
         UserSkill jsf = new UserSkill(Category.PROGRAMMING,"JSF (Richfaces,Primefaces)", 3d, 2013, SkillLevel.GOOD_EXPERIENCE,false);
         cv.getUserSkills().add(jsf);
-        UserSkill vaadin = new UserSkill(Category.PROGRAMMING,"Vaadin", 2d, 2016, SkillLevel.GOOD_EXPERIENCE,false);
+        UserSkill vaadin = new UserSkill(Category.PROGRAMMING,"Vaadin", 2d, 2017, SkillLevel.GOOD_EXPERIENCE,false);
         cv.getUserSkills().add(vaadin);
         UserSkill gwt = new UserSkill(Category.PROGRAMMING,"GWT", 1d, 2007, SkillLevel.GOOD_EXPERIENCE,false);
         cv.getUserSkills().add(gwt);
-        UserSkill ws = new UserSkill(Category.PROGRAMMING,"Web Services", 10d, 2016, SkillLevel.EXPERT,false);
+        UserSkill ws = new UserSkill(Category.PROGRAMMING,"Web Services", 10d, 2017, SkillLevel.EXPERT,false);
         cv.getUserSkills().add(ws);
-        UserSkill selenium = new UserSkill(Category.PROGRAMMING,"Selenium", 0.5d, 2016, SkillLevel.GOOD_EXPERIENCE,false);
+        UserSkill selenium = new UserSkill(Category.PROGRAMMING,"Selenium", 0.5d, 2017, SkillLevel.GOOD_EXPERIENCE,false);
         cv.getUserSkills().add(selenium);
         
         //Middleware
-        UserSkill tomcat = new UserSkill(Category.SERVER,"Tomcat", 11d, 2016, SkillLevel.GOOD_EXPERIENCE,false);
+        UserSkill tomcat = new UserSkill(Category.SERVER,"Tomcat", 11d, 2017, SkillLevel.GOOD_EXPERIENCE,false);
         cv.getUserSkills().add(tomcat);
         UserSkill jboss = new UserSkill(Category.SERVER,"JBoss/Wildfly", 2d, 2016, SkillLevel.GOOD_EXPERIENCE,false);
         cv.getUserSkills().add(jboss);
         UserSkill wls = new UserSkill(Category.SERVER,"Weblogic", 0.5d, 2016, SkillLevel.GOOD_EXPERIENCE,false);
-        cv.getUserSkills().add(wls);       
+        cv.getUserSkills().add(wls); 
+        UserSkill broadworks = new UserSkill(Category.SERVER,"Broadworks", 1d, 2017, SkillLevel.GOOD_EXPERIENCE,false);
+        cv.getUserSkills().add(broadworks);
         
         //SAP
         UserSkill sapBPM = new UserSkill(Category.SAP,"SAP BPM", 6d, 2016,SkillLevel.EXPERT,true);
         cv.getUserSkills().add(sapBPM);
         UserSkill sapWD = new UserSkill(Category.SAP,"SAP Web Dynpro Java", 10d, 2016,SkillLevel.EXPERT,true);
         cv.getUserSkills().add(sapWD);
-        UserSkill portaladmin = new UserSkill(Category.SAP,"SAP Portals Administration", 10d, 2016,SkillLevel.GOOD_EXPERIENCE,true);
+        UserSkill portaladmin = new UserSkill(Category.SAP,"SAP Portals Administration", 10d, 2016,SkillLevel.GOOD_EXPERIENCE,false);
         cv.getUserSkills().add(portaladmin);
-        UserSkill iview = new UserSkill(Category.SAP,"Portal iView Development", 6d, 2014,SkillLevel.EXPERT,true);
+        UserSkill iview = new UserSkill(Category.SAP,"Portal iView Development", 6d, 2014,SkillLevel.EXPERT,false);
         cv.getUserSkills().add(iview);
         UserSkill nwdi = new UserSkill(Category.SAP,"Netweaver Development Infrastructure Administration", 8d, 2014,SkillLevel.EXPERT,true);
         cv.getUserSkills().add(nwdi);
@@ -220,47 +234,86 @@ public class DataGenerator {
         cv.getUserSkills().add(eco);
         UserSkill sapMobile = new UserSkill(Category.SAP,"SAP Mobile", 1d, 2010,SkillLevel.BEGINNER,false);
         cv.getUserSkills().add(sapMobile);
-        UserSkill abap = new UserSkill(Category.SAP,"ABAP OO", 1d, 2010,SkillLevel.BEGINNER,false);
-        cv.getUserSkills().add(abap);
         
         //Tools
-        UserSkill git = new UserSkill(Category.TOOLS,"Git", 1d, 2016,SkillLevel.GOOD_EXPERIENCE,true);
+        UserSkill git = new UserSkill(Category.TOOLS,"Git", 1d, 2017,SkillLevel.GOOD_EXPERIENCE,true);
         cv.getUserSkills().add(git);
-        UserSkill maven = new UserSkill(Category.TOOLS,"Maven", 1d, 2016,SkillLevel.GOOD_EXPERIENCE,true);
+        UserSkill maven = new UserSkill(Category.TOOLS,"Maven", 1d, 2017,SkillLevel.GOOD_EXPERIENCE,true);
         cv.getUserSkills().add(maven);
-        UserSkill wily = new UserSkill(Category.TOOLS,"WILY", 3d, 2015,SkillLevel.GOOD_EXPERIENCE,true);
+        UserSkill gradle = new UserSkill(Category.TOOLS,"Gradle", 1d, 2017,SkillLevel.GOOD_EXPERIENCE,true);
+        cv.getUserSkills().add(gradle);
+        UserSkill wily = new UserSkill(Category.TOOLS,"WILY", 3d, 2015,SkillLevel.GOOD_EXPERIENCE,false);
         cv.getUserSkills().add(wily);
-        UserSkill profiler = new UserSkill(Category.TOOLS,"Java Profiler", 1d, 2015,SkillLevel.GOOD_EXPERIENCE,true);
+        UserSkill profiler = new UserSkill(Category.TOOLS,"Java Profiler", 1d, 2015,SkillLevel.GOOD_EXPERIENCE,false);
         cv.getUserSkills().add(profiler);
+        UserSkill docker = new UserSkill(Category.TOOLS,"Docker", 1d, 2017,SkillLevel.GOOD_EXPERIENCE,true);
+        cv.getUserSkills().add(docker);
+        
         
         //METHODS
-        UserSkill scrum = new UserSkill(Category.METHODS,"Scrum", 7d, 2016,SkillLevel.EXPERT,true);
+        UserSkill scrum = new UserSkill(Category.METHODS,"Scrum", 7d, 2017,SkillLevel.EXPERT,true);
         cv.getUserSkills().add(scrum);
-        UserSkill project = new UserSkill(Category.METHODS,"Projectmanagement", 4d, 2016,SkillLevel.GOOD_EXPERIENCE,true);
+        UserSkill project = new UserSkill(Category.METHODS,"Projectmanagement", 4d, 2017,SkillLevel.GOOD_EXPERIENCE,true);
         cv.getUserSkills().add(project);
         //OS
-        UserSkill windows = new UserSkill(Category.OS,"WINDOWS", 16d, 2016,SkillLevel.GOOD_EXPERIENCE,true);
+        UserSkill windows = new UserSkill(Category.OS,"WINDOWS", 16d, 2017,SkillLevel.GOOD_EXPERIENCE,true);
         cv.getUserSkills().add(windows);
-        UserSkill linux = new UserSkill(Category.OS,"LINUX", 6d, 2016,SkillLevel.GOOD_EXPERIENCE,true);
+        UserSkill linux = new UserSkill(Category.OS,"LINUX", 6d, 2017,SkillLevel.GOOD_EXPERIENCE,true);
         cv.getUserSkills().add(linux);
-        UserSkill mac = new UserSkill(Category.OS,"Mac OS", 6d, 2016,SkillLevel.GOOD_EXPERIENCE,true);
+        UserSkill mac = new UserSkill(Category.OS,"Mac OS", 6d, 2017,SkillLevel.GOOD_EXPERIENCE,true);
         cv.getUserSkills().add(mac);
-        UserSkill unix = new UserSkill(Category.OS,"Unix (HP,Solaris)", 4d, 2006,SkillLevel.GOOD_EXPERIENCE,true);
+        UserSkill unix = new UserSkill(Category.OS,"Unix (HP,Solaris)", 4d, 2006,SkillLevel.GOOD_EXPERIENCE,false);
         cv.getUserSkills().add(unix);
         
         //Database
         UserSkill oracle = new UserSkill(Category.DATABASE,"ORACLE", 16d, 2016,SkillLevel.GOOD_EXPERIENCE,true);
         cv.getUserSkills().add(oracle);
-        UserSkill mysql = new UserSkill(Category.DATABASE,"MySQL", 3d, 2016,SkillLevel.GOOD_EXPERIENCE,true);
+        UserSkill mysql = new UserSkill(Category.DATABASE,"MySQL", 3d, 2017,SkillLevel.GOOD_EXPERIENCE,true);
         cv.getUserSkills().add(mysql);
         UserSkill sql = new UserSkill(Category.DATABASE,"SQL Server", 5d, 2010,SkillLevel.GOOD_EXPERIENCE,true);
         cv.getUserSkills().add(sql);
-        
+        UserSkill postgres = new UserSkill(Category.DATABASE,"Postgres SQL", 2d, 2017,SkillLevel.GOOD_EXPERIENCE,true);
+        cv.getUserSkills().add(postgres);
+        UserSkill mongo = new UserSkill(Category.DATABASE,"Mongo DB", 0.5d, 2010,SkillLevel.BEGINNER, false);
+        cv.getUserSkills().add(mongo);
         
         
         //Projects
-
-        Project p =  new Project("symparch",new I18NText("Architektur Online Services und SOA", "SOA Infrastructure")); 
+        Project p =  new Project("rss",new I18NText("Projectleiter/Architekt rss.com", "Projectlead/architect rss.com")); 
+        p.setDescription(new I18NText(
+        		"Verantwortung von Architektur und Leitung von Offshore Team.", 
+        		"Responsible for architecture and leading of offshore development team"));
+        p.setCustomer("rss.com");
+        p.setFrom(new SimpleDate(2016, 11, 1)); 
+        p.setTo( new SimpleDate(2017, 6, 30));
+        p.skills( java, j2ee, vaadin, spring, docker, rails, angular);
+        p.setProjectSize(new I18NText("2 Entwickler", "2 Developers"));
+        p.setRole(new I18NText("Architekt","Architekt"));
+        p.setResponsibility(new I18NText(
+        		"Systemaufbau, Architektur, Codereviews, Coaching, System Dokumentation",
+        		"System Design, Architecture, Codereviews, Coaching, System Documentation"));
+        p.setProjectLocation(new I18NText("Deutschland", "Germany"));
+        p.setIndustry(new I18NText("Telekommunikation", "Telecommunication"));
+        cv.getProjects().add(p);
+        
+        p =  new Project("bwpaas",new I18NText("Integration von Broadworks in Placetel", "Integration of Broadworks into Placetel")); 
+        p.setDescription(new I18NText(
+        		"Aufbau eines Rest Integration Layers für BW OCI/XSI. Verantwortung von Architektur und Leitung von Offshore Team.", 
+        		"Setup of Rest integration layer for BW OCI/XSI. Responsible for architecture and leading of offshore development team"));
+        p.setCustomer("Broadsoft");
+        p.setFrom(new SimpleDate(2016, 11, 1)); 
+        p.setTo( new SimpleDate(2017, 6, 30));
+        p.skills( java, j2ee, gradle, spring, docker, rails, broadworks, rest);
+        p.setProjectSize(new I18NText("4 Entwickler", "4 Developers"));
+        p.setRole(new I18NText("Architekt","Architekt"));
+        p.setResponsibility(new I18NText(
+        		"Systemaufbau, Architektur, Codereviews, Coaching, System Dokumentation",
+        		"System Design, Architecture, Codereviews, Coaching, System Documentation"));
+        p.setProjectLocation(new I18NText("Deutschland", "Germany"));
+        p.setIndustry(new I18NText("Telekommunikation", "Telecommunication"));
+        cv.getProjects().add(p);
+        
+        p =  new Project("symparch",new I18NText("Architektur Online Services und SOA", "SOA Infrastructure")); 
         p.setDescription(new I18NText(
         		"Verantwortung der SOA Strategie und der Gesamtarchitektur der Online Angebotes einer Krankenversicherung sowie Aufbau eines neuen SOA Frameworks", 
         		"Setup of SOA Infrastruktur mit Microservices und Camel"));
@@ -457,7 +510,7 @@ public class DataGenerator {
         p.setCustomer("NEO");
         p.setFrom(new SimpleDate(2010, 4, 1)); 
         p.setTo( new SimpleDate(2010, 12, 1));
-        p.skills( java, j2ee,jpa,jsf,sapMobile,eco,abap,nwdi,ws);
+        p.skills( java, j2ee,jpa,jsf,sapMobile,eco,nwdi,ws);
         p.setProjectSize(new I18NText("1 Entwickler", "1 Developer"));
         p.setRole(new I18NText("Entwickler","Developer"));
         p.setResponsibility(new I18NText(
